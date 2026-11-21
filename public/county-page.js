@@ -14,11 +14,12 @@ const HOTSPOT_COUNT = 3;
 
 async function load() {
   const code = new URLSearchParams(location.search).get("code") ?? "";
-  const [counties, bounds, species, forms] = await Promise.all([
+  const [counties, bounds, species, forms, photos] = await Promise.all([
     fetch("data/ca_counties.json").then((r) => r.json()),
     fetch("data/ca_county_bounds.json").then((r) => r.json()),
     loadSpecies(),
     fetch("data/ca_species_forms.json").then((r) => r.json()),
+    fetch("data/ca_species_photos.json").then((r) => r.json()),
   ]);
   const county = counties.find((c) => c.code === code);
   if (!county) {
@@ -56,13 +57,14 @@ async function load() {
     const when = period(days);
     const groups = groupBySpecies(notable.sightings, species, forms);
     const places = placesFor(groups);
+    const ctx = { mapParts, photos, places };
     showPins(mapParts, places, area);
     $("map-heading").textContent = `Notable sightings map, last ${days} days`;
-    showHotspots(mapParts, places, area, when, HOTSPOT_COUNT);
+    showHotspots(ctx, area, when, HOTSPOT_COUNT);
     $("top-heading").textContent = `Rarest Birds ${area.phrase} ${when.heading}`;
-    fillList($("top"), topRarest(groups, TOP_COUNT).map(topItem), `No rare birds reported here ${when.span}.`);
+    fillList($("top"), topRarest(groups, TOP_COUNT).map((g) => topItem(g, ctx)), `No rare birds reported here ${when.span}.`);
     $("tier-heading").textContent = `Notable sightings, last ${days} days`;
-    showTiers(groups, when);
+    showTiers(groups, ctx);
     $("updated").textContent = updatedText(notable.fetchedAt);
     status.hidden = true;
   }

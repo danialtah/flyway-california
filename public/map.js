@@ -167,11 +167,13 @@ export function swatch(group) {
   return el("span", { class: `swatch swatch-${shape}`, style: `--color: ${color}` });
 }
 
-// The marker key, in the map's bottom-left corner.
+// The map key, in the map's bottom-left corner: rarest first, escapees last.
+const LEGEND_ORDER = ["noTier", "Rare", "Uncommon", "Common", "escapee"];
 export function addLegend(map) {
   const legend = L.control({ position: "bottomleft" });
   legend.onAdd = () => el("div", { class: "map-legend" },
-    ...DRAW_ORDER.map((group) => el("div", {}, swatch(group), MARKERS[group].label)));
+    el("span", { class: "title" }, "Map key"),
+    ...LEGEND_ORDER.map((group) => el("div", {}, swatch(group), MARKERS[group].label)));
   legend.addTo(map);
 }
 
@@ -191,7 +193,7 @@ export function groupByPlace(groups) {
       seenAt.add(s.locId);
       let place = places.get(s.locId);
       if (!place) {
-        place = { locName: s.locName, county: s.county, lat: s.lat, lng: s.lng, birds: [] };
+        place = { locId: s.locId, locName: s.locName, county: s.county, lat: s.lat, lng: s.lng, birds: [] };
         places.set(s.locId, place);
       }
       place.birds.push({ bird, group, sighting: s });

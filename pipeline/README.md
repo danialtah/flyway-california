@@ -49,10 +49,6 @@ script builds it.
 each county, from the eBird API, for the county pages. Run it from
 `public/data/` with `EBIRD_API_KEY` set.
 
-`build_county_bounds.py` writes `ca_county_bounds.json`: the map bounds of
-each county, from the eBird API, for the county pages. Run it from
-`public/data/` with `EBIRD_API_KEY` set.
-
 No script overwrites an existing output file; delete or move the old file
 first.
 

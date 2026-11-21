@@ -1,0 +1,359 @@
+/* Shared components from the Figma design: the header, the footer, icons,
+   buttons, filter pills and their menus, and the notable-sightings cards and
+   list. Pages link this after tokens.css; page layout lives in each page's
+   own stylesheet (home.css). */
+
+body { margin: 0; }
+[hidden] { display: none !important; }
+a { color: inherit; }
+
+/* Keyboard focus, everywhere: a 2px ocean-blue ring. */
+:focus-visible { outline: 2px solid var(--color-ocean-blue); outline-offset: 2px; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* Icons are the Figma SVGs used as masks, so they take the text color and
+   can change color on hover. Each has its Figma size. */
+.icon {
+  display: inline-block; flex: none; background: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+}
+.icon-search      { --icon: url(images/ui/search.svg);         width: 20px; height: 20px; }
+.icon-location-20 { --icon: url(images/ui/location-on-20.svg); width: 20px; height: 20px; }
+.icon-location-18 { --icon: url(images/ui/location-on-18.svg); width: 18px; height: 18px; }
+.icon-location-14 { --icon: url(images/ui/location-on-14.svg); width: 14px; height: 14px; }
+.icon-near-me-18  { --icon: url(images/ui/near-me-18.svg);     width: 18px; height: 18px; }
+.icon-near-me-16  { --icon: url(images/ui/near-me-16.svg);     width: 16px; height: 16px; }
+.icon-expand-more { --icon: url(images/ui/expand-more.svg);    width: 20px; height: 20px; }
+.icon-expand-less { --icon: url(images/ui/expand-less.svg);    width: 20px; height: 20px; }
+.icon-row-more    { --icon: url(images/ui/expand-more-row.svg); width: 20px; height: 20px; }
+.icon-check       { --icon: url(images/ui/check.svg);          width: 18px; height: 18px; }
+.icon-image       { --icon: url(images/ui/image.svg);          width: 32px; height: 32px; color: #B9B09C; }
+
+/* Shared widths: 1240px of content, centered, with 100px margins on a
+   1440px screen and smaller ones below that. */
+.wrap { box-sizing: border-box; width: 100%; max-width: 1440px; margin: 0 auto; padding-inline: clamp(16px, 6.95vw, 100px); }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky; top: 0; z-index: 1100;  /* stays at the top while the page scrolls */
+  background: var(--color-background); border-bottom: 1px solid var(--color-border);
+}
+.header-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-header .logo {
+  display: flex; align-items: center; gap: 12px; margin-left: -4px;
+  font: 600 20px/normal var(--font-sans); color: var(--color-text-primary); text-decoration: none;
+  white-space: nowrap;
+}
+.site-header .logo img { width: 69px; height: 57px; }
+.site-nav { display: flex; align-items: center; gap: 36px; }
+.site-nav > a {
+  font: 400 16px/normal var(--font-sans);  /* body-md */
+  color: var(--color-text-primary); text-decoration: none;
+  white-space: nowrap; transition: color 150ms ease;
+}
+.site-nav > a:hover, .site-nav > a[aria-current="page"] { color: var(--color-ocean-blue); }
+
+/* Search fields: a 1px border that turns into a 2px ocean-blue stroke while
+   the field is selected. The second pixel is an inset shadow, so nothing
+   moves. No hover state. */
+.field {
+  box-sizing: border-box; display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-background);
+  color: var(--color-secondary); cursor: text;
+}
+.field:focus-within { border-color: var(--color-ocean-blue); box-shadow: inset 0 0 0 1px var(--color-ocean-blue); }
+.field input {
+  flex: 1; min-width: 0; border: 0; padding: 0; background: none; outline: none;
+  font: 400 16px/normal var(--font-sans); color: var(--color-text-primary);
+}
+.field input::placeholder { color: var(--color-secondary); opacity: 1; }
+.field input::-webkit-search-cancel-button { cursor: pointer; }
+
+.site-search { position: relative; }
+.site-search .field { width: 187px; height: 34px; padding: 6px 8px; }
+
+/* Menus: the white panel under a filter pill or search field. */
+.menu {
+  position: absolute; z-index: 1200; box-sizing: border-box; min-width: 220px; margin: 0;
+  display: flex; flex-direction: column; gap: 2px; padding: 8px; list-style: none;
+  background: #fff; border: 1px solid var(--color-border); border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  animation: menu-in 150ms ease;
+}
+@keyframes menu-in { from { opacity: 0; } }
+.menu [role="option"], .menu [role="menuitem"] {
+  display: flex; align-items: center; gap: 10px; padding: 10px 24px 10px 12px; border-radius: 8px;
+  font: 400 16px/normal var(--font-sans); color: var(--color-text-primary); white-space: nowrap;
+  cursor: pointer;
+}
+.menu [role="option"]:hover, .menu [role="option"].active,
+.menu [role="menuitem"]:hover, .menu [role="menuitem"]:focus { background: var(--color-surface); outline: none; }
+.menu [role="option"][aria-selected="true"] { background: var(--color-pill); font-weight: 500; }
+.menu .check { width: 18px; height: 18px; flex: none; }
+.menu [aria-selected="true"] .check { background: currentColor; mask: url(images/ui/check.svg) center / contain no-repeat; }
+
+/* Site search suggestions: a menu under the header search, right-aligned
+   so it stays on screen, with room for long names. */
+.site-search .menu { right: 0; top: calc(100% + 8px); width: 340px; }
+.site-search .menu [role="option"], .menu [role="menuitem"] { white-space: normal; padding-right: 12px; }
+.site-search .menu .detail { margin-left: auto; color: var(--color-secondary); font-size: 14px; white-space: nowrap; }
+
+/* ---------- Buttons ---------- */
+
+/* Filter pill: cream with a border; sky blue with an ocean-blue border while
+   open or picked. */
+.pill {
+  box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px 12px 10px 16px; border: 1px solid var(--color-border); border-radius: 12px;
+  background: var(--color-pill); color: var(--color-text-primary);
+  font: 500 16px/normal var(--font-sans); white-space: nowrap; cursor: pointer;
+  transition: background-color 150ms ease;
+}
+.pill:hover:not(:disabled, [aria-expanded="true"], [aria-pressed="true"]) { background: var(--color-pill-hover); }
+.pill[aria-expanded="true"], .pill[aria-pressed="true"] {
+  background: var(--color-sky-blue); border-color: var(--color-ocean-blue); color: var(--color-ocean-blue);
+}
+.pill[aria-expanded="true"] .icon-expand-more { --icon: url(images/ui/expand-less.svg); }
+.pill:disabled { background: var(--color-pill-disabled); color: var(--color-disabled-content); cursor: not-allowed; }
+.pill:disabled > * { opacity: var(--opacity-disabled-content); }
+.pill-sm { padding: 8px 12px; }  /* list-size choices: label only */
+
+/* Directions: the one filled button. Medium on hotspot cards, small on
+   bird and sighting cards. */
+.button {
+  box-sizing: border-box; display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px 8px 12px; border-radius: 12px; background: var(--color-sky-blue);
+  color: var(--color-ocean-blue); font: 600 16px/normal var(--font-sans); text-decoration: none;
+  white-space: nowrap; transition: background-color 150ms ease;
+}
+.button:hover { background: var(--color-sky-hover); }
+.button-sm { padding: 8px 12px 8px 8px; font: 500 12px/normal var(--font-sans); }
+
+/* Text button: ocean-blue text and icon, no fill, underline on hover. Same
+   height as the Directions button beside it. */
+.text-button {
+  display: inline-flex; align-items: center; gap: 4px; height: 40px; padding: 0 4px; border: 0;
+  border-radius: 8px; background: none; color: var(--color-ocean-blue); cursor: pointer;
+  font: 600 16px/normal var(--font-sans); white-space: nowrap;
+}
+.text-button-sm { height: 32px; padding: 0; font: 500 12px/normal var(--font-sans); }
+.text-button:hover .label { text-decoration: underline; }
+
+.actions { display: flex; align-items: center; gap: 8px; }
+
+/* ---------- Cards ---------- */
+
+/* Rarity dot: the map marker's color, as a plain dot. */
+.dot { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--color); }
+
+/* Names cut to 2 lines (cardName in ui.js) keep their tooltip from tokens.css. */
+.clamp-1 { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+/* Bird card: photo edge to edge on top, then the badge, name, place and
+   last seen, with the actions pinned to the bottom so cards in a row line up. */
+.bird-card {
+  display: flex; flex-direction: column; overflow: hidden; height: 100%; box-sizing: border-box;
+  background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px;
+}
+.photo { position: relative; overflow: hidden; background: var(--color-photo-empty); }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo .empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.bird-card .photo { height: 167px; flex: none; }
+.credit {
+  position: absolute; left: 8px; bottom: 8px; max-width: calc(100% - 18px); box-sizing: border-box;
+  padding: 2px 6px; border-radius: 4px; background: rgba(34, 34, 34, 0.5); color: var(--color-background);
+  font: 400 10px/normal var(--font-sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.credit a { text-decoration: none; }
+.credit a:hover { text-decoration: underline; }
+.bird-card .body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 12px; }
+.bird-card .info { display: flex; flex-direction: column; gap: 8px; }
+.bird-card .info > *, .hotspot-card .top p, .hotspot-card .top h3 { margin: 0; }
+.badge { display: flex; align-items: center; gap: 6px; font: 500 12px/normal var(--font-sans); }
+.bird-card .name { font: 500 18px/normal var(--font-sans); min-height: calc(2lh); }
+.bird-card .name a { text-decoration: none; }
+.bird-card .name a:hover { text-decoration: underline; }
+.bird-card .place { font: 400 12px/normal var(--font-sans); min-height: 32px; }
+.bird-card .seen { font: 400 12px/normal var(--font-sans); color: var(--color-secondary); }
+.bird-card .actions, .bird-card .no-location { padding-top: 12px; }
+.bird-card .no-location { margin: 0; font: 400 12px/normal var(--font-sans); color: var(--color-secondary); }
+
+/* Hotspot card: name, county, counts, and up to three rare birds as a
+   divided list with dots. */
+.hotspot-card {
+  display: flex; flex-direction: column; justify-content: space-between; height: 100%; box-sizing: border-box;
+  padding: 20px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px;
+}
+.hotspot-card .top { display: flex; flex-direction: column; gap: 12px; }
+.hotspot-card .header { display: flex; flex-direction: column; gap: 2px; }
+.hotspot-card .name { font: 600 20px/normal var(--font-sans); }
+.hotspot-card .county { font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }
+.hotspot-card .stats { font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }
+.hotspot-card .stats strong { font-weight: 600; color: #D9342B; }  /* the Rare marker color */
+.hotspot-card ul { margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--color-border); }
+.hotspot-card li { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid var(--color-border); min-width: 0; }
+.hotspot-card li .dot { width: 8px; height: 8px; }
+.hotspot-card li a { font: 400 16px/normal var(--font-sans); text-decoration: none; }
+.hotspot-card li a:hover { text-decoration: underline; }
+.hotspot-card .actions { padding-top: 16px; }
+
+/* ---------- Notable list ---------- */
+
+/* Tier tabs: cream pills with a dot; the picked one is sky blue. */
+.tier-tabs { display: flex; flex-wrap: wrap; gap: 10px; }
+.tier-tabs .dot { width: 12px; height: 12px; }
+
+/* Columns shared by the header and the rows: Bird 340, Latest Sighting
+   (the rest), Last Seen, and the 40px open button. Rows reach 24px past the
+   text on each side so the hover and open highlight frame it. */
+.notable-list { --cols: 340px minmax(0, 1fr) 172px 40px; }
+.list-header {
+  display: grid; grid-template-columns: var(--cols); gap: 24px; margin: 0 24px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border); font: 400 16px/normal var(--font-sans); color: var(--color-secondary);
+}
+.notable-list > ol { margin: 0; padding: 0; list-style: none; }
+.row { border: 1px solid transparent; border-radius: 12px; transition: background-color 150ms ease; }
+.row-head {
+  display: block; width: 100%; box-sizing: border-box; padding: 0 23px; border: 0; background: none;
+  text-align: left; cursor: pointer; font: 400 16px/normal var(--font-sans); color: var(--color-text-primary);
+}
+.row-head .cols {
+  display: grid; grid-template-columns: var(--cols); gap: 24px; align-items: center;
+  padding: 20px 0; border-bottom: 1px solid var(--color-border);
+}
+.row-head .bird { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.row-head .bird-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-head .place { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-head .seen { font-size: 14px; color: var(--color-secondary); }
+.row-head .more { display: flex; align-items: center; justify-content: center; height: 40px; padding: 0; }
+.row-head .more .icon { transition: transform 200ms ease-in-out, color 200ms ease-in-out; }
+.review-tag {
+  flex: none; padding: 2px 8px; border: 1px solid var(--color-border); border-radius: 8px;
+  font: 400 12px/normal var(--font-sans); color: var(--color-secondary); white-space: nowrap;
+}
+.row:hover { background: var(--color-surface); border-color: var(--color-border); }
+.row:hover .cols, .row.open .cols { border-bottom-color: transparent; }
+.row:hover .more .icon { color: var(--color-ocean-blue); }
+.row.open { background: var(--color-pill); border-color: var(--color-border); }
+.row.open .more .icon { color: var(--color-ocean-blue); transform: rotate(180deg); }
+.row.open .row-head .place { visibility: hidden; }
+.row.open .cols { align-items: start; padding-bottom: 0; }
+.row.open .more { margin-bottom: -18px; }  /* the chevron sits on the name's line, as in Figma */
+
+/* Open row: photo and credit under the name; on the right the status line,
+   the species page link, and a card for each place it was reported. */
+.row-details {
+  display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 24px; padding: 12px 23px 20px;
+}
+.row-details .photo { height: 255px; border-radius: 8px; }
+.row-details .photo-credit { margin: 12px 0 0; font: 400 12px/normal var(--font-sans); color: var(--color-secondary); }
+.row-details .photo-credit a { text-decoration: none; }
+.row-details .photo-credit a:hover { text-decoration: underline; }
+.row-details .content { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-height: 255px; }
+.row-details .description { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.row-details .description p { margin: 0; font: 400 16px/normal var(--font-sans); }
+.row-details .species-link { font: 600 14px/normal var(--font-sans); color: var(--color-ocean-blue); }
+.row-details h4 { margin: 0 0 16px; font: 600 16px/normal var(--font-sans); }
+.row-details .all-places { display: inline-block; margin-top: 16px; }
+.sighting-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.sighting-card {
+  display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid var(--color-border);
+  border-radius: 12px; background: var(--color-background);
+}
+.sighting-card .meta, .sighting-card .county { font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }
+.sighting-card .spot { font: 400 16px/normal var(--font-sans); }
+.sighting-card .actions { gap: 16px; padding-top: 6px; margin-top: auto; }  /* line up across a row */
+.sighting-card .button-sm, .sighting-card .text-button-sm { font-size: 14px; }  /* caption size in open rows */
+
+.list-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 14px 0 24px; }
+.list-footer .count { font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }
+.show-more {
+  display: inline-flex; align-items: center; gap: 4px; padding: 14px 20px; border: 0; background: none;
+  color: var(--color-ocean-blue); font: 500 16px/normal var(--font-sans); cursor: pointer;
+}
+.show-more:hover .label { text-decoration: underline; }
+/* Split control: the label adds 10; the chevron opens a menu (Show 10 more,
+   Show all) styled like the filter menus, right-aligned under it. */
+.more-split { position: relative; display: inline-flex; align-items: center; }
+.more-split .show-more { padding-right: 4px; }
+.more-toggle {
+  display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin-right: 12px;
+  padding: 0; border: 1px solid transparent; border-radius: 8px; background: none; color: var(--color-ocean-blue); cursor: pointer;
+  transition: background-color 150ms ease;
+}
+.more-toggle:hover { background: var(--color-pill-hover); }
+.more-toggle[aria-expanded="true"] { background: var(--color-sky-blue); border-color: var(--color-ocean-blue); }
+.more-toggle[aria-expanded="true"] .icon-expand-more { --icon: url(images/ui/expand-less.svg); }
+.more-split .menu { right: 0; top: calc(100% + 8px); z-index: 1050; }
+
+@media (prefers-reduced-motion: reduce) {
+  .row-head .more .icon, .row, .menu { transition: none; animation: none; }
+}
+
+/* ---------- Map ---------- */
+
+/* Map key and zoom buttons, restyled from Leaflet's. */
+.map-frame { border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
+.map-frame .leaflet-container { font-family: var(--font-sans); background: var(--color-pill); }
+.map-frame .leaflet-top.leaflet-left { margin: 15px 0 0 19px; }
+.map-frame .leaflet-top .leaflet-control { margin: 0; }
+.map-frame .leaflet-bar { border: 1px solid var(--color-map-border); border-radius: 8px; box-shadow: none; overflow: hidden; }
+.map-frame .leaflet-bar a {
+  width: 36px; height: 36px; line-height: 36px; border: 0; color: var(--color-text-primary);
+  font: 500 20px/36px var(--font-sans);
+}
+.map-frame .leaflet-bar a:hover { background: var(--color-surface); }
+.map-frame .leaflet-bottom.leaflet-left { margin: 0 0 17px 19px; }
+.map-frame .leaflet-bottom .leaflet-control { margin: 0; }
+.map-frame .map-legend {
+  display: flex; flex-direction: column; gap: 8px; padding: 12px 14px;
+  background: #fff; border: 1px solid var(--color-map-border); border-radius: 12px;
+  font: 400 14px/normal var(--font-sans); color: var(--color-text-primary);
+}
+.map-frame .map-legend .title { font-weight: 600; }
+.map-frame .map-legend div { display: flex; align-items: center; gap: 8px; }
+.map-frame .map-legend .swatch { margin: 0; width: 12px; height: 12px; }
+.map-frame .map-legend .swatch-ring { border-width: 2px; }
+.map-frame .map-legend .swatch-diamond { width: 10px; height: 10px; margin: 2px 3px 2px 2px; border: 0; }
+.map-frame .leaflet-popup-content { font: 400 14px/normal var(--font-sans); }
+
+/* ---------- Footer ---------- */
+
+/* The loon floats on water that slides left forever: the surface moves by
+   one wavelength every 8 s, so each loop ends where it began. (The two
+   sky-blue ripple lines are out until there's a better water reference.)
+   The loon bobs a pixel or two. Everything holds still with reduced motion. */
+.site-footer { margin-top: 0; }
+.waterline { position: relative; height: 128px; overflow: hidden; }
+.waterline .loon { position: absolute; left: calc(max(0px, (100% - 1440px) / 2) + clamp(12px, 6.67vw, 96px)); top: 22.83px; width: 150px; height: 73.17px; animation: bob 4s ease-in-out infinite; }
+.waterline svg { position: absolute; left: 0; top: 74px; width: 100%; height: 56px; }
+.waterline .surface { animation: wave-160 8s linear infinite; }
+@keyframes wave-160 { to { transform: translateX(-160px); } }
+@keyframes bob { 50% { transform: translateY(1.5px); } }
+@media (prefers-reduced-motion: reduce) {
+  .waterline .loon, .waterline path { animation: none; }
+}
+
+.footer-content { margin-top: -2px; background: var(--color-ocean-blue); color: var(--color-background); }
+.footer-inner { display: flex; flex-direction: column; gap: 32px; padding-block: 24px 32px; }
+.footer-columns { display: flex; flex-wrap: wrap; gap: 64px; padding: 16px 0 8px; }
+.footer-brand { display: flex; flex-direction: column; gap: 16px; width: 420px; max-width: 100%; margin-right: auto; }
+.footer-brand .name { font: 600 20px/normal var(--font-sans); }
+.footer-brand p { margin: 0; font: 400 16px/normal var(--font-sans); }
+.footer-contact { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; }
+.site-footer .eyebrow { margin: 0; font: 600 12px/normal var(--font-sans); letter-spacing: 0.96px; text-transform: uppercase; color: var(--color-sky-blue); }
+.footer-links { display: flex; flex-direction: column; gap: 12px; margin: 0; }
+.footer-links ul { display: contents; }
+.footer-links li { list-style: none; }
+.footer-links a { font: 400 16px/normal var(--font-sans); text-decoration: none; white-space: nowrap; }
+.site-footer a:hover { text-decoration: underline; }
+.footer-contact a { text-decoration: underline; }
+.footer-divider { height: 1px; background: var(--color-sky-blue); opacity: 0.4; }
+.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font: 400 12px/normal var(--font-sans); }
+.footer-bottom p { margin: 0; }
+.footer-bottom a { text-decoration: underline; }

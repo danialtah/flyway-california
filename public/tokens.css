@@ -1,13 +1,13 @@
-/* Design tokens from the FlyWay California design system in Figma. Names
-   match the Figma variables. Only the page background, text color, body
-   type, and error text are applied so far; the rest wait for the component
-   designs. */
+/* Design tokens from the FlyWay California design system in Figma: colors,
+   fonts, and one class per Figma text style. Shared components are in
+   site.css. */
 
 /* Noto Sans, served from public/fonts (SIL Open Font License, fonts/OFL.txt;
    files from Fontsource 5.2.10). Self-hosted so visitors' browsers don't
    contact Google. Each weight comes in two files: Latin, and Latin Extended
    for place names like "'olołkoy Beach Park"; the browser only downloads
-   one when the page uses its characters. 400 italic is for scientific
+   one when the page uses its characters. 500 (Medium) and 600 (SemiBold)
+   are the weights the Figma styles use; 400 italic is for scientific
    names. */
 @font-face {
   font-family: "Noto Sans"; font-style: normal; font-weight: 300; font-display: swap;
@@ -27,6 +27,26 @@
 @font-face {
   font-family: "Noto Sans"; font-style: normal; font-weight: 400; font-display: swap;
   src: url(fonts/noto-sans-latin-ext-400-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "Noto Sans"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url(fonts/noto-sans-latin-500-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Noto Sans"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url(fonts/noto-sans-latin-ext-500-normal.woff2) format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: "Noto Sans"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url(fonts/noto-sans-latin-600-normal.woff2) format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Noto Sans"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url(fonts/noto-sans-latin-ext-600-normal.woff2) format("woff2");
   unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
 }
 @font-face {
@@ -55,9 +75,24 @@
   --color-background: #FFFCF4;    /* page background */
   --color-text-primary: #222222;  /* text on the background (15.5:1) */
   --color-sky-blue: #8EB9DF;      /* button fills and highlights */
+  --color-sky-hover: #779CBD;     /* "Sky-Hover": Directions button on hover */
   --color-ocean-blue: #143C72;    /* text on sky blue (5.3:1) */
   --color-error-text: #D61515;    /* error text (5.2:1 on the background) */
   --color-links: #2E6CA3;         /* links that leave FlyWay, like iNaturalist (5.4:1) */
+  --color-secondary: #5E6A70;     /* "Secondary Text" (5.4:1) */
+  --color-border: #E2DCCD;        /* "Borders" */
+  --color-surface: #F8F4EA;       /* cards, hovered list rows */
+  --color-pill: #F3EEE2;          /* filter pills, open list rows, picked menu option */
+  --color-pill-hover: #E9E2D2;    /* any cream pill on hover: one step darker than --color-pill */
+  --color-photo-empty: #E9E2D2;   /* photo box before the photo loads */
+  --color-map-border: #D9D9D9;    /* map key and zoom buttons */
+
+  /* Disabled controls (Figma "Filter pill" Disabled, 267:34003): the fill
+     fades to 30%, the border stays, and the label and icon turn secondary
+     gray at 50%. */
+  --color-pill-disabled: rgba(243, 238, 226, 0.3);  /* --color-pill at 30% */
+  --color-disabled-content: var(--color-secondary);
+  --opacity-disabled-content: 0.5;
 
   /* Radius */
   --radius-card: 12px;
@@ -66,16 +101,15 @@
   --font-sans: "Noto Sans", system-ui, sans-serif;
 }
 
-/* Type styles, one class per Figma text style. */
-.display-xxl { font: 300 56px/1.12 var(--font-sans); letter-spacing: -1.4px; }   /* display headline */
-.display-lg  { font: 700 48px/1.12 var(--font-sans); letter-spacing: -0.6px; }   /* section titles */
-.display-md  { font: 700 32px/1.25 var(--font-sans); letter-spacing: -0.256px; } /* card title */
-.heading-lg  { font: 700 24px/1.33 var(--font-sans); }                           /* filter setting */
-.body-lg     { font: 400 18px/1.55 var(--font-sans); }                           /* body lead */
-.body-md     { font: 400 16px/1.55 var(--font-sans); }                           /* default UI body */
-.caption     { font: 400 14px/1.43 var(--font-sans); }                           /* helper copy, footnotes */
-.button-md   { font: 700 16px/1.38 var(--font-sans); letter-spacing: 0.2px; }    /* CTA label */
-.micro-cap   { font: 700 12px/1 var(--font-sans); letter-spacing: 0.96px; }      /* eyebrow label */
+/* Type styles, one class per Figma text style. Figma's line height is
+   "auto", which is the font's own spacing: line-height normal. */
+.h3             { font: 600 32px/normal var(--font-sans); }
+.h5             { font: 600 20px/normal var(--font-sans); }
+.body-lg        { font: 500 18px/normal var(--font-sans); }
+.body-md        { font: 400 16px/normal var(--font-sans); }
+.caption        { font: 400 14px/normal var(--font-sans); }
+.caption-sml    { font: 400 12px/normal var(--font-sans); }
+.credit-xtrasml { font: 400 10px/normal var(--font-sans); }
 
 body {
   background: var(--color-background);
