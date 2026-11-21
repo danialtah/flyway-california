@@ -1,0 +1,8 @@
+{
+  "name": "flyway-california",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev"
+  }
+}

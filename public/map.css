@@ -1,0 +1,16 @@
+/* Map pieces. The design pass will restyle these; Leaflet needs a height to
+   draw a map at all. */
+.map { height: 300px; }
+.map-large { height: 450px; }
+
+/* Escapee marker and its legend swatch: a diamond with a white outline. */
+.marker-diamond span, .swatch-diamond {
+  display: block; width: 13px; height: 13px; margin: 2.5px; box-sizing: border-box;
+  background: var(--color); border: 2px solid #fff; transform: rotate(45deg);
+}
+
+.map-legend { background: #fff; padding: 6px 8px; line-height: 1.7; }
+.swatch { display: inline-block; vertical-align: middle; margin-right: 6px; box-sizing: border-box; }
+.swatch-circle { width: 14px; height: 14px; border-radius: 50%; background: var(--color); }
+.swatch-ring { width: 14px; height: 14px; border-radius: 50%; border: 2.5px dashed var(--color); }
+.swatch-diamond { display: inline-block; width: 11px; height: 11px; margin: 1.5px 7.5px 1.5px 1.5px; }

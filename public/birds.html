@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens.css">
+  <title>California Bird Species · FlyWay California</title>
+  <script type="module" src="birds-page.js"></script>
+  <script type="module" src="nav.js"></script>
+</head>
+<body>
+  <header>
+    <a href="./" class="logo"><img src="images/loon.svg" alt="" width="49" height="24"><span>FlyWay California</span></a>
+    <nav aria-label="Main">
+      <a href="counties.html">Counties</a>
+      <a href="birds.html" aria-current="page">Species</a>
+    </nav>
+    <form id="site-search" role="search" action="./">
+      <label for="site-search-input">Search birds, counties, and places</label>
+      <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
+             aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
+             placeholder="Search birds, counties, places">
+      <ul id="site-search-list" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+  </header>
+
+  <main>
+    <h1>California Bird Species</h1>
+    <p>Every bird recorded in California. Pick one to see when it's here and
+      where it's been seen recently.</p>
+    <form id="bird-filter">
+      <p>
+        <label for="bird-name">Name</label>
+        <input id="bird-name" type="search" autocomplete="off" placeholder="Common or scientific name">
+      </p>
+      <p>
+        <label for="bird-rarity">Rarity</label>
+        <select id="bird-rarity">
+          <option value="">All rarities</option>
+          <option value="noTier">Rare (no seasonal data)</option>
+          <option value="Rare">Rare</option>
+          <option value="Uncommon">Uncommon</option>
+          <option value="Common">Common</option>
+          <option value="escapee">Escapee or non-native</option>
+        </select>
+      </p>
+      <p>
+        <label for="bird-season">Season</label>
+        <select id="bird-season">
+          <option value="">All birds</option>
+          <option value="year-round">Year-round birds</option>
+          <option value="winter visitor">Winter visitors</option>
+          <option value="summer visitor">Summer visitors</option>
+          <option value="migrant">Migrants</option>
+          <option value="vagrant">Rare visitors / vagrants</option>
+        </select>
+      </p>
+      <p>
+        <input id="bird-review" type="checkbox">
+        <label for="bird-review">CBRC review species only</label>
+      </p>
+    </form>
+    <p id="status" aria-live="polite">Loading birds…</p>
+    <nav id="letters" aria-label="Jump to a letter"></nav>
+    <div id="bird-list"></div>
+  </main>
+
+  <footer>
+    <p>Data from eBird (Cornell Lab of Ornithology) and eBird Status and Trends.
+      Map data &copy; OpenStreetMap contributors.</p>
+    <p id="review-note">CBRC review species: the California Bird Records Committee
+      reviews sightings of these species.</p>
+    <p>Last updated: <span id="updated">–</span></p>
+    <p>FlyWay California is free, with no ads.
+      <a href="about.html">About and sources</a></p>
+    <!-- TODO: contact link, once there's an address to use. -->
+    <p>Contact: coming soon</p>
+  </footer>
+</body>
+</html>

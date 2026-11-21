@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens.css">
+  <title>Counties · FlyWay California</title>
+  <script type="module" src="counties-page.js"></script>
+  <link rel="stylesheet" href="pages.css">
+  <script type="module" src="nav.js"></script>
+</head>
+<body>
+  <header>
+    <a href="./" class="logo"><img src="images/loon.svg" alt="" width="49" height="24"><span>FlyWay California</span></a>
+    <nav aria-label="Main">
+      <a href="counties.html" aria-current="page">Counties</a>
+      <a href="birds.html">Species</a>
+    </nav>
+    <form id="site-search" role="search" action="./">
+      <label for="site-search-input">Search birds, counties, and places</label>
+      <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
+             aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
+             placeholder="Search birds, counties, places">
+      <ul id="site-search-list" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+  </header>
+
+  <main>
+    <h1>California Counties</h1>
+    <p>Pick a county to see its notable sightings, rarest birds, and hotspots.</p>
+    <form id="county-filter">
+      <label for="county-name">Find a county</label>
+      <input id="county-name" type="search" autocomplete="off" placeholder="e.g. Marin">
+    </form>
+    <p id="status" aria-live="polite">Loading counties…</p>
+    <ul id="county-list" class="county-list"></ul>
+  </main>
+
+  <footer>
+    <p>Data from eBird (Cornell Lab of Ornithology) and eBird Status and Trends.
+      Map data &copy; OpenStreetMap contributors.</p>
+    <p id="review-note">CBRC review species: the California Bird Records Committee
+      reviews sightings of these species.</p>
+    <p>Last updated: <span id="updated">–</span></p>
+    <p>FlyWay California is free, with no ads.
+      <a href="about.html">About and sources</a></p>
+    <!-- TODO: contact link, once there's an address to use. -->
+    <p>Contact: coming soon</p>
+  </footer>
+</body>
+</html>

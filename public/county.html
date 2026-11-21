@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens.css">
+  <title>County · FlyWay California</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+        integrity="sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
+          integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous"></script>
+  <script type="module" src="county-page.js"></script>
+  <link rel="stylesheet" href="map.css">
+  <script type="module" src="nav.js"></script>
+</head>
+<body>
+  <header>
+    <a href="./" class="logo"><img src="images/loon.svg" alt="" width="49" height="24"><span>FlyWay California</span></a>
+    <nav aria-label="Main">
+      <a href="counties.html" aria-current="page">Counties</a>
+      <a href="birds.html">Species</a>
+    </nav>
+    <form id="site-search" role="search" action="./">
+      <label for="site-search-input">Search birds, counties, and places</label>
+      <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
+             aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
+             placeholder="Search birds, counties, places">
+      <ul id="site-search-list" role="listbox" aria-label="Suggestions" hidden></ul>
+    </form>
+  </header>
+
+  <main>
+    <p><a href="counties.html">All counties</a></p>
+    <h1 id="county-heading">County, notable sightings</h1>
+    <div id="days" role="group" aria-label="How far back to look"></div>
+    <p id="status" aria-live="polite">Loading sightings…</p>
+
+    <section>
+      <h2 id="map-heading">Notable sightings map</h2>
+      <div id="map" class="map map-large"></div>
+    </section>
+
+    <section>
+      <h2 id="top-heading">Rarest Birds This Week</h2>
+      <ol id="top"></ol>
+    </section>
+
+    <section id="hotspots-section" hidden>
+      <h2 id="hotspots-heading">Rare Bird Hotspots This Week</h2>
+      <ol id="hotspots"></ol>
+    </section>
+
+    <section>
+      <h2 id="tier-heading">Notable sightings, last 7 days</h2>
+      <ul id="tier-cards"></ul>
+      <div id="tier-list" aria-live="polite" hidden></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data from eBird (Cornell Lab of Ornithology) and eBird Status and Trends.
+      Map data &copy; OpenStreetMap contributors.</p>
+    <p id="review-note">CBRC review species: the California Bird Records Committee
+      reviews sightings of these species.</p>
+    <p>Last updated: <span id="updated">–</span></p>
+    <p>FlyWay California is free, with no ads.
+      <a href="about.html">About and sources</a></p>
+    <!-- TODO: contact link, once there's an address to use. -->
+    <p>Contact: coming soon</p>
+  </footer>
+</body>
+</html>

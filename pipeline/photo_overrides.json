@@ -1,0 +1,584 @@
+{
+  "aldfly": {
+    "name": "Alder Flycatcher",
+    "reason": "birds head cut off",
+    "photo_id": 53401919,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/53401919/medium.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Aitor, some rights reserved (CC BY), uploaded by Aitor",
+    "page": "https://www.inaturalist.org/photos/53401919"
+  },
+  "anhing": {
+    "name": "Anhinga",
+    "reason": "the birds head is cut off by the crop",
+    "photo_id": 248520585,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/248520585/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Antonio Amaral, some rights reserved (CC BY-NC), uploaded by Antonio Amaral",
+    "page": "https://www.inaturalist.org/photos/248520585",
+    "crop": "top"
+  },
+  "arcter": {
+    "name": "Arctic Tern",
+    "reason": "Too zoomed in, but could work,",
+    "photo_id": 548480978,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/548480978/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Elan Zucchetti, some rights reserved (CC BY-NC), uploaded by Elan Zucchetti",
+    "page": "https://www.inaturalist.org/photos/548480978"
+  },
+  "benthr": {
+    "name": "Bendire's Thrasher",
+    "reason": "Head cut off",
+    "photo_id": 5695310,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/5695310/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Steve Jones, some rights reserved (CC BY-NC), uploaded by Steve Jones",
+    "page": "https://www.inaturalist.org/photos/5695310"
+  },
+  "bkvshe": {
+    "name": "Black-vented Shearwater",
+    "reason": "would prefer one isolated bird in the photo",
+    "photo_id": 261943417,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/261943417/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Trent R. Stanley, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/261943417"
+  },
+  "blkfra": {
+    "name": "Black Francolin",
+    "reason": "no photo found automatically",
+    "taxon_id": 649,
+    "photo_id": 25979,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/25979/medium.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Tony Hisgett, some rights reserved (CC BY)",
+    "page": "https://www.inaturalist.org/photos/25979"
+  },
+  "blueth": {
+    "name": "Bluethroat",
+    "reason": "head cut off",
+    "photo_id": 9071,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/9071/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Vitaliy Khustochka, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/9071"
+  },
+  "bncfly": {
+    "name": "Brown-crested Flycatcher",
+    "reason": "Head cut off",
+    "photo_id": 223067,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/223067/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Greg Lasley, some rights reserved (CC BY-NC), uploaded by Greg Lasley",
+    "page": "https://www.inaturalist.org/photos/223067"
+  },
+  "bracor": {
+    "name": "Brandt's Cormorant",
+    "reason": "Change to side view photo",
+    "photo_id": 345629777,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/345629777/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Cyrus Li, some rights reserved (CC BY-NC), uploaded by Cyrus Li",
+    "page": "https://www.inaturalist.org/photos/345629777"
+  },
+  "brebla": {
+    "name": "Brewer's Blackbird",
+    "reason": "Head cut off",
+    "photo_id": 2053,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/2053/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Jamie Chavez, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/2053"
+  },
+  "bubfly": {
+    "name": "Buff-breasted Flycatcher",
+    "reason": "head cut off",
+    "photo_id": 307239191,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/307239191/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Ad Konings, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/307239191"
+  },
+  "buthum": {
+    "name": "Blue-throated Mountain-gem",
+    "reason": "wings cut off",
+    "photo_id": 190197,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/190197/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) BJ Stacey, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/190197"
+  },
+  "comgal1": {
+    "name": "Common Gallinule",
+    "reason": "Head cut off",
+    "photo_id": 30905992,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/30905992/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) uzun, some rights reserved (CC BY-NC), uploaded by uzun",
+    "page": "https://www.inaturalist.org/photos/30905992",
+    "crop": "top"
+  },
+  "comloo": {
+    "name": "Common Loon",
+    "reason": "We could keep this, but i would like a different photo showing off the one with the red eye.",
+    "photo_id": 2960972,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/2960972/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Ronald Kelley, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/2960972"
+  },
+  "coohaw": {
+    "name": "Cooper's Hawk",
+    "reason": "Head cut off",
+    "photo_id": 330903735,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/330903735/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Tom Murray, some rights reserved (CC BY-NC), uploaded by Tom Murray",
+    "page": "https://www.inaturalist.org/photos/330903735"
+  },
+  "dasfly": {
+    "name": "Dark-sided Flycatcher",
+    "reason": "Birds head not in frame",
+    "photo_id": 149908652,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/149908652/medium.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Ramnarayan K, some rights reserved (CC BY), uploaded by Ramnarayan K",
+    "page": "https://www.inaturalist.org/photos/149908652"
+  },
+  "dowwoo": {
+    "name": "Downy Woodpecker",
+    "reason": "head slightly cut off",
+    "photo_id": 107395752,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/107395752/medium.jpg",
+    "license": "cc-by-nc-sa",
+    "attribution": "(c) Mary Keim, some rights reserved (CC BY-NC-SA)",
+    "page": "https://www.inaturalist.org/photos/107395752"
+  },
+  "easkin": {
+    "name": "Eastern Kingbird",
+    "reason": "Head not in frame.",
+    "photo_id": 13231534,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/13231534/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Jason Headley, some rights reserved (CC BY-NC), uploaded by Jason Headley",
+    "page": "https://www.inaturalist.org/photos/13231534"
+  },
+  "easmea": {
+    "name": "Eastern Meadowlark",
+    "reason": "Birds head not in frame",
+    "photo_id": 390472977,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/390472977/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Alvaro Monter Pozos, some rights reserved (CC BY-NC), uploaded by Alvaro Monter Pozos",
+    "page": "https://www.inaturalist.org/photos/390472977"
+  },
+  "eurkes": {
+    "name": "Eurasian Kestrel",
+    "reason": "Birds head cropped",
+    "photo_id": 393845767,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/393845767/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Erik Eckstein, some rights reserved (CC BY-NC), uploaded by Erik Eckstein",
+    "page": "https://www.inaturalist.org/photos/393845767"
+  },
+  "gilfli": {
+    "name": "Gilded Flicker",
+    "reason": "head cut off",
+    "photo_id": 2921338,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/2921338/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Steven Mlodinow, some rights reserved (CC BY-NC), uploaded by Steven Mlodinow",
+    "page": "https://www.inaturalist.org/photos/2921338",
+    "crop": "top"
+  },
+  "gilwoo": {
+    "name": "Gila Woodpecker",
+    "reason": "head cut off",
+    "photo_id": 91138007,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/91138007/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Mark Dennis, some rights reserved (CC BY-NC), uploaded by Mark Dennis",
+    "page": "https://www.inaturalist.org/photos/91138007"
+  },
+  "goflea1": {
+    "name": "Golden-fronted Leafbird",
+    "reason": "Birds body not in view",
+    "photo_id": 344839738,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/344839738/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Anil Kumar Verma, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/344839738"
+  },
+  "gopwea1": {
+    "name": "Golden Palm Weaver",
+    "reason": "Birds head cut off",
+    "photo_id": 697806241,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/697806241/medium.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Zach Johnson, some rights reserved (CC BY)",
+    "page": "https://www.inaturalist.org/photos/697806241"
+  },
+  "grbani": {
+    "name": "Groove-billed Ani",
+    "reason": "Birds head not in frame",
+    "photo_id": 32407763,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/32407763/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) José Antonio Linage Espinosa, some rights reserved (CC BY-NC), uploaded by José Antonio Linage Espinosa",
+    "page": "https://www.inaturalist.org/photos/32407763",
+    "crop": "top"
+  },
+  "grccra1": {
+    "name": "Gray Crowned-Crane",
+    "reason": "Birds head cut off",
+    "photo_id": 261339008,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/261339008/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Wayne and Pam Osborn, some rights reserved (CC BY-NC), uploaded by Wayne and Pam Osborn",
+    "page": "https://www.inaturalist.org/photos/261339008",
+    "crop": "top"
+  },
+  "grepew": {
+    "name": "Greater Pewee",
+    "reason": "Birds head not in frame",
+    "photo_id": 57268206,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/57268206/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) guyincognito, some rights reserved (CC BY-NC), uploaded by guyincognito",
+    "page": "https://www.inaturalist.org/photos/57268206",
+    "crop": "top"
+  },
+  "grhowl": {
+    "name": "Great Horned Owl",
+    "reason": "Head cut off",
+    "photo_id": 14549085,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/14549085/medium.jpg",
+    "license": "cc-by-nc-sa",
+    "attribution": "(c) Paul G. Johnson, some rights reserved (CC BY-NC-SA), uploaded by Paul G. Johnson",
+    "page": "https://www.inaturalist.org/photos/14549085",
+    "crop": "top"
+  },
+  "grypep2": {
+    "name": "Gray Peacock-Pheasant",
+    "reason": "Birds head not in view",
+    "photo_id": 358491176,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/358491176/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Sam Hambly, some rights reserved (CC BY-NC), uploaded by Sam Hambly",
+    "page": "https://www.inaturalist.org/photos/358491176"
+  },
+  "gycthr": {
+    "name": "Gray-cheeked Thrush",
+    "reason": "Birds head not in frame",
+    "photo_id": 212025482,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/212025482/medium.jpg",
+    "license": "cc-by",
+    "attribution": "(c) John Rosford, some rights reserved (CC BY), uploaded by John Rosford",
+    "page": "https://www.inaturalist.org/photos/212025482",
+    "crop": "top"
+  },
+  "hamfly": {
+    "name": "Hammond's Flycatcher",
+    "reason": "head cut off",
+    "photo_id": 321184346,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/321184346/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Ad Konings, some rights reserved (CC BY-NC), uploaded by Ad Konings",
+    "page": "https://www.inaturalist.org/photos/321184346"
+  },
+  "heegul": {
+    "name": "Heermann's Gull",
+    "reason": "head cut off",
+    "photo_id": 61880537,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/61880537/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Omar Del Toro, some rights reserved (CC BY-NC), uploaded by Omar Del Toro",
+    "page": "https://www.inaturalist.org/photos/61880537"
+  },
+  "hooori": {
+    "name": "Hooded Oriole",
+    "reason": "head cut off",
+    "photo_id": 7747,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/7747/medium.jpg",
+    "license": "cc-by-nc-sa",
+    "attribution": "(c) Francesco Veronesi, some rights reserved (CC BY-NC-SA)",
+    "page": "https://www.inaturalist.org/photos/7747"
+  },
+  "hyamac1": {
+    "name": "Hyacinth Macaw",
+    "reason": "Birds head not in view, too zoomed in",
+    "photo_id": 216053787,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/216053787/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Michael Barth, some rights reserved (CC BY-NC), uploaded by Michael Barth",
+    "page": "https://www.inaturalist.org/photos/216053787"
+  },
+  "incdov": {
+    "name": "Inca Dove",
+    "reason": "Birds head not in frame",
+    "photo_id": 1442236,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/1442236/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Greg Lasley, some rights reserved (CC BY-NC), uploaded by Greg Lasley",
+    "page": "https://www.inaturalist.org/photos/1442236",
+    "crop": "top"
+  },
+  "laugul": {
+    "name": "Laughing Gull",
+    "reason": "Birds head not in frame",
+    "photo_id": 4196757,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/4196757/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) José Antonio Linage Espinosa, some rights reserved (CC BY-NC), uploaded by José Antonio Linage Espinosa",
+    "page": "https://www.inaturalist.org/photos/4196757",
+    "crop": "top"
+  },
+  "leafly": {
+    "name": "Least Flycatcher",
+    "reason": "Birds head slightly cropped",
+    "photo_id": 40417747,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/40417747/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Denis Doucet, some rights reserved (CC BY-NC), uploaded by Denis Doucet",
+    "page": "https://www.inaturalist.org/photos/40417747"
+  },
+  "leastp2": {
+    "name": "Ainley's Storm-Petrel",
+    "reason": "bird is not in focus, too many humans",
+    "photo_id": 458111750,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/458111750/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Ken Chamberlain, osa oikeuksista pidätetään (CC BY-NC), lähettänyt Ken Chamberlain",
+    "page": "https://www.inaturalist.org/photos/458111750",
+    "crop": "top"
+  },
+  "licpar": {
+    "name": "Lilac-crowned Amazon",
+    "reason": "Birds head not in frame",
+    "photo_id": 252786151,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/252786151/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Mexfant Maravilloso, some rights reserved (CC BY-NC), uploaded by Mexfant Maravilloso",
+    "page": "https://www.inaturalist.org/photos/252786151",
+    "crop": "top"
+  },
+  "lilmea2": {
+    "name": "Chihuahuan Meadowlark",
+    "reason": "not a clear photo of the bird, hard to ID",
+    "photo_id": 63071191,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/63071191/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Ad Konings, some rights reserved (CC BY-NC), uploaded by Ad Konings",
+    "page": "https://www.inaturalist.org/photos/63071191"
+  },
+  "litgul": {
+    "name": "Little Gull",
+    "reason": "Wing slightly out of frame, could keep though.",
+    "photo_id": 126657733,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/126657733/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) vyatka, some rights reserved (CC BY-NC), uploaded by vyatka",
+    "page": "https://www.inaturalist.org/photos/126657733",
+    "crop": "top"
+  },
+  "manshe": {
+    "name": "Manx Shearwater",
+    "reason": "no photo found automatically",
+    "taxon_id": 4093,
+    "photo_id": 111005655,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/111005655/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Andrew Thompson, some rights reserved (CC BY-NC), uploaded by Andrew Thompson",
+    "page": "https://www.inaturalist.org/photos/111005655"
+  },
+  "mitpar": {
+    "name": "Mitred Parakeet",
+    "reason": "Photo is too zoomed in the head, want one with more body.",
+    "photo_id": 509419990,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/509419990/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Leonardo Zoat, some rights reserved (CC BY-NC), uploaded by Leonardo Zoat",
+    "page": "https://www.inaturalist.org/photos/509419990",
+    "crop": "top"
+  },
+  "neocor": {
+    "name": "Neotropic Cormorant",
+    "reason": "Photo is too zoomed in the head, want one with more body.",
+    "photo_id": 256314790,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/256314790/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Daniel Onea, some rights reserved (CC BY-NC), uploaded by Daniel Onea",
+    "page": "https://www.inaturalist.org/photos/256314790"
+  },
+  "ovenbi1": {
+    "name": "Ovenbird",
+    "reason": "Slightly too zoomed in , head is getting cut off.",
+    "photo_id": 342279813,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/342279813/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) cgbb2004, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/342279813"
+  },
+  "pacpar2": {
+    "name": "Pacific Parrotlet",
+    "reason": "Birds head not in view",
+    "photo_id": 138583603,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/138583603/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Nelson Apolo, some rights reserved (CC BY-NC), uploaded by Nelson Apolo",
+    "page": "https://www.inaturalist.org/photos/138583603",
+    "crop": "top"
+  },
+  "rinduc": {
+    "name": "Ring-necked Duck",
+    "reason": "change to side view",
+    "photo_id": 483225152,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/483225152/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Pierce Louderback, some rights reserved (CC BY-NC), uploaded by Pierce Louderback",
+    "page": "https://www.inaturalist.org/photos/483225152"
+  },
+  "shtalb": {
+    "name": "Short-tailed Albatross",
+    "reason": "Birds head not in frame",
+    "photo_id": 121907718,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/121907718/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Tony Morris, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/121907718"
+  },
+  "silphe": {
+    "name": "Silver Pheasant",
+    "reason": "Show one bird, not two, one of the birds heads is cut off",
+    "photo_id": 113575272,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/113575272/medium.jpg",
+    "license": "cc-by-nc-sa",
+    "attribution": "(c) biodivinf, some rights reserved (CC BY-NC-SA)",
+    "page": "https://www.inaturalist.org/photos/113575272"
+  },
+  "spoowl": {
+    "name": "Spotted Owl",
+    "reason": "Head cut off",
+    "photo_id": 46120955,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/46120955/medium.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Laurel Meredyk, some rights reserved (CC BY), uploaded by Laurel Meredyk",
+    "page": "https://www.inaturalist.org/photos/46120955"
+  },
+  "stepet": {
+    "name": "Stejneger's Petrel",
+    "reason": "no iNaturalist photo with an allowed license; Macaulay Library photo, self-hosted",
+    "taxon_id": 4062,
+    "photo_id": "ML204982431",
+    "url": "/images/photos/stepet.jpg",
+    "license": "macaulay",
+    "attribution": "(c) David Fisher, Macaulay Library",
+    "page": "https://macaulaylibrary.org/asset/204982431",
+    "crop": "top"
+  },
+  "taifly1": {
+    "name": "Taiga Flycatcher",
+    "reason": "Head not in frame",
+    "photo_id": 63254921,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/63254921/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Sahana M, some rights reserved (CC BY-NC), uploaded by Sahana M",
+    "page": "https://www.inaturalist.org/photos/63254921"
+  },
+  "thbkin": {
+    "name": "Thick-billed Kingbird",
+    "reason": "Slightly too zoomed in, head cut off.",
+    "photo_id": 30902418,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/30902418/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) uzun, some rights reserved (CC BY-NC), uploaded by uzun",
+    "page": "https://www.inaturalist.org/photos/30902418",
+    "crop": "top"
+  },
+  "trokin": {
+    "name": "Tropical Kingbird",
+    "reason": "Head cut off",
+    "photo_id": 121584504,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/121584504/medium.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Esteban Poveda, some rights reserved (CC BY), uploaded by Esteban Poveda",
+    "page": "https://www.inaturalist.org/photos/121584504"
+  },
+  "ventro1": {
+    "name": "Venezuelan Troupial",
+    "reason": "no photo found automatically",
+    "taxon_id": 9345,
+    "photo_id": 256174086,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/256174086/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Daniel Onea, some rights reserved (CC BY-NC), uploaded by Daniel Onea",
+    "page": "https://www.inaturalist.org/photos/256174086"
+  },
+  "virwar": {
+    "name": "Virginia's Warbler",
+    "reason": "Very low contrast photo.",
+    "photo_id": 310191490,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/310191490/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Ad Konings, some rights reserved (CC BY-NC), uploaded by Ad Konings",
+    "page": "https://www.inaturalist.org/photos/310191490"
+  },
+  "wesfly": {
+    "name": "Western Flycatcher",
+    "reason": "Head cut off",
+    "photo_id": 107471638,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/107471638/medium.jpeg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Stephen John Davies, some rights reserved (CC BY-NC), uploaded by Stephen John Davies",
+    "page": "https://www.inaturalist.org/photos/107471638"
+  },
+  "whhwoo": {
+    "name": "White-headed Woodpecker",
+    "reason": "Head cut off",
+    "photo_id": 430921766,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/430921766/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) jtajax, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/430921766",
+    "crop": "top"
+  },
+  "willet3": {
+    "name": "Prairie Willet",
+    "reason": "no photo found automatically",
+    "taxon_id": 512290,
+    "photo_id": 350581358,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/350581358/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) scottjstoner, some rights reserved (CC BY-NC)",
+    "page": "https://www.inaturalist.org/photos/350581358"
+  },
+  "woosto": {
+    "name": "Wood Stork",
+    "reason": "head slightly cut off.",
+    "photo_id": 87252334,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/87252334/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) chezasaurus, some rights reserved (CC BY-NC), uploaded by chezasaurus",
+    "page": "https://www.inaturalist.org/photos/87252334",
+    "crop": "top"
+  },
+  "ycnher": {
+    "name": "Yellow-crowned Night Heron",
+    "reason": "Feathers out, want one with a more typical view.",
+    "photo_id": 21781884,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/21781884/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Scott Buckel, some rights reserved (CC BY-NC), uploaded by Scott Buckel",
+    "page": "https://www.inaturalist.org/photos/21781884"
+  },
+  "yebcuc": {
+    "name": "Yellow-billed Cuckoo",
+    "reason": "too zoomed in.",
+    "photo_id": 161893839,
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/161893839/medium.jpg",
+    "license": "cc-by-nc",
+    "attribution": "(c) Susan Elliott, some rights reserved (CC BY-NC), uploaded by Susan Elliott",
+    "page": "https://www.inaturalist.org/photos/161893839"
+  }
+}

@@ -1,0 +1,904 @@
+ebird_code,common_name,scientific_name,order,family
+abetow,Abert's Towhee,Melozone aberti,Passeriformes,New World Sparrows
+acowoo,Acorn Woodpecker,Melanerpes formicivorus,Piciformes,Woodpeckers
+afcdov1,African Collared-Dove,Streptopelia roseogrisea,Columbiformes,Pigeons and Doves
+darter3,African Darter,Anhinga rufa,Suliformes,Anhingas
+afffin,African Firefinch,Lagonosticta rubricata,Passeriformes,Waxbills and Allies
+sacibi2,African Sacred Ibis,Threskiornis aethiopicus,Pelecaniformes,Ibises and Spoonbills
+leastp2,Ainley's Storm-Petrel,Hydrobates cheimomnestes,Procellariiformes,Northern Storm-Petrels
+aldfly,Alder Flycatcher,Empidonax alnorum,Passeriformes,Tyrant Flycatchers
+alepar2,Alexandrine Parakeet,Psittacula eupatria,Psittaciformes,Old World Parrots
+allhum,Allen's Hummingbird,Selasphorus sasin,Apodiformes,Hummingbirds
+ameavo,American Avocet,Recurvirostra americana,Charadriiformes,Stilts and Avocets
+brnowl,American Barn Owl,Tyto furcata,Strigiformes,Barn-Owls
+amebit,American Bittern,Botaurus lentiginosus,Pelecaniformes,"Herons, Egrets, and Bitterns"
+ambduc,American Black Duck,Anas rubripes,Anseriformes,"Ducks, Geese, and Waterfowl"
+y00475,American Coot,Fulica americana,Gruiformes,"Rails, Gallinules, and Coots"
+amecro,American Crow,Corvus brachyrhynchos,Passeriformes,"Crows, Jays, and Magpies"
+amedip,American Dipper,Cinclus mexicanus,Passeriformes,Dippers
+grefla2,American Flamingo,Phoenicopterus ruber,Phoenicopteriformes,Flamingos
+amgplo,American Golden-Plover,Pluvialis dominica,Charadriiformes,Plovers and Lapwings
+amegfi,American Goldfinch,Spinus tristis,Passeriformes,"Finches, Euphonias, and Allies"
+norgos,American Goshawk,Astur atricapillus,Accipitriformes,"Hawks, Eagles, and Kites"
+amhgul1,American Herring Gull,Larus smithsonianus,Charadriiformes,"Gulls, Terns, and Skimmers"
+amekes,American Kestrel,Falco sparverius,Falconiformes,Falcons and Caracaras
+ameoys,American Oystercatcher,Haematopus palliatus,Charadriiformes,Oystercatchers
+amepip,American Pipit,Anthus rubescens,Passeriformes,Wagtails and Pipits
+amered,American Redstart,Setophaga ruticilla,Passeriformes,New World Warblers
+amerob,American Robin,Turdus migratorius,Passeriformes,Thrushes and Allies
+amtspa,American Tree Sparrow,Spizelloides arborea,Passeriformes,New World Sparrows
+amwpel,American White Pelican,Pelecanus erythrorhynchos,Pelecaniformes,Pelicans
+amewig,American Wigeon,Mareca americana,Anseriformes,"Ducks, Geese, and Waterfowl"
+amewoo,American Woodcock,Scolopax minor,Charadriiformes,Sandpipers and Allies
+ancmur,Ancient Murrelet,Synthliboramphus antiquus,Charadriiformes,"Auks, Murres, and Puffins"
+anhing,Anhinga,Anhinga anhinga,Suliformes,Anhingas
+annhum,Anna's Hummingbird,Calypte anna,Apodiformes,Hummingbirds
+arcloo,Arctic Loon,Gavia arctica,Gaviiformes,Loons
+arcter,Arctic Tern,Sterna paradisaea,Charadriiformes,"Gulls, Terns, and Skimmers"
+arcwar1,Arctic Warbler,Phylloscopus borealis,Passeriformes,Leaf Warblers
+astfly,Ash-throated Flycatcher,Myiarchus cinerascens,Passeriformes,Tyrant Flycatchers
+asspet,Ashy Storm-Petrel,Hydrobates homochroa,Procellariiformes,Northern Storm-Petrels
+cintit13,Asian Tit,Parus cinereus,Passeriformes,"Tits, Chickadees, and Titmice"
+baitea,Baikal Teal,Sibirionetta formosa,Anseriformes,"Ducks, Geese, and Waterfowl"
+baisan,Baird's Sandpiper,Calidris bairdii,Charadriiformes,Sandpipers and Allies
+baispa,Baird's Sparrow,Centronyx bairdii,Passeriformes,New World Sparrows
+baleag,Bald Eagle,Haliaeetus leucocephalus,Accipitriformes,"Hawks, Eagles, and Kites"
+balmyn1,Bali Myna,Leucopsar rothschildi,Passeriformes,Starlings
+balori,Baltimore Oriole,Icterus galbula,Passeriformes,Troupials and Allies
+barpet,Band-rumped Storm-Petrel,Hydrobates castro,Procellariiformes,Northern Storm-Petrels
+batpig1,Band-tailed Pigeon,Patagioenas fasciata,Columbiformes,Pigeons and Doves
+banswa,Bank Swallow,Riparia riparia,Passeriformes,Swallows
+bahgoo,Bar-headed Goose,Anser indicus,Anseriformes,"Ducks, Geese, and Waterfowl"
+batgod,Bar-tailed Godwit,Limosa lapponica,Charadriiformes,Sandpipers and Allies
+barswa,Barn Swallow,Hirundo rustica,Passeriformes,Swallows
+bargoo,Barnacle Goose,Branta leucopsis,Anseriformes,"Ducks, Geese, and Waterfowl"
+brdowl,Barred Owl,Strix varia,Strigiformes,Owls
+bargol,Barrow's Goldeneye,Bucephala islandica,Anseriformes,"Ducks, Geese, and Waterfowl"
+babwar,Bay-breasted Warbler,Setophaga castanea,Passeriformes,New World Warblers
+belgul,Belcher's Gull,Larus belcheri,Charadriiformes,"Gulls, Terns, and Skimmers"
+belspa2,Bell's Sparrow,Artemisiospiza belli,Passeriformes,New World Sparrows
+belvir,Bell's Vireo,Vireo bellii,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+belkin1,Belted Kingfisher,Megaceryle alcyon,Coraciiformes,Kingfishers
+benthr,Bendire's Thrasher,Toxostoma bendirei,Passeriformes,Mockingbirds and Thrashers
+bewwre,Bewick's Wren,Thryomanes bewickii,Passeriformes,Wrens
+blkfra,Black Francolin,Francolinus francolinus,Galliformes,"Pheasants, Grouse, and Allies"
+blkoys,Black Oystercatcher,Haematopus bachmani,Charadriiformes,Oystercatchers
+blkpho,Black Phoebe,Sayornis nigricans,Passeriformes,Tyrant Flycatchers
+blkrai,Black Rail,Laterallus jamaicensis,Gruiformes,"Rails, Gallinules, and Coots"
+bkrfin,Black Rosy-Finch,Leucosticte atrata,Passeriformes,"Finches, Euphonias, and Allies"
+blksco2,Black Scoter,Melanitta americana,Anseriformes,"Ducks, Geese, and Waterfowl"
+blasis1,Black Siskin,Spinus atratus,Passeriformes,"Finches, Euphonias, and Allies"
+blkski,Black Skimmer,Rynchops niger,Charadriiformes,"Gulls, Terns, and Skimmers"
+bkspet,Black Storm-Petrel,Hydrobates melania,Procellariiformes,Northern Storm-Petrels
+blkswa,Black Swan,Cygnus atratus,Anseriformes,"Ducks, Geese, and Waterfowl"
+blkswi,Black Swift,Cypseloides niger,Apodiformes,Swifts
+blkter,Black Tern,Chlidonias niger,Charadriiformes,"Gulls, Terns, and Skimmers"
+blktur,Black Turnstone,Arenaria melanocephala,Charadriiformes,Sandpipers and Allies
+blkvul,Black Vulture,Coragyps atratus,Cathartiformes,New World Vultures
+bawwar,Black-and-white Warbler,Mniotilta varia,Passeriformes,New World Warblers
+blbori1,Black-backed Oriole,Icterus abeillei,Passeriformes,Troupials and Allies
+bkbwoo,Black-backed Woodpecker,Picoides arcticus,Piciformes,Woodpeckers
+bkbplo,Black-bellied Plover,Pluvialis squatarola,Charadriiformes,Plovers and Lapwings
+bbwduc,Black-bellied Whistling-Duck,Dendrocygna autumnalis,Anseriformes,"Ducks, Geese, and Waterfowl"
+bkbcuc,Black-billed Cuckoo,Coccyzus erythropthalmus,Cuculiformes,Cuckoos
+bkbmag1,Black-billed Magpie,Pica hudsonia,Passeriformes,"Crows, Jays, and Magpies"
+bkcchi,Black-capped Chickadee,Poecile atricapillus,Passeriformes,"Tits, Chickadees, and Titmice"
+blcpar1,Black-capped Parakeet,Pyrrhura rupicola,Psittaciformes,New World and African Parrots
+bkchum,Black-chinned Hummingbird,Archilochus alexandri,Apodiformes,Hummingbirds
+bkcspa,Black-chinned Sparrow,Spizella atrogularis,Passeriformes,New World Sparrows
+bcnher,Black-crowned Night Heron,Nycticorax nycticorax,Pelecaniformes,"Herons, Egrets, and Bitterns"
+bkfalb,Black-footed Albatross,Phoebastria nigripes,Procellariiformes,Albatrosses
+bkhgro,Black-headed Grosbeak,Pheucticus melanocephalus,Passeriformes,Cardinals and Allies
+bkhgul,Black-headed Gull,Chroicocephalus ridibundus,Charadriiformes,"Gulls, Terns, and Skimmers"
+blhwea1,Black-headed Weaver,Ploceus melanocephalus,Passeriformes,Weavers and Allies
+bklkit,Black-legged Kittiwake,Rissa tridactyla,Charadriiformes,"Gulls, Terns, and Skimmers"
+bknsti,Black-necked Stilt,Himantopus mexicanus,Charadriiformes,Stilts and Avocets
+blnswa2,Black-necked Swan,Cygnus melancoryphus,Anseriformes,"Ducks, Geese, and Waterfowl"
+bkrwax,Black-rumped Waxbill,Estrilda troglodytes,Passeriformes,Waxbills and Allies
+bktgna,Black-tailed Gnatcatcher,Polioptila melanura,Passeriformes,Gnatcatchers
+bktgul,Black-tailed Gull,Larus crassirostris,Charadriiformes,"Gulls, Terns, and Skimmers"
+btbwar,Black-throated Blue Warbler,Setophaga caerulescens,Passeriformes,New World Warblers
+bltcan1,Black-throated Canary,Crithagra atrogularis,Passeriformes,"Finches, Euphonias, and Allies"
+btywar,Black-throated Gray Warbler,Setophaga nigrescens,Passeriformes,New World Warblers
+btnwar,Black-throated Green Warbler,Setophaga virens,Passeriformes,New World Warblers
+btmjay,Black-throated Magpie-Jay,Cyanocorax colliei,Passeriformes,"Crows, Jays, and Magpies"
+bktspa,Black-throated Sparrow,Amphispiza bilineata,Passeriformes,New World Sparrows
+bkvshe,Black-vented Shearwater,Puffinus opisthomelas,Procellariiformes,Shearwaters and Petrels
+blwbis1,Black-winged Bishop,Euplectes hordeaceus,Passeriformes,Weavers and Allies
+bkbwar,Blackburnian Warbler,Setophaga fusca,Passeriformes,New World Warblers
+bkpwar,Blackpoll Warbler,Setophaga striata,Passeriformes,New World Warblers
+bludac1,Blue Dacnis,Dacnis cayana,Passeriformes,Tanagers and Allies
+blugrb1,Blue Grosbeak,Passerina caerulea,Passeriformes,Cardinals and Allies
+blujay,Blue Jay,Cyanocitta cristata,Passeriformes,"Crows, Jays, and Magpies"
+blumoc,Blue Mockingbird,Melanotis caerulescens,Passeriformes,Mockingbirds and Thrashers
+burthr,Blue Rock-Thrush,Monticola solitarius,Passeriformes,Old World Flycatchers
+baymac,Blue-and-yellow Macaw,Ara ararauna,Psittaciformes,New World and African Parrots
+blbgra1,Blue-black Grassquit,Volatinia jacarina,Passeriformes,Tanagers and Allies
+blbqua1,Blue-breasted Quail,Synoicus chinensis,Galliformes,"Pheasants, Grouse, and Allies"
+blccor1,Blue-capped Cordonbleu,Uraeginthus cyanocephalus,Passeriformes,Waxbills and Allies
+bucpar,Blue-crowned Parakeet,Thectocercus acuticaudatus,Psittaciformes,New World and African Parrots
+bfoboo,Blue-footed Booby,Sula nebouxii,Suliformes,Boobies and Gannets
+buggna,Blue-gray Gnatcatcher,Polioptila caerulea,Passeriformes,Gnatcatchers
+bugtan,Blue-gray Tanager,Thraupis episcopus,Passeriformes,Tanagers and Allies
+buhvir,Blue-headed Vireo,Vireo solitarius,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+buthum,Blue-throated Mountain-gem,Lampornis clemenciae,Apodiformes,Hummingbirds
+buwtea,Blue-winged Teal,Spatula discors,Anseriformes,"Ducks, Geese, and Waterfowl"
+buwwar,Blue-winged Warbler,Vermivora cyanoptera,Passeriformes,New World Warblers
+blueth,Bluethroat,Luscinia svecica,Passeriformes,Old World Flycatchers
+boboli,Bobolink,Dolichonyx oryzivorus,Passeriformes,Troupials and Allies
+bohwax,Bohemian Waxwing,Bombycilla garrulus,Passeriformes,Waxwings
+bongul,Bonaparte's Gull,Chroicocephalus philadelphia,Charadriiformes,"Gulls, Terns, and Skimmers"
+boupar2,Bourke's Parrot,Neopsephotus bourkii,Psittaciformes,Old World Parrots
+brasta1,Brahminy Starling,Sturnia pagodarum,Passeriformes,Starlings
+brambl,Brambling,Fringilla montifringilla,Passeriformes,"Finches, Euphonias, and Allies"
+bracor,Brandt's Cormorant,Urile penicillatus,Suliformes,Cormorants and Shags
+brant,Brant,Branta bernicla,Anseriformes,"Ducks, Geese, and Waterfowl"
+brebla,Brewer's Blackbird,Euphagus cyanocephalus,Passeriformes,Troupials and Allies
+brespa,Brewer's Sparrow,Spizella breweri,Passeriformes,New World Sparrows
+briter1,Bridled Tern,Onychoprion anaethetus,Charadriiformes,"Gulls, Terns, and Skimmers"
+brtcur,Bristle-thighed Curlew,Numenius tahitiensis,Charadriiformes,Sandpipers and Allies
+brbhum,Broad-billed Hummingbird,Cynanthus latirostris,Apodiformes,Hummingbirds
+brthum,Broad-tailed Hummingbird,Selasphorus platycercus,Apodiformes,Hummingbirds
+btpwhy1,Broad-tailed Paradise-Whydah,Vidua obtusa,Passeriformes,Whydahs and Indigobirds
+brwhaw,Broad-winged Hawk,Buteo platypterus,Accipitriformes,"Hawks, Eagles, and Kites"
+broman1,Bronze Mannikin,Spermestes cucullata,Passeriformes,Waxbills and Allies
+brocow,Bronzed Cowbird,Molothrus aeneus,Passeriformes,Troupials and Allies
+brncre,Brown Creeper,Certhia americana,Passeriformes,Treecreepers
+brnpel,Brown Pelican,Pelecanus occidentalis,Pelecaniformes,Pelicans
+broqua1,Brown Quail,Synoicus ypsilophorus,Galliformes,"Pheasants, Grouse, and Allies"
+brnshr,Brown Shrike,Lanius cristatus,Passeriformes,Shrikes
+brnthr,Brown Thrasher,Toxostoma rufum,Passeriformes,Mockingbirds and Thrashers
+bncfly,Brown-crested Flycatcher,Myiarchus tyrannulus,Passeriformes,Tyrant Flycatchers
+bnhcow,Brown-headed Cowbird,Molothrus ater,Passeriformes,Troupials and Allies
+budger,Budgerigar,Melopsittacus undulatus,Psittaciformes,Old World Parrots
+bubfly,Buff-breasted Flycatcher,Empidonax fulvifrons,Passeriformes,Tyrant Flycatchers
+bubsan,Buff-breasted Sandpiper,Calidris subruficollis,Charadriiformes,Sandpipers and Allies
+bucnig,Buff-collared Nightjar,Antrostomus ridgwayi,Caprimulgiformes,Nightjars and Allies
+buffle,Bufflehead,Bucephala albeola,Anseriformes,"Ducks, Geese, and Waterfowl"
+bulshe,Buller's Shearwater,Ardenna bulleri,Procellariiformes,Shearwaters and Petrels
+bulori,Bullock's Oriole,Icterus bullockii,Passeriformes,Troupials and Allies
+bulpet,Bulwer's Petrel,Bulweria bulwerii,Procellariiformes,Shearwaters and Petrels
+burowl,Burrowing Owl,Athene cunicularia,Strigiformes,Owls
+burpar,Burrowing Parakeet,Cyanoliseus patagonus,Psittaciformes,New World and African Parrots
+bushti,Bushtit,Psaltriparus minimus,Passeriformes,Long-tailed Tits
+cacgoo1,Cackling Goose,Branta hutchinsii,Anseriformes,"Ducks, Geese, and Waterfowl"
+cacwre,Cactus Wren,Campylorhynchus brunneicapillus,Passeriformes,Wrens
+calcon,California Condor,Gymnogyps californianus,Cathartiformes,New World Vultures
+calgna,California Gnatcatcher,Polioptila californica,Passeriformes,Gnatcatchers
+calgul,California Gull,Larus californicus,Charadriiformes,"Gulls, Terns, and Skimmers"
+calqua,California Quail,Callipepla californica,Galliformes,New World Quail
+cowscj1,California Scrub-Jay,Aphelocoma californica,Passeriformes,"Crows, Jays, and Magpies"
+calthr,California Thrasher,Toxostoma redivivum,Passeriformes,Mockingbirds and Thrashers
+caltow,California Towhee,Melozone crissalis,Passeriformes,New World Sparrows
+calhum,Calliope Hummingbird,Selasphorus calliope,Apodiformes,Hummingbirds
+cangoo,Canada Goose,Branta canadensis,Anseriformes,"Ducks, Geese, and Waterfowl"
+gryjay,Canada Jay,Perisoreus canadensis,Passeriformes,"Crows, Jays, and Magpies"
+canwar,Canada Warbler,Cardellina canadensis,Passeriformes,New World Warblers
+canvas,Canvasback,Aythya valisineria,Anseriformes,"Ducks, Geese, and Waterfowl"
+canwre,Canyon Wren,Catherpes mexicanus,Passeriformes,Wrens
+camwar,Cape May Warbler,Setophaga tigrina,Passeriformes,New World Warblers
+caster1,Caspian Tern,Hydroprogne caspia,Charadriiformes,"Gulls, Terns, and Skimmers"
+redcro9,Cassia Crossbill,Loxia sinesciuris,Passeriformes,"Finches, Euphonias, and Allies"
+casauk,Cassin's Auklet,Ptychoramphus aleuticus,Charadriiformes,"Auks, Murres, and Puffins"
+casfin,Cassin's Finch,Haemorhous cassinii,Passeriformes,"Finches, Euphonias, and Allies"
+caskin,Cassin's Kingbird,Tyrannus vociferans,Passeriformes,Tyrant Flycatchers
+casspa,Cassin's Sparrow,Peucaea cassinii,Passeriformes,New World Sparrows
+casvir,Cassin's Vireo,Vireo cassinii,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+cavswa,Cave Swallow,Petrochelidon fulva,Passeriformes,Swallows
+cedwax,Cedar Waxwing,Bombycilla cedrorum,Passeriformes,Waxwings
+cerwar,Cerulean Warbler,Setophaga cerulea,Passeriformes,New World Warblers
+shyalb2,Chatham Albatross,Thalassarche eremita,Procellariiformes,Albatrosses
+chemun,Chestnut Munia,Lonchura atricapilla,Passeriformes,Waxbills and Allies
+chbchi,Chestnut-backed Chickadee,Poecile rufescens,Passeriformes,"Tits, Chickadees, and Titmice"
+chclon,Chestnut-collared Longspur,Calcarius ornatus,Passeriformes,Longspurs and Snow Buntings
+chswar,Chestnut-sided Warbler,Setophaga pensylvanica,Passeriformes,New World Warblers
+lilmea2,Chihuahuan Meadowlark,Sturnella lilianae,Passeriformes,Troupials and Allies
+chifla1,Chilean Flamingo,Phoenicopterus chilensis,Phoenicopteriformes,Flamingos
+chiwig1,Chiloe Wigeon,Mareca sibilatrix,Anseriformes,"Ducks, Geese, and Waterfowl"
+chiswi,Chimney Swift,Chaetura pelagica,Apodiformes,Swifts
+chispa,Chipping Sparrow,Spizella passerina,Passeriformes,New World Sparrows
+chwwid,Chuck-will's-widow,Antrostomus carolinensis,Caprimulgiformes,Nightjars and Allies
+chukar,Chukar,Alectoris chukar,Galliformes,"Pheasants, Grouse, and Allies"
+cintea,Cinnamon Teal,Spatula cyanoptera,Anseriformes,"Ducks, Geese, and Waterfowl"
+whcsee2,Cinnamon-rumped Seedeater,Sporophila torqueola,Passeriformes,Tanagers and Allies
+citwag,Citrine Wagtail,Motacilla citreola,Passeriformes,Wagtails and Pipits
+clagre,Clark's Grebe,Aechmophorus clarkii,Podicipediformes,Grebes
+clanut,Clark's Nutcracker,Nucifraga columbiana,Passeriformes,"Crows, Jays, and Magpies"
+clcspa,Clay-colored Sparrow,Spizella pallida,Passeriformes,New World Sparrows
+cliswa,Cliff Swallow,Petrochelidon pyrrhonota,Passeriformes,Swallows
+cockat,Cockatiel,Nymphicus hollandicus,Psittaciformes,Cockatoos
+cocboo1,Cocos Booby,Sula brewsteri,Suliformes,Boobies and Gannets
+comblh1,Common Black Hawk,Buteogallus anthracinus,Accipitriformes,"Hawks, Eagles, and Kites"
+comcra,Common Crane,Grus grus,Gruiformes,Cranes
+comcuc,Common Cuckoo,Cuculus canorus,Cuculiformes,Cuckoos
+comeid,Common Eider,Somateria mollissima,Anseriformes,"Ducks, Geese, and Waterfowl"
+comgal1,Common Gallinule,Gallinula galeata,Gruiformes,"Rails, Gallinules, and Coots"
+comgol,Common Goldeneye,Bucephala clangula,Anseriformes,"Ducks, Geese, and Waterfowl"
+comgra,Common Grackle,Quiscalus quiscula,Passeriformes,Troupials and Allies
+comgre,Common Greenshank,Tringa nebularia,Charadriiformes,Sandpipers and Allies
+cogdov,Common Ground Dove,Columbina passerina,Columbiformes,Pigeons and Doves
+mewgul,Common Gull,Larus canus,Charadriiformes,"Gulls, Terns, and Skimmers"
+hilmyn,Common Hill Myna,Gracula religiosa,Passeriformes,Starlings
+comloo,Common Loon,Gavia immer,Gaviiformes,Loons
+commer,Common Merganser,Mergus merganser,Anseriformes,"Ducks, Geese, and Waterfowl"
+commur,Common Murre,Uria aalge,Charadriiformes,"Auks, Murres, and Puffins"
+commyn,Common Myna,Acridotheres tristis,Passeriformes,Starlings
+comnig,Common Nighthawk,Chordeiles minor,Caprimulgiformes,Nightjars and Allies
+ostric2,Common Ostrich,Struthio camelus,Struthioniformes,Ostriches
+compoc,Common Pochard,Aythya ferina,Anseriformes,"Ducks, Geese, and Waterfowl"
+compoo,Common Poorwill,Phalaenoptilus nuttallii,Caprimulgiformes,Nightjars and Allies
+comqua1,Common Quail,Coturnix coturnix,Galliformes,"Pheasants, Grouse, and Allies"
+comrav,Common Raven,Corvus corax,Passeriformes,"Crows, Jays, and Magpies"
+corplo,Common Ringed Plover,Charadrius hiaticula,Charadriiformes,Plovers and Lapwings
+comros,Common Rosefinch,Carpodacus erythrinus,Passeriformes,"Finches, Euphonias, and Allies"
+blksco1,Common Scoter,Melanitta nigra,Anseriformes,"Ducks, Geese, and Waterfowl"
+comshe,Common Shelduck,Tadorna tadorna,Anseriformes,"Ducks, Geese, and Waterfowl"
+comsni,Common Snipe,Gallinago gallinago,Charadriiformes,Sandpipers and Allies
+comswi,Common Swift,Apus apus,Apodiformes,Swifts
+comter,Common Tern,Sterna hirundo,Charadriiformes,"Gulls, Terns, and Skimmers"
+comwax,Common Waxbill,Estrilda astrild,Passeriformes,Waxbills and Allies
+comyel,Common Yellowthroat,Geothlypis trichas,Passeriformes,New World Warblers
+conwar,Connecticut Warbler,Oporornis agilis,Passeriformes,New World Warblers
+coopet,Cook's Petrel,Pterodroma cookii,Procellariiformes,Shearwaters and Petrels
+coohaw,Cooper's Hawk,Astur cooperii,Accipitriformes,"Hawks, Eagles, and Kites"
+corshe1,Cory's Shearwater,Calonectris borealis,Procellariiformes,Shearwaters and Petrels
+coshum,Costa's Hummingbird,Calypte costae,Apodiformes,Hummingbirds
+coukin,Couch's Kingbird,Tyrannus couchii,Passeriformes,Tyrant Flycatchers
+cramur,Craveri's Murrelet,Synthliboramphus craveri,Charadriiformes,"Auks, Murres, and Puffins"
+creauk,Crested Auklet,Aethia cristatella,Charadriiformes,"Auks, Murres, and Puffins"
+y00678,Crested Caracara,Caracara plancus,Falconiformes,Falcons and Caracaras
+creduc1,Crested Duck,Lophonetta specularioides,Anseriformes,"Ducks, Geese, and Waterfowl"
+cremyn,Crested Myna,Acridotheres cristatellus,Passeriformes,Starlings
+creoro1,Crested Oropendola,Psarocolius decumanus,Passeriformes,Troupials and Allies
+crepig1,Crested Pigeon,Ocyphaps lophotes,Columbiformes,Pigeons and Doves
+criros2,Crimson Rosella,Platycercus elegans,Psittaciformes,Old World Parrots
+crrwax1,Crimson-rumped Waxbill,Estrilda rhodopyga,Passeriformes,Waxbills and Allies
+crithr,Crissal Thrasher,Toxostoma crissale,Passeriformes,Mockingbirds and Thrashers
+cursan,Curlew Sandpiper,Calidris ferruginea,Charadriiformes,Sandpipers and Allies
+cubthr,Curve-billed Thrasher,Toxostoma curvirostre,Passeriformes,Mockingbirds and Thrashers
+cutthr1,Cut-throat Finch,Amadina fasciata,Passeriformes,Waxbills and Allies
+daejun,Dark-eyed Junco,Junco hyemalis,Passeriformes,New World Sparrows
+dasfly,Dark-sided Flycatcher,Muscicapa sibirica,Passeriformes,Old World Flycatchers
+demcra1,Demoiselle Crane,Grus virgo,Gruiformes,Cranes
+diadov1,Diamond Dove,Geopelia cuneata,Columbiformes,Pigeons and Doves
+diafir1,Diamond Firetail,Stagonopleura guttata,Passeriformes,Waxbills and Allies
+dickci,Dickcissel,Spiza americana,Passeriformes,Cardinals and Allies
+dobfin1,Double-barred Finch,Stizoptera bichenovii,Passeriformes,Waxbills and Allies
+doccor,Double-crested Cormorant,Nannopterum auritum,Suliformes,Cormorants and Shags
+dowwoo,Downy Woodpecker,Dryobates pubescens,Piciformes,Woodpeckers
+dunlin,Dunlin,Calidris alpina,Charadriiformes,Sandpipers and Allies
+dusfly,Dusky Flycatcher,Empidonax oberholseri,Passeriformes,Tyrant Flycatchers
+duswar,Dusky Warbler,Phylloscopus fuscatus,Passeriformes,Leaf Warblers
+ducfly,Dusky-capped Flycatcher,Myiarchus tuberculifer,Passeriformes,Tyrant Flycatchers
+eargre,Eared Grebe,Podiceps nigricollis,Podicipediformes,Grebes
+easblu,Eastern Bluebird,Sialia sialis,Passeriformes,Thrushes and Allies
+easkin,Eastern Kingbird,Tyrannus tyrannus,Passeriformes,Tyrant Flycatchers
+easmea,Eastern Meadowlark,Sturnella magna,Passeriformes,Troupials and Allies
+easpho,Eastern Phoebe,Sayornis phoebe,Passeriformes,Tyrant Flycatchers
+easros1,Eastern Rosella,Platycercus eximius,Psittaciformes,Old World Parrots
+eawvir1,Eastern Warbling Vireo,Vireo gilvus,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+easwpw1,Eastern Whip-poor-will,Antrostomus vociferus,Caprimulgiformes,Nightjars and Allies
+eawpew,Eastern Wood-Pewee,Contopus virens,Passeriformes,Tyrant Flycatchers
+eaywag,Eastern Yellow Wagtail,Motacilla tschutschensis,Passeriformes,Wagtails and Pipits
+egygoo,Egyptian Goose,Alopochen aegyptiaca,Anseriformes,"Ducks, Geese, and Waterfowl"
+eleter1,Elegant Tern,Thalasseus elegans,Charadriiformes,"Gulls, Terns, and Skimmers"
+elfowl,Elf Owl,Micrathene whitneyi,Strigiformes,Owls
+empgoo,Emperor Goose,Anser canagicus,Anseriformes,"Ducks, Geese, and Waterfowl"
+emu1,Emu,Dromaius novaehollandiae,Casuariiformes,Cassowaries and Emu
+epaori1,Epaulet Oriole,Icterus cayanensis,Passeriformes,Troupials and Allies
+eurbla,Eurasian Blackbird,Turdus merula,Passeriformes,Thrushes and Allies
+blutit,Eurasian Blue Tit,Cyanistes caeruleus,Passeriformes,"Tits, Chickadees, and Titmice"
+eucdov,Eurasian Collared-Dove,Streptopelia decaocto,Columbiformes,Pigeons and Doves
+eurdot,Eurasian Dotterel,Eudromias morinellus,Charadriiformes,Plovers and Lapwings
+eurkes,Eurasian Kestrel,Falco tinnunculus,Falconiformes,Falcons and Caracaras
+eurmag1,Eurasian Magpie,Pica pica,Passeriformes,"Crows, Jays, and Magpies"
+skylar,Eurasian Skylark,Alauda arvensis,Passeriformes,Larks
+eutspa,Eurasian Tree Sparrow,Passer montanus,Passeriformes,Old World Sparrows
+whimbr5,Eurasian Whimbrel,Numenius phaeopus,Charadriiformes,Sandpipers and Allies
+eurwig,Eurasian Wigeon,Mareca penelope,Anseriformes,"Ducks, Geese, and Waterfowl"
+eurwry,Eurasian Wryneck,Jynx torquilla,Piciformes,Woodpeckers
+eurgol,European Goldfinch,Carduelis carduelis,Passeriformes,"Finches, Euphonias, and Allies"
+eurgre1,European Greenfinch,Chloris chloris,Passeriformes,"Finches, Euphonias, and Allies"
+eurser1,European Serin,Serinus serinus,Passeriformes,"Finches, Euphonias, and Allies"
+eursta,European Starling,Sturnus vulgaris,Passeriformes,Starlings
+evegro,Evening Grosbeak,Hesperiphona vespertina,Passeriformes,"Finches, Euphonias, and Allies"
+eyethr,Eyebrowed Thrush,Turdus obscurus,Passeriformes,Thrushes and Allies
+falduc,Falcated Duck,Mareca falcata,Anseriformes,"Ducks, Geese, and Waterfowl"
+ferhaw,Ferruginous Hawk,Buteo regalis,Accipitriformes,"Hawks, Eagles, and Kites"
+fiespa,Field Sparrow,Spizella pusilla,Passeriformes,New World Sparrows
+fislov1,Fischer's Lovebird,Agapornis fischeri,Psittaciformes,Old World Parrots
+flaowl,Flammulated Owl,Psiloscops flammeolus,Strigiformes,Owls
+flfshe,Flesh-footed Shearwater,Ardenna carneipes,Procellariiformes,Shearwaters and Petrels
+fotfly,Fork-tailed Flycatcher,Tyrannus savana,Passeriformes,Tyrant Flycatchers
+ftspet,Fork-tailed Storm-Petrel,Hydrobates furcatus,Procellariiformes,Northern Storm-Petrels
+forter,Forster's Tern,Sterna forsteri,Charadriiformes,"Gulls, Terns, and Skimmers"
+foxspa,Fox Sparrow,Passerella iliaca,Passeriformes,New World Sparrows
+fragul,Franklin's Gull,Leucophaeus pipixcan,Charadriiformes,"Gulls, Terns, and Skimmers"
+fuwduc,Fulvous Whistling-Duck,Dendrocygna bicolor,Anseriformes,"Ducks, Geese, and Waterfowl"
+gadwal,Gadwall,Mareca strepera,Anseriformes,"Ducks, Geese, and Waterfowl"
+gamqua,Gambel's Quail,Callipepla gambelii,Galliformes,New World Quail
+gargan,Garganey,Spatula querquedula,Anseriformes,"Ducks, Geese, and Waterfowl"
+gilwoo,Gila Woodpecker,Melanerpes uropygialis,Piciformes,Woodpeckers
+gilfli,Gilded Flicker,Colaptes chrysoides,Piciformes,Woodpeckers
+glagul,Glaucous Gull,Larus hyperboreus,Charadriiformes,"Gulls, Terns, and Skimmers"
+glwgul,Glaucous-winged Gull,Larus glaucescens,Charadriiformes,"Gulls, Terns, and Skimmers"
+gloibi,Glossy Ibis,Plegadis falcinellus,Pelecaniformes,Ibises and Spoonbills
+goleag,Golden Eagle,Aquila chrysaetos,Accipitriformes,"Hawks, Eagles, and Kites"
+gopwea1,Golden Palm Weaver,Ploceus bojeri,Passeriformes,Weavers and Allies
+golphe,Golden Pheasant,Chrysolophus pictus,Galliformes,"Pheasants, Grouse, and Allies"
+gchwar,Golden-cheeked Warbler,Setophaga chrysoparia,Passeriformes,New World Warblers
+gockin,Golden-crowned Kinglet,Regulus satrapa,Passeriformes,Kinglets
+gocspa,Golden-crowned Sparrow,Zonotrichia atricapilla,Passeriformes,New World Sparrows
+goflea1,Golden-fronted Leafbird,Chloropsis aurifrons,Passeriformes,Leafbirds
+gowwar,Golden-winged Warbler,Vermivora chrysoptera,Passeriformes,New World Warblers
+goufin3,Gouldian Finch,Chloebia gouldiae,Passeriformes,Waxbills and Allies
+grawar,Grace's Warbler,Setophaga graciae,Passeriformes,New World Warblers
+graspa,Grasshopper Sparrow,Ammodramus savannarum,Passeriformes,New World Sparrows
+gryfin1,Grassland Yellow-Finch,Sicalis luteola,Passeriformes,Tanagers and Allies
+grycat,Gray Catbird,Dumetella carolinensis,Passeriformes,Mockingbirds and Thrashers
+grccra1,Gray Crowned-Crane,Balearica regulorum,Gruiformes,Cranes
+gryfly,Gray Flycatcher,Empidonax wrightii,Passeriformes,Tyrant Flycatchers
+grygab1,Gray Go-away-bird,Crinifer concolor,Musophagiformes,Turacos
+gryhaw2,Gray Hawk,Buteo plagiatus,Accipitriformes,"Hawks, Eagles, and Kites"
+grepar,Gray Parrot,Psittacus erithacus,Psittaciformes,New World and African Parrots
+grypar,Gray Partridge,Perdix perdix,Galliformes,"Pheasants, Grouse, and Allies"
+grypep2,Gray Peacock-Pheasant,Polyplectron bicalcaratum,Galliformes,"Pheasants, Grouse, and Allies"
+grsfly1,Gray Silky-flycatcher,Ptiliogonys cinereus,Passeriformes,Silky-flycatchers
+grathr1,Gray Thrasher,Toxostoma cinereum,Passeriformes,Mockingbirds and Thrashers
+gryvir,Gray Vireo,Vireo vicinior,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+grywag,Gray Wagtail,Motacilla cinerea,Passeriformes,Wagtails and Pipits
+gycthr,Gray-cheeked Thrush,Catharus minimus,Passeriformes,Thrushes and Allies
+eurgol2,Gray-crowned Goldfinch,Carduelis caniceps,Passeriformes,"Finches, Euphonias, and Allies"
+gcrfin,Gray-crowned Rosy-Finch,Leucosticte tephrocotis,Passeriformes,"Finches, Euphonias, and Allies"
+grwpet2,Gray-faced Petrel,Pterodroma gouldi,Procellariiformes,Shearwaters and Petrels
+gyttat1,Gray-tailed Tattler,Tringa brevipes,Charadriiformes,Sandpipers and Allies
+gragoo,Graylag Goose,Anser anser,Anseriformes,"Ducks, Geese, and Waterfowl"
+gbbgul,Great Black-backed Gull,Larus marinus,Charadriiformes,"Gulls, Terns, and Skimmers"
+grbher3,Great Blue Heron,Ardea herodias,Pelecaniformes,"Herons, Egrets, and Bitterns"
+grcfly,Great Crested Flycatcher,Myiarchus crinitus,Passeriformes,Tyrant Flycatchers
+greegr,Great Egret,Ardea alba,Pelecaniformes,"Herons, Egrets, and Bitterns"
+grefri,Great Frigatebird,Fregata minor,Suliformes,Frigatebirds
+grgowl,Great Gray Owl,Strix nebulosa,Strigiformes,Owls
+grhowl,Great Horned Owl,Bubo virginianus,Strigiformes,Owls
+grekis,Great Kiskadee,Pitangus sulphuratus,Passeriformes,Tyrant Flycatchers
+greshe,Great Shearwater,Ardenna gravis,Procellariiformes,Shearwaters and Petrels
+gretit1,Great Tit,Parus major,Passeriformes,"Tits, Chickadees, and Titmice"
+grtgra,Great-tailed Grackle,Quiscalus mexicanus,Passeriformes,Troupials and Allies
+grefla3,Greater Flamingo,Phoenicopterus roseus,Phoenicopteriformes,Flamingos
+grepew,Greater Pewee,Contopus pertinax,Passeriformes,Tyrant Flycatchers
+greroa,Greater Roadrunner,Geococcyx californianus,Cuculiformes,Cuckoos
+saggro,Greater Sage-Grouse,Centrocercus urophasianus,Galliformes,"Pheasants, Grouse, and Allies"
+grsplo,Greater Sand-Plover,Anarhynchus leschenaultii,Charadriiformes,Plovers and Lapwings
+gresca,Greater Scaup,Aythya marila,Anseriformes,"Ducks, Geese, and Waterfowl"
+gwfgoo,Greater White-fronted Goose,Anser albifrons,Anseriformes,"Ducks, Geese, and Waterfowl"
+greyel,Greater Yellowlegs,Tringa melanoleuca,Charadriiformes,Sandpipers and Allies
+grnher,Green Heron,Butorides virescens,Pelecaniformes,"Herons, Egrets, and Bitterns"
+grnjay,Green Jay,Cyanocorax yncas,Passeriformes,"Crows, Jays, and Magpies"
+grnpar,Green Parakeet,Psittacara holochlorus,Psittaciformes,New World and African Parrots
+rinphe2,Green Pheasant,Phasianus versicolor,Galliformes,"Pheasants, Grouse, and Allies"
+gncpar,Green-cheeked Parakeet,Pyrrhura molinae,Psittaciformes,New World and African Parrots
+gnttow,Green-tailed Towhee,Pipilo chlorurus,Passeriformes,New World Sparrows
+grwpyt1,Green-winged Pytilia,Pytilia melba,Passeriformes,Waxbills and Allies
+gnwtea,Green-winged Teal,Anas crecca,Anseriformes,"Ducks, Geese, and Waterfowl"
+grbani,Groove-billed Ani,Crotophaga sulcirostris,Cuculiformes,Cuckoos
+xanmur1,Guadalupe Murrelet,Synthliboramphus hypoleucus,Charadriiformes,"Auks, Murres, and Puffins"
+gubter2,Gull-billed Tern,Gelochelidon nilotica,Charadriiformes,"Gulls, Terns, and Skimmers"
+gyrfal,Gyrfalcon,Falco rusticolus,Falconiformes,Falcons and Caracaras
+haiwoo,Hairy Woodpecker,Leuconotopicus villosus,Piciformes,Woodpeckers
+hamfly,Hammond's Flycatcher,Empidonax hammondii,Passeriformes,Tyrant Flycatchers
+harduc,Harlequin Duck,Histrionicus histrionicus,Anseriformes,"Ducks, Geese, and Waterfowl"
+hrshaw,Harris's Hawk,Parabuteo unicinctus,Accipitriformes,"Hawks, Eagles, and Kites"
+harspa,Harris's Sparrow,Zonotrichia querula,Passeriformes,New World Sparrows
+hawgoo,Hawaiian Goose,Branta sandvicensis,Anseriformes,"Ducks, Geese, and Waterfowl"
+hawpet1,Hawaiian Petrel,Pterodroma sandwichensis,Procellariiformes,Shearwaters and Petrels
+hawfin,Hawfinch,Coccothraustes coccothraustes,Passeriformes,"Finches, Euphonias, and Allies"
+heegul,Heermann's Gull,Larus heermanni,Charadriiformes,"Gulls, Terns, and Skimmers"
+helgui,Helmeted Guineafowl,Numida meleagris,Galliformes,Guineafowl
+heptan,Hepatic Tanager,Piranga flava,Passeriformes,Cardinals and Allies
+herthr,Hermit Thrush,Catharus guttatus,Passeriformes,Thrushes and Allies
+herwar,Hermit Warbler,Setophaga occidentalis,Passeriformes,New World Warblers
+hoomer,Hooded Merganser,Lophodytes cucullatus,Anseriformes,"Ducks, Geese, and Waterfowl"
+hooori,Hooded Oriole,Icterus cucullatus,Passeriformes,Troupials and Allies
+hoosis1,Hooded Siskin,Spinus magellanicus,Passeriformes,"Finches, Euphonias, and Allies"
+hoowar,Hooded Warbler,Setophaga citrina,Passeriformes,New World Warblers
+horgre,Horned Grebe,Podiceps auritus,Podicipediformes,Grebes
+horlar,Horned Lark,Eremophila alpestris,Passeriformes,Larks
+horpuf,Horned Puffin,Fratercula corniculata,Charadriiformes,"Auks, Murres, and Puffins"
+houcro1,House Crow,Corvus splendens,Passeriformes,"Crows, Jays, and Magpies"
+houfin,House Finch,Haemorhous mexicanus,Passeriformes,"Finches, Euphonias, and Allies"
+houspa,House Sparrow,Passer domesticus,Passeriformes,Old World Sparrows
+hudgod,Hudsonian Godwit,Limosa haemastica,Charadriiformes,Sandpipers and Allies
+whimbr3,Hudsonian Whimbrel,Numenius hudsonicus,Charadriiformes,Sandpipers and Allies
+hutvir,Hutton's Vireo,Vireo huttoni,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+hyamac1,Hyacinth Macaw,Anodorhynchus hyacinthinus,Psittaciformes,New World and African Parrots
+y00478,Iceland Gull,Larus glaucoides,Charadriiformes,"Gulls, Terns, and Skimmers"
+incdov,Inca Dove,Columbina inca,Columbiformes,Pigeons and Doves
+compea,Indian Peafowl,Pavo cristatus,Galliformes,"Pheasants, Grouse, and Allies"
+indsil,Indian Silverbill,Euodice malabarica,Passeriformes,Waxbills and Allies
+indwhe1,Indian White-eye,Zosterops palpebrosus,Passeriformes,"White-eyes, Yuhinas, and Allies"
+indbun,Indigo Bunting,Passerina cyanea,Passeriformes,Cardinals and Allies
+comcan,Island Canary,Serinus canaria,Passeriformes,"Finches, Euphonias, and Allies"
+issjay,Island Scrub-Jay,Aphelocoma insularis,Passeriformes,"Crows, Jays, and Magpies"
+ivogul,Ivory Gull,Pagophila eburnea,Charadriiformes,"Gulls, Terns, and Skimmers"
+jacsni,Jack Snipe,Lymnocryptes minimus,Charadriiformes,Sandpipers and Allies
+janpar1,Jandaya Parakeet,Aratinga jandaya,Psittaciformes,New World and African Parrots
+japqua,Japanese Quail,Coturnix japonica,Galliformes,"Pheasants, Grouse, and Allies"
+joupet,Jouanin's Petrel,Bulweria fallax,Procellariiformes,Shearwaters and Petrels
+juntit1,Juniper Titmouse,Baeolophus ridgwayi,Passeriformes,"Tits, Chickadees, and Titmice"
+kalphe,Kalij Pheasant,Lophura leucomelanos,Galliformes,"Pheasants, Grouse, and Allies"
+kebtou1,Keel-billed Toucan,Ramphastos sulfuratus,Piciformes,Toucans
+kelgul,Kelp Gull,Larus dominicanus,Charadriiformes,"Gulls, Terns, and Skimmers"
+kenwar,Kentucky Warbler,Geothlypis formosa,Passeriformes,New World Warblers
+kerpet,Kermadec Petrel,Pterodroma neglecta,Procellariiformes,Shearwaters and Petrels
+killde,Killdeer,Charadrius vociferus,Charadriiformes,Plovers and Lapwings
+kineid,King Eider,Somateria spectabilis,Anseriformes,"Ducks, Geese, and Waterfowl"
+kitmur,Kittlitz's Murrelet,Brachyramphus brevirostris,Charadriiformes,"Auks, Murres, and Puffins"
+labwoo,Ladder-backed Woodpecker,Dryobates scalaris,Piciformes,Woodpeckers
+laaphe1,Lady Amherst's Pheasant,Chrysolophus amherstiae,Galliformes,"Pheasants, Grouse, and Allies"
+lanwar,Lanceolated Warbler,Locustella lanceolata,Passeriformes,Grassbirds and Allies
+laplon,Lapland Longspur,Calcarius lapponicus,Passeriformes,Longspurs and Snow Buntings
+larbun,Lark Bunting,Calamospiza melanocorys,Passeriformes,New World Sparrows
+larspa,Lark Sparrow,Chondestes grammacus,Passeriformes,New World Sparrows
+laudov1,Laughing Dove,Spilopelia senegalensis,Columbiformes,Pigeons and Doves
+laugul,Laughing Gull,Leucophaeus atricilla,Charadriiformes,"Gulls, Terns, and Skimmers"
+lawgol,Lawrence's Goldfinch,Spinus lawrencei,Passeriformes,"Finches, Euphonias, and Allies"
+layalb,Laysan Albatross,Phoebastria immutabilis,Procellariiformes,Albatrosses
+lazbun,Lazuli Bunting,Passerina amoena,Passeriformes,Cardinals and Allies
+lecspa,LeConte's Sparrow,Ammospiza leconteii,Passeriformes,New World Sparrows
+lecthr,LeConte's Thrasher,Toxostoma lecontei,Passeriformes,Mockingbirds and Thrashers
+lcspet,Leach's Storm-Petrel,Hydrobates leucorhous,Procellariiformes,Northern Storm-Petrels
+leaauk,Least Auklet,Aethia pusilla,Charadriiformes,"Auks, Murres, and Puffins"
+leabit,Least Bittern,Botaurus exilis,Pelecaniformes,"Herons, Egrets, and Bitterns"
+leafly,Least Flycatcher,Empidonax minimus,Passeriformes,Tyrant Flycatchers
+leagre,Least Grebe,Tachybaptus dominicus,Podicipediformes,Grebes
+leasan,Least Sandpiper,Calidris minutilla,Charadriiformes,Sandpipers and Allies
+lsspet,Least Storm-Petrel,Hydrobates microsoma,Procellariiformes,Northern Storm-Petrels
+leater1,Least Tern,Sternula antillarum,Charadriiformes,"Gulls, Terns, and Skimmers"
+lbbgul,Lesser Black-backed Gull,Larus fuscus,Charadriiformes,"Gulls, Terns, and Skimmers"
+lesfla1,Lesser Flamingo,Phoeniconaias minor,Phoenicopteriformes,Flamingos
+lesfri,Lesser Frigatebird,Fregata ariel,Suliformes,Frigatebirds
+lesgol,Lesser Goldfinch,Spinus psaltria,Passeriformes,"Finches, Euphonias, and Allies"
+lesnig,Lesser Nighthawk,Chordeiles acutipennis,Caprimulgiformes,Nightjars and Allies
+lessca,Lesser Scaup,Aythya affinis,Anseriformes,"Ducks, Geese, and Waterfowl"
+lesyel,Lesser Yellowlegs,Tringa flavipes,Charadriiformes,Sandpipers and Allies
+lewwoo,Lewis's Woodpecker,Melanerpes lewis,Piciformes,Woodpeckers
+limalb1,Light-mantled Albatross,Phoebetria palpebrata,Procellariiformes,Albatrosses
+librol2,Lilac-breasted Roller,Coracias caudatus,Coraciiformes,Rollers
+licpar,Lilac-crowned Amazon,Amazona finschi,Psittaciformes,New World and African Parrots
+linspa,Lincoln's Sparrow,Melospiza lincolnii,Passeriformes,New World Sparrows
+libher,Little Blue Heron,Egretta caerulea,Pelecaniformes,"Herons, Egrets, and Bitterns"
+litbun,Little Bunting,Schoeniclus pusillus,Passeriformes,Old World Buntings
+litcur,Little Curlew,Numenius minutus,Charadriiformes,Sandpipers and Allies
+litgul,Little Gull,Hydrocoloeus minutus,Charadriiformes,"Gulls, Terns, and Skimmers"
+litsti,Little Stint,Calidris minuta,Charadriiformes,Sandpipers and Allies
+logshr,Loggerhead Shrike,Lanius ludovicianus,Passeriformes,Shrikes
+lobcur,Long-billed Curlew,Numenius americanus,Charadriiformes,Sandpipers and Allies
+lobdow,Long-billed Dowitcher,Limnodromus scolopaceus,Charadriiformes,Sandpipers and Allies
+lobmur,Long-billed Murrelet,Brachyramphus perdix,Charadriiformes,"Auks, Murres, and Puffins"
+loeowl,Long-eared Owl,Asio otus,Strigiformes,Owls
+lotduc,Long-tailed Duck,Clangula hyemalis,Anseriformes,"Ducks, Geese, and Waterfowl"
+lotjae,Long-tailed Jaeger,Stercorarius longicaudus,Charadriiformes,Skuas and Jaegers
+lotsti,Long-toed Stint,Calidris subminuta,Charadriiformes,Sandpipers and Allies
+louwat,Louisiana Waterthrush,Parkesia motacilla,Passeriformes,New World Warblers
+lucwar,Lucy's Warbler,Leiothlypis luciae,Passeriformes,New World Warblers
+macwar,MacGillivray's Warbler,Geothlypis tolmiei,Passeriformes,New World Warblers
+magfri,Magnificent Frigatebird,Fregata magnificens,Suliformes,Frigatebirds
+magwar,Magnolia Warbler,Setophaga magnolia,Passeriformes,New World Warblers
+mallar3,Mallard,Anas platyrhynchos,Anseriformes,"Ducks, Geese, and Waterfowl"
+manduc,Mandarin Duck,Aix galericulata,Anseriformes,"Ducks, Geese, and Waterfowl"
+manwar1,Mangrove Yellow Warbler,Setophaga petechia,Passeriformes,New World Warblers
+manshe,Manx Shearwater,Puffinus puffinus,Procellariiformes,Shearwaters and Petrels
+margod,Marbled Godwit,Limosa fedoa,Charadriiformes,Sandpipers and Allies
+marmur,Marbled Murrelet,Brachyramphus marmoratus,Charadriiformes,"Auks, Murres, and Puffins"
+mabpar,Maroon-bellied Parakeet,Pyrrhura frontalis,Psittaciformes,New World and African Parrots
+marsan,Marsh Sandpiper,Tringa stagnatilis,Charadriiformes,Sandpipers and Allies
+masboo,Masked Booby,Sula dactylatra,Suliformes,Boobies and Gannets
+meapar,Mealy Amazon,Amazona farinosa,Psittaciformes,New World and African Parrots
+merlin,Merlin,Falco columbarius,Falconiformes,Falcons and Caracaras
+mexduc,Mexican Duck,Anas diazi,Anseriformes,"Ducks, Geese, and Waterfowl"
+grnvie1,Mexican Violetear,Colibri thalassinus,Apodiformes,Hummingbirds
+souwpw1,Mexican Whip-poor-will,Antrostomus arizonae,Caprimulgiformes,Nightjars and Allies
+meypar1,Meyer's Parrot,Poicephalus meyeri,Psittaciformes,New World and African Parrots
+milmac,Military Macaw,Ara militaris,Psittaciformes,New World and African Parrots
+miskit,Mississippi Kite,Ictinia mississippiensis,Accipitriformes,"Hawks, Eagles, and Kites"
+mitpar,Mitred Parakeet,Psittacara mitratus,Psittaciformes,New World and African Parrots
+monpar,Monk Parakeet,Myiopsitta monachus,Psittaciformes,New World and African Parrots
+motpet,Mottled Petrel,Pterodroma inexpectata,Procellariiformes,Shearwaters and Petrels
+moublu,Mountain Bluebird,Sialia currucoides,Passeriformes,Thrushes and Allies
+mouchi,Mountain Chickadee,Poecile gambeli,Passeriformes,"Tits, Chickadees, and Titmice"
+mouplo,Mountain Plover,Anarhynchus montanus,Charadriiformes,Plovers and Lapwings
+mouqua,Mountain Quail,Oreortyx pictus,Galliformes,New World Quail
+moudov,Mourning Dove,Zenaida macroura,Columbiformes,Pigeons and Doves
+mouwar,Mourning Warbler,Geothlypis philadelphia,Passeriformes,New World Warblers
+murpet,Murphy's Petrel,Pterodroma ultima,Procellariiformes,Shearwaters and Petrels
+musduc,Muscovy Duck,Cairina moschata,Anseriformes,"Ducks, Geese, and Waterfowl"
+mutswa,Mute Swan,Cygnus olor,Anseriformes,"Ducks, Geese, and Waterfowl"
+namdov1,Namaqua Dove,Oena capensis,Columbiformes,Pigeons and Doves
+bkhpar,Nanday Parakeet,Aratinga nenday,Psittaciformes,New World and African Parrots
+naswar,Nashville Warbler,Leiothlypis ruficapilla,Passeriformes,New World Warblers
+nazboo1,Nazca Booby,Sula granti,Suliformes,Boobies and Gannets
+nstspa,Nelson's Sparrow,Ammospiza nelsoni,Passeriformes,New World Sparrows
+neocor,Neotropic Cormorant,Nannopterum brasilianum,Suliformes,Cormorants and Shags
+towshe2,Newell's Shearwater,Puffinus newelli,Procellariiformes,Shearwaters and Petrels
+norbob,Northern Bobwhite,Colinus virginianus,Galliformes,New World Quail
+norcar,Northern Cardinal,Cardinalis cardinalis,Passeriformes,Cardinals and Allies
+norfli,Northern Flicker,Colaptes auratus,Piciformes,Woodpeckers
+norful,Northern Fulmar,Fulmarus glacialis,Procellariiformes,Shearwaters and Petrels
+norgan,Northern Gannet,Morus bassanus,Suliformes,Boobies and Gannets
+norhar2,Northern Harrier,Circus hudsonius,Accipitriformes,"Hawks, Eagles, and Kites"
+houwre,Northern House Wren,Troglodytes aedon,Passeriformes,Wrens
+normoc,Northern Mockingbird,Mimus polyglottos,Passeriformes,Mockingbirds and Thrashers
+norpar,Northern Parula,Setophaga americana,Passeriformes,New World Warblers
+norpin,Northern Pintail,Anas acuta,Anseriformes,"Ducks, Geese, and Waterfowl"
+nopowl,Northern Pygmy-Owl,Glaucidium gnoma,Strigiformes,Owls
+orabis1,Northern Red Bishop,Euplectes franciscanus,Passeriformes,Weavers and Allies
+nrwswa,Northern Rough-winged Swallow,Stelgidopteryx serripennis,Passeriformes,Swallows
+nswowl,Northern Saw-whet Owl,Aegolius acadicus,Strigiformes,Owls
+norsho,Northern Shoveler,Spatula clypeata,Anseriformes,"Ducks, Geese, and Waterfowl"
+norshr4,Northern Shrike,Lanius borealis,Passeriformes,Shrikes
+norwat,Northern Waterthrush,Parkesia noveboracensis,Passeriformes,New World Warblers
+norwhe,Northern Wheatear,Oenanthe oenanthe,Passeriformes,Old World Flycatchers
+yelwar1,Northern Yellow Warbler,Setophaga aestiva,Passeriformes,New World Warblers
+nutwoo,Nuttall's Woodpecker,Dryobates nuttallii,Piciformes,Woodpeckers
+nutfly1,Nutting's Flycatcher,Myiarchus nuttingi,Passeriformes,Tyrant Flycatchers
+oaktit,Oak Titmouse,Baeolophus inornatus,Passeriformes,"Tits, Chickadees, and Titmice"
+olbpip,Olive-backed Pipit,Anthus hodgsoni,Passeriformes,Wagtails and Pipits
+olsfly,Olive-sided Flycatcher,Contopus cooperi,Passeriformes,Tyrant Flycatchers
+orbbun1,Orange-breasted Bunting,Passerina leclancherii,Passeriformes,Cardinals and Allies
+orcwax,Orange-cheeked Waxbill,Estrilda melpoda,Passeriformes,Waxbills and Allies
+orcwar,Orange-crowned Warbler,Leiothlypis celata,Passeriformes,New World Warblers
+orfpar,Orange-fronted Parakeet,Eupsittula canicularis,Psittaciformes,New World and African Parrots
+orwpar,Orange-winged Amazon,Amazona amazonica,Psittaciformes,New World and African Parrots
+orcori,Orchard Oriole,Icterus spurius,Passeriformes,Troupials and Allies
+origre,Oriental Greenfinch,Chloris sinica,Passeriformes,"Finches, Euphonias, and Allies"
+orphor1,Oriental Pied-Hornbill,Anthracoceros albirostris,Bucerotiformes,Hornbills
+ortdov,Oriental Turtle-Dove,Streptopelia orientalis,Columbiformes,Pigeons and Doves
+osprey,Osprey,Pandion haliaetus,Accipitriformes,Osprey
+ovenbi1,Ovenbird,Seiurus aurocapilla,Passeriformes,New World Warblers
+pagplo,Pacific Golden-Plover,Pluvialis fulva,Charadriiformes,Plovers and Lapwings
+pacloo,Pacific Loon,Gavia pacifica,Gaviiformes,Loons
+pacpar2,Pacific Parrotlet,Forpus coelestis,Psittaciformes,New World and African Parrots
+pacwre1,Pacific Wren,Nannus pacificus,Passeriformes,Wrens
+paibun,Painted Bunting,Passerina ciris,Passeriformes,Cardinals and Allies
+paired,Painted Whitestart,Myioborus pictus,Passeriformes,New World Warblers
+palwar,Palm Warbler,Setophaga palmarum,Passeriformes,New World Warblers
+parauk,Parakeet Auklet,Aethia psittacula,Charadriiformes,"Auks, Murres, and Puffins"
+parjae,Parasitic Jaeger,Stercorarius parasiticus,Charadriiformes,Skuas and Jaegers
+parpet1,Parkinson's Petrel,Procellaria parkinsoni,Procellariiformes,Shearwaters and Petrels
+pabsee1,Parrot-billed Seedeater,Sporophila peruviana,Passeriformes,Tanagers and Allies
+peakit1,Pearl Kite,Gampsonyx swainsonii,Accipitriformes,"Hawks, Eagles, and Kites"
+pecsan,Pectoral Sandpiper,Calidris melanotos,Charadriiformes,Sandpipers and Allies
+pelcor,Pelagic Cormorant,Urile pelagicus,Suliformes,Cormorants and Shags
+perfal,Peregrine Falcon,Falco peregrinus,Falconiformes,Falcons and Caracaras
+phaino,Phainopepla,Phainopepla nitens,Passeriformes,Silky-flycatchers
+phivir,Philadelphia Vireo,Vireo philadelphicus,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+piecro1,Pied Crow,Corvus albus,Passeriformes,"Crows, Jays, and Magpies"
+pibgre,Pied-billed Grebe,Podilymbus podiceps,Podicipediformes,Grebes
+piggui,Pigeon Guillemot,Cepphus columba,Charadriiformes,"Auks, Murres, and Puffins"
+pilwoo,Pileated Woodpecker,Dryocopus pileatus,Piciformes,Woodpeckers
+pitwhy,Pin-tailed Whydah,Vidua macroura,Passeriformes,Whydahs and Indigobirds
+pingro,Pine Grosbeak,Pinicola enucleator,Passeriformes,"Finches, Euphonias, and Allies"
+pinsis,Pine Siskin,Spinus pinus,Passeriformes,"Finches, Euphonias, and Allies"
+pinwar,Pine Warbler,Setophaga pinus,Passeriformes,New World Warblers
+pibpel1,Pink-backed Pelican,Pelecanus rufescens,Pelecaniformes,Pelicans
+pifshe,Pink-footed Shearwater,Ardenna creatopus,Procellariiformes,Shearwaters and Petrels
+pinjay,Pinyon Jay,Gymnorhinus cyanocephalus,Passeriformes,"Crows, Jays, and Magpies"
+pipplo,Piping Plover,Charadrius melodus,Charadriiformes,Plovers and Lapwings
+plsvir,Plumbeous Vireo,Vireo plumbeus,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+pomjae,Pomarine Jaeger,Stercorarius pomarinus,Charadriiformes,Skuas and Jaegers
+prafal,Prairie Falcon,Falco mexicanus,Falconiformes,Falcons and Caracaras
+prawar,Prairie Warbler,Setophaga discolor,Passeriformes,New World Warblers
+willet3,Prairie Willet,Tringa inornata,Charadriiformes,Sandpipers and Allies
+prowar,Prothonotary Warbler,Protonotaria citrea,Passeriformes,New World Warblers
+purfin,Purple Finch,Haemorhous purpureus,Passeriformes,"Finches, Euphonias, and Allies"
+purgal2,Purple Gallinule,Porphyrio martinica,Gruiformes,"Rails, Gallinules, and Coots"
+purmar,Purple Martin,Progne subis,Passeriformes,Swallows
+pursan,Purple Sandpiper,Calidris maritima,Charadriiformes,Sandpipers and Allies
+pugsta1,Purple Starling,Lamprotornis purpureus,Passeriformes,Starlings
+pygnut,Pygmy Nuthatch,Sitta pygmaea,Passeriformes,Nuthatches
+pyrrhu,Pyrrhuloxia,Cardinalis sinuatus,Passeriformes,Cardinals and Allies
+railor5,Rainbow Lorikeet,Trichoglossus moluccanus,Psittaciformes,Old World Parrots
+redava,Red Avadavat,Amandava amandava,Passeriformes,Waxbills and Allies
+redcro,Red Crossbill,Loxia curvirostra,Passeriformes,"Finches, Euphonias, and Allies"
+redjun,Red Junglefowl,Gallus gallus,Galliformes,"Pheasants, Grouse, and Allies"
+redkno,Red Knot,Calidris canutus,Charadriiformes,Sandpipers and Allies
+redpha1,Red Phalarope,Phalaropus fulicarius,Charadriiformes,Sandpipers and Allies
+ragmac1,Red-and-green Macaw,Ara chloropterus,Psittaciformes,New World and African Parrots
+rebfir2,Red-billed Firefinch,Lagonosticta senegala,Passeriformes,Waxbills and Allies
+reblei,Red-billed Leiothrix,Leiothrix lutea,Passeriformes,Laughingthrushes and Allies
+rebtro,Red-billed Tropicbird,Phaethon aethereus,Phaethontiformes,Tropicbirds
+rebgoo1,Red-breasted Goose,Branta ruficollis,Anseriformes,"Ducks, Geese, and Waterfowl"
+rebmer,Red-breasted Merganser,Mergus serrator,Anseriformes,"Ducks, Geese, and Waterfowl"
+rebnut,Red-breasted Nuthatch,Sitta canadensis,Passeriformes,Nuthatches
+rebsap,Red-breasted Sapsucker,Sphyrapicus ruber,Piciformes,Woodpeckers
+rebfir1,Red-browed Finch,Neochmia temporalis,Passeriformes,Waxbills and Allies
+reccor,Red-cheeked Cordonbleu,Uraeginthus bengalus,Passeriformes,Waxbills and Allies
+reccar,Red-crested Cardinal,Paroaria coronata,Passeriformes,Tanagers and Allies
+recpoc,Red-crested Pochard,Netta rufina,Anseriformes,"Ducks, Geese, and Waterfowl"
+recpar,Red-crowned Amazon,Amazona viridigenalis,Psittaciformes,New World and African Parrots
+reevir1,Red-eyed Vireo,Vireo olivaceus,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+refwar,Red-faced Warbler,Cardellina rubrifrons,Passeriformes,New World Warblers
+refblu1,Red-flanked Bluetail,Tarsiger cyanurus,Passeriformes,Old World Flycatchers
+refboo,Red-footed Booby,Sula sula,Suliformes,Boobies and Gannets
+rehwoo,Red-headed Woodpecker,Melanerpes erythrocephalus,Piciformes,Woodpeckers
+relkit,Red-legged Kittiwake,Rissa brevirostris,Charadriiformes,"Gulls, Terns, and Skimmers"
+relpar10,Red-lored Amazon,Amazona autumnalis,Psittaciformes,New World and African Parrots
+rempar,Red-masked Parakeet,Psittacara erythrogenys,Psittaciformes,New World and African Parrots
+rensap,Red-naped Sapsucker,Sphyrapicus nuchalis,Piciformes,Woodpeckers
+rengre,Red-necked Grebe,Podiceps grisegena,Podicipediformes,Grebes
+renpha,Red-necked Phalarope,Phalaropus lobatus,Charadriiformes,Sandpipers and Allies
+rensti,Red-necked Stint,Calidris ruficollis,Charadriiformes,Sandpipers and Allies
+reshaw,Red-shouldered Hawk,Buteo lineatus,Accipitriformes,"Hawks, Eagles, and Kites"
+rethaw,Red-tailed Hawk,Buteo jamaicensis,Accipitriformes,"Hawks, Eagles, and Kites"
+rettro,Red-tailed Tropicbird,Phaethon rubricauda,Phaethontiformes,Tropicbirds
+retloo,Red-throated Loon,Gavia stellata,Gaviiformes,Loons
+retpip,Red-throated Pipit,Anthus cervinus,Passeriformes,Wagtails and Pipits
+pettwi1,Red-throated Twinspot,Hypargos niveoguttatus,Passeriformes,Waxbills and Allies
+revbul,Red-vented Bulbul,Pycnonotus cafer,Passeriformes,Bulbuls
+rewbul,Red-whiskered Bulbul,Pycnonotus jocosus,Passeriformes,Bulbuls
+rewbla,Red-winged Blackbird,Agelaius phoeniceus,Passeriformes,Troupials and Allies
+redegr,Reddish Egret,Egretta rufescens,Pelecaniformes,"Herons, Egrets, and Bitterns"
+redhea,Redhead,Aythya americana,Anseriformes,"Ducks, Geese, and Waterfowl"
+redpol1,Redpoll,Acanthis flammea,Passeriformes,"Finches, Euphonias, and Allies"
+reephe1,Reeves's Pheasant,Syrmaticus reevesii,Galliformes,"Pheasants, Grouse, and Allies"
+rhiauk,Rhinoceros Auklet,Cerorhinca monocerata,Charadriiformes,"Auks, Murres, and Puffins"
+ridrai1,Ridgway's Rail,Rallus obsoletus,Gruiformes,"Rails, Gallinules, and Coots"
+ribgul,Ring-billed Gull,Larus delawarensis,Charadriiformes,"Gulls, Terns, and Skimmers"
+rinduc,Ring-necked Duck,Aythya collaris,Anseriformes,"Ducks, Geese, and Waterfowl"
+rinphe1,Ring-necked Pheasant,Phasianus colchicus,Galliformes,"Pheasants, Grouse, and Allies"
+rispet1,Ringed Storm-Petrel,Hydrobates hornbyi,Procellariiformes,Northern Storm-Petrels
+rintea1,Ringed Teal,Callonetta leucophrys,Anseriformes,"Ducks, Geese, and Waterfowl"
+maghum1,Rivoli's Hummingbird,Eugenes fulgens,Apodiformes,Hummingbirds
+rocpig,Rock Pigeon,Columba livia,Columbiformes,Pigeons and Doves
+rocsan,Rock Sandpiper,Calidris ptilocnemis,Charadriiformes,Sandpipers and Allies
+rocwre,Rock Wren,Salpinctes obsoletus,Passeriformes,Wrens
+robgro,Rose-breasted Grosbeak,Pheucticus ludovicianus,Passeriformes,Cardinals and Allies
+rorpar,Rose-ringed Parakeet,Psittacula krameri,Psittaciformes,Old World Parrots
+rosspo1,Roseate Spoonbill,Platalea ajaja,Pelecaniformes,Ibises and Spoonbills
+rosgoo,Ross's Goose,Anser rossii,Anseriformes,"Ducks, Geese, and Waterfowl"
+rosgul,Ross's Gull,Rhodostethia rosea,Charadriiformes,"Gulls, Terns, and Skimmers"
+peflov,Rosy-faced Lovebird,Agapornis roseicollis,Psittaciformes,Old World Parrots
+rolhaw,Rough-legged Hawk,Buteo lagopus,Accipitriformes,"Hawks, Eagles, and Kites"
+royter1,Royal Tern,Thalasseus maximus,Charadriiformes,"Gulls, Terns, and Skimmers"
+ruckin,Ruby-crowned Kinglet,Corthylio calendula,Passeriformes,Kinglets
+rthhum,Ruby-throated Hummingbird,Archilochus colubris,Apodiformes,Hummingbirds
+rudduc,Ruddy Duck,Oxyura jamaicensis,Anseriformes,"Ducks, Geese, and Waterfowl"
+rugdov,Ruddy Ground Dove,Columbina talpacoti,Columbiformes,Pigeons and Doves
+rudshe,Ruddy Shelduck,Tadorna ferruginea,Anseriformes,"Ducks, Geese, and Waterfowl"
+rudtur,Ruddy Turnstone,Arenaria interpres,Charadriiformes,Sandpipers and Allies
+ruff,Ruff,Calidris pugnax,Charadriiformes,Sandpipers and Allies
+rufgro,Ruffed Grouse,Bonasa umbellus,Galliformes,"Pheasants, Grouse, and Allies"
+rufhum,Rufous Hummingbird,Selasphorus rufus,Apodiformes,Hummingbirds
+rubrob,Rufous-backed Robin,Turdus rufopalliatus,Passeriformes,Thrushes and Allies
+rucspa,Rufous-crowned Sparrow,Aimophila ruficeps,Passeriformes,New World Sparrows
+rusbun,Rustic Bunting,Schoeniclus rusticus,Passeriformes,Old World Buntings
+rusbla,Rusty Blackbird,Euphagus carolinus,Passeriformes,Troupials and Allies
+sabgul,Sabine's Gull,Xema sabini,Charadriiformes,"Gulls, Terns, and Skimmers"
+saffin,Saffron Finch,Sicalis flaveola,Passeriformes,Tanagers and Allies
+sagthr,Sage Thrasher,Oreoscoptes montanus,Passeriformes,Mockingbirds and Thrashers
+sagspa1,Sagebrush Sparrow,Artemisiospiza nevadensis,Passeriformes,New World Sparrows
+salalb1,Salvin's Albatross,Thalassarche salvini,Procellariiformes,Albatrosses
+sander,Sanderling,Calidris alba,Charadriiformes,Sandpipers and Allies
+sancra,Sandhill Crane,Antigone canadensis,Gruiformes,Cranes
+santer1,Sandwich Tern,Thalasseus sandvicensis,Charadriiformes,"Gulls, Terns, and Skimmers"
+savhaw1,Savanna Hawk,Buteogallus meridionalis,Accipitriformes,"Hawks, Eagles, and Kites"
+savspa,Savannah Sparrow,Passerculus sandwichensis,Passeriformes,New World Sparrows
+saypho,Say's Phoebe,Sayornis saya,Passeriformes,Tyrant Flycatchers
+scaqua,Scaled Quail,Callipepla squamata,Galliformes,New World Quail
+nutman,Scaly-breasted Munia,Lonchura punctulata,Passeriformes,Waxbills and Allies
+schpar1,Scaly-headed Parrot,Pionus maximiliani,Psittaciformes,New World and African Parrots
+scamac1,Scarlet Macaw,Ara macao,Psittaciformes,New World and African Parrots
+scatan,Scarlet Tanager,Piranga olivacea,Passeriformes,Cardinals and Allies
+sctfly,Scissor-tailed Flycatcher,Tyrannus forficatus,Passeriformes,Tyrant Flycatchers
+scoori,Scott's Oriole,Icterus parisorum,Passeriformes,Troupials and Allies
+xanmur2,Scripps's Murrelet,Synthliboramphus scrippsi,Charadriiformes,"Auks, Murres, and Puffins"
+sedwre1,Sedge Wren,Cistothorus stellaris,Passeriformes,Wrens
+semplo,Semipalmated Plover,Charadrius semipalmatus,Charadriiformes,Plovers and Lapwings
+semsan,Semipalmated Sandpiper,Calidris pusilla,Charadriiformes,Sandpipers and Allies
+shshaw,Sharp-shinned Hawk,Accipiter striatus,Accipitriformes,"Hawks, Eagles, and Kites"
+shtgro,Sharp-tailed Grouse,Tympanuchus phasianellus,Galliformes,"Pheasants, Grouse, and Allies"
+shtsan,Sharp-tailed Sandpiper,Calidris acuminata,Charadriiformes,Sandpipers and Allies
+shbdow,Short-billed Dowitcher,Limnodromus griseus,Charadriiformes,Sandpipers and Allies
+mewgul2,Short-billed Gull,Larus brachyrhynchus,Charadriiformes,"Gulls, Terns, and Skimmers"
+sheowl,Short-eared Owl,Asio flammeus,Strigiformes,Owls
+shtalb,Short-tailed Albatross,Phoebastria albatrus,Procellariiformes,Albatrosses
+shtshe,Short-tailed Shearwater,Ardenna tenuirostris,Procellariiformes,Shearwaters and Petrels
+sibpip1,Siberian Pipit,Anthus japonicus,Passeriformes,Wagtails and Pipits
+sibrub,Siberian Rubythroat,Calliope calliope,Passeriformes,Old World Flycatchers
+lessap2,Siberian Sand-Plover,Anarhynchus mongolus,Charadriiformes,Plovers and Lapwings
+silphe,Silver Pheasant,Lophura nycthemera,Galliformes,"Pheasants, Grouse, and Allies"
+sltred,Slate-throated Whitestart,Myioborus miniatus,Passeriformes,New World Warblers
+slbgul,Slaty-backed Gull,Larus schistisagus,Charadriiformes,"Gulls, Terns, and Skimmers"
+smbela1,Small-billed Elaenia,Elaenia parvirostris,Passeriformes,Tyrant Flycatchers
+smew,Smew,Mergellus albellus,Anseriformes,"Ducks, Geese, and Waterfowl"
+smilon,Smith's Longspur,Calcarius pictus,Passeriformes,Longspurs and Snow Buntings
+snobun,Snow Bunting,Plectrophenax nivalis,Passeriformes,Longspurs and Snow Buntings
+snogoo,Snow Goose,Anser caerulescens,Anseriformes,"Ducks, Geese, and Waterfowl"
+snoegr,Snowy Egret,Egretta thula,Pelecaniformes,"Herons, Egrets, and Bitterns"
+snoowl1,Snowy Owl,Bubo scandiacus,Strigiformes,Owls
+snoplo5,Snowy Plover,Anarhynchus nivosus,Charadriiformes,Plovers and Lapwings
+solsan,Solitary Sandpiper,Tringa solitaria,Charadriiformes,Sandpipers and Allies
+sonspa,Song Sparrow,Melospiza melodia,Passeriformes,New World Sparrows
+sonthr1,Song Thrush,Turdus philomelos,Passeriformes,Thrushes and Allies
+soogro1,Sooty Grouse,Dendragapus fuliginosus,Galliformes,"Pheasants, Grouse, and Allies"
+sooshe,Sooty Shearwater,Ardenna grisea,Procellariiformes,Shearwaters and Petrels
+sooter1,Sooty Tern,Onychoprion fuscatus,Charadriiformes,"Gulls, Terns, and Skimmers"
+sora,Sora,Porzana carolina,Gruiformes,"Rails, Gallinules, and Coots"
+soashe1,South African Shelduck,Tadorna cana,Anseriformes,"Ducks, Geese, and Waterfowl"
+sopsku1,South Polar Skua,Stercorarius maccormicki,Charadriiformes,Skuas and Jaegers
+afmwea,Southern Masked-Weaver,Ploceus velatus,Passeriformes,Weavers and Allies
+redbis,Southern Red Bishop,Euplectes orix,Passeriformes,Weavers and Allies
+spepig1,Speckled Pigeon,Columba guinea,Columbiformes,Pigeons and Doves
+spodov,Spotted Dove,Spilopelia chinensis,Columbiformes,Pigeons and Doves
+spoowl,Spotted Owl,Strix occidentalis,Strigiformes,Owls
+spored,Spotted Redshank,Tringa erythropus,Charadriiformes,Sandpipers and Allies
+sposan,Spotted Sandpiper,Actitis macularius,Charadriiformes,Sandpipers and Allies
+spotow,Spotted Towhee,Pipilo maculatus,Passeriformes,New World Sparrows
+sprpip,Sprague's Pipit,Anthus spragueii,Passeriformes,Wagtails and Pipits
+stafin1,Star Finch,Emblema ruficauda,Passeriformes,Waxbills and Allies
+stepet,Stejneger's Petrel,Pterodroma longirostris,Procellariiformes,Shearwaters and Petrels
+whwsco1,Stejneger's Scoter,Melanitta stejnegeri,Anseriformes,"Ducks, Geese, and Waterfowl"
+steeid,Steller's Eider,Polysticta stelleri,Anseriformes,"Ducks, Geese, and Waterfowl"
+stejay,Steller's Jay,Cyanocitta stelleri,Passeriformes,"Crows, Jays, and Magpies"
+stisan,Stilt Sandpiper,Calidris himantopus,Charadriiformes,Sandpipers and Allies
+stbori,Streak-backed Oriole,Icterus pustulatus,Passeriformes,Troupials and Allies
+strshe,Streaked Shearwater,Calonectris leucomelas,Procellariiformes,Shearwaters and Petrels
+strsee1,Streaky Seedeater,Crithagra striolata,Passeriformes,"Finches, Euphonias, and Allies"
+sugspa1,Sudan Golden Sparrow,Passer luteus,Passeriformes,Old World Sparrows
+subfly,Sulphur-bellied Flycatcher,Myiodynastes luteiventris,Passeriformes,Tyrant Flycatchers
+succoc,Sulphur-crested Cockatoo,Cacatua galerita,Psittaciformes,Cockatoos
+sumtan,Summer Tanager,Piranga rubra,Passeriformes,Cardinals and Allies
+sunpar1,Sun Parakeet,Aratinga solstitialis,Psittaciformes,New World and African Parrots
+sursco,Surf Scoter,Melanitta perspicillata,Anseriformes,"Ducks, Geese, and Waterfowl"
+surfbi,Surfbird,Calidris virgata,Charadriiformes,Sandpipers and Allies
+swahaw,Swainson's Hawk,Buteo swainsoni,Accipitriformes,"Hawks, Eagles, and Kites"
+swathr,Swainson's Thrush,Catharus ustulatus,Passeriformes,Thrushes and Allies
+swtgul1,Swallow-tailed Gull,Creagrus furcatus,Charadriiformes,"Gulls, Terns, and Skimmers"
+swtkit,Swallow-tailed Kite,Elanoides forficatus,Accipitriformes,"Hawks, Eagles, and Kites"
+swaspa,Swamp Sparrow,Melospiza georgiana,Passeriformes,New World Sparrows
+swagoo1,Swan Goose,Anser cygnoides,Anseriformes,"Ducks, Geese, and Waterfowl"
+swiwhe1,Swinhoe's White-eye,Zosterops simplex,Passeriformes,"White-eyes, Yuhinas, and Allies"
+taifly1,Taiga Flycatcher,Ficedula albicilla,Passeriformes,Old World Flycatchers
+tagwea1,Taveta Golden-Weaver,Ploceus castaneiceps,Passeriformes,Weavers and Allies
+tenwar,Tennessee Warbler,Leiothlypis peregrina,Passeriformes,New World Warblers
+tersan,Terek Sandpiper,Xenus cinereus,Charadriiformes,Sandpipers and Allies
+thbkin,Thick-billed Kingbird,Tyrannus crassirostris,Passeriformes,Tyrant Flycatchers
+mcclon,Thick-billed Longspur,Rhynchophanes mccownii,Passeriformes,Longspurs and Snow Buntings
+thbmur,Thick-billed Murre,Uria lomvia,Charadriiformes,"Auks, Murres, and Puffins"
+topwhy1,Togo Paradise-Whydah,Vidua togoensis,Passeriformes,Whydahs and Indigobirds
+towsol,Townsend's Solitaire,Myadestes townsendi,Passeriformes,Thrushes and Allies
+leastp5,Townsend's Storm-Petrel,Hydrobates socorroensis,Procellariiformes,Northern Storm-Petrels
+towwar,Townsend's Warbler,Setophaga townsendi,Passeriformes,New World Warblers
+treswa,Tree Swallow,Tachycineta bicolor,Passeriformes,Swallows
+tribla,Tricolored Blackbird,Agelaius tricolor,Passeriformes,Troupials and Allies
+triher,Tricolored Heron,Egretta tricolor,Pelecaniformes,"Herons, Egrets, and Bitterns"
+trimun,Tricolored Munia,Lonchura malacca,Passeriformes,Waxbills and Allies
+trspet,Tristram's Storm-Petrel,Hydrobates tristrami,Procellariiformes,Northern Storm-Petrels
+trokin,Tropical Kingbird,Tyrannus melancholicus,Passeriformes,Tyrant Flycatchers
+tropar,Tropical Parula,Setophaga pitiayumi,Passeriformes,New World Warblers
+truswa,Trumpeter Swan,Cygnus buccinator,Anseriformes,"Ducks, Geese, and Waterfowl"
+tufduc,Tufted Duck,Aythya fuligula,Anseriformes,"Ducks, Geese, and Waterfowl"
+tufpuf,Tufted Puffin,Fratercula cirrhata,Charadriiformes,"Auks, Murres, and Puffins"
+tunbeg1,Tundra Bean-Goose,Anser serrirostris,Anseriformes,"Ducks, Geese, and Waterfowl"
+tunswa,Tundra Swan,Cygnus columbianus,Anseriformes,"Ducks, Geese, and Waterfowl"
+turvul,Turkey Vulture,Cathartes aura,Cathartiformes,New World Vultures
+bufpar,Turquoise-fronted Amazon,Amazona aestiva,Psittaciformes,New World and African Parrots
+uplgoo1,Upland Goose,Chloephaga picta,Anseriformes,"Ducks, Geese, and Waterfowl"
+uplsan,Upland Sandpiper,Bartramia longicauda,Charadriiformes,Sandpipers and Allies
+varbun,Varied Bunting,Passerina versicolor,Passeriformes,Cardinals and Allies
+varthr,Varied Thrush,Ixoreus naevius,Passeriformes,Thrushes and Allies
+vauswi,Vaux's Swift,Chaetura vauxi,Apodiformes,Swifts
+veery,Veery,Catharus fuscescens,Passeriformes,Thrushes and Allies
+veggul1,Vega Gull,Larus vegae,Charadriiformes,"Gulls, Terns, and Skimmers"
+ventro1,Venezuelan Troupial,Icterus icterus,Passeriformes,Troupials and Allies
+verdin,Verdin,Auriparus flaviceps,Passeriformes,Penduline-Tits
+verfly,Vermilion Flycatcher,Pyrocephalus rubinus,Passeriformes,Tyrant Flycatchers
+vesspa,Vesper Sparrow,Pooecetes gramineus,Passeriformes,New World Sparrows
+vilind,Village Indigobird,Vidua chalybeata,Passeriformes,Whydahs and Indigobirds
+vilwea1,Village Weaver,Ploceus cucullatus,Passeriformes,Weavers and Allies
+vitpar1,Vinous-throated Parrotbill,Suthora webbiana,Passeriformes,Parrotbills
+vichum,Violet-crowned Hummingbird,Ramosomyia violiceps,Apodiformes,Hummingbirds
+vigswa,Violet-green Swallow,Tachycineta thalassina,Passeriformes,Swallows
+virrai,Virginia Rail,Rallus limicola,Gruiformes,"Rails, Gallinules, and Coots"
+virwar,Virginia's Warbler,Leiothlypis virginiae,Passeriformes,New World Warblers
+wantat1,Wandering Tattler,Tringa incana,Charadriiformes,Sandpipers and Allies
+wavalb,Waved Albatross,Phoebastria irrorata,Procellariiformes,Albatrosses
+wrspet,Wedge-rumped Storm-Petrel,Hydrobates tethys,Procellariiformes,Northern Storm-Petrels
+wetshe,Wedge-tailed Shearwater,Ardenna pacifica,Procellariiformes,Shearwaters and Petrels
+wesblu,Western Bluebird,Sialia mexicana,Passeriformes,Thrushes and Allies
+categr1,Western Cattle-Egret,Ardea ibis,Pelecaniformes,"Herons, Egrets, and Bitterns"
+wesfly,Western Flycatcher,Empidonax difficilis,Passeriformes,Tyrant Flycatchers
+wesgre,Western Grebe,Aechmophorus occidentalis,Podicipediformes,Grebes
+wesgul,Western Gull,Larus occidentalis,Charadriiformes,"Gulls, Terns, and Skimmers"
+weskin,Western Kingbird,Tyrannus verticalis,Passeriformes,Tyrant Flycatchers
+marwre1,Western Marsh Wren,Cistothorus paludicola,Passeriformes,Wrens
+wesmea,Western Meadowlark,Sturnella neglecta,Passeriformes,Troupials and Allies
+wessan,Western Sandpiper,Calidris mauri,Charadriiformes,Sandpipers and Allies
+wesowl1,Western Screech-Owl,Megascops kennicottii,Strigiformes,Owls
+westan,Western Tanager,Piranga ludoviciana,Passeriformes,Cardinals and Allies
+wewvir2,Western Warbling Vireo,Vireo swainsoni,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+wewpew,Western Wood-Pewee,Contopus sordidulus,Passeriformes,Tyrant Flycatchers
+whiibi,White Ibis,Eudocimus albus,Pelecaniformes,Ibises and Spoonbills
+whiwag,White Wagtail,Motacilla alba,Passeriformes,Wagtails and Pipits
+whbnut,White-breasted Nuthatch,Sitta carolinensis,Passeriformes,Nuthatches
+whcalb1,White-capped Albatross,Thalassarche cauta,Procellariiformes,Albatrosses
+whcpin,White-cheeked Pintail,Anas bahamensis,Anseriformes,"Ducks, Geese, and Waterfowl"
+whctur1,White-cheeked Turaco,Menelikornis leucotis,Musophagiformes,Turacos
+whcpet1,White-chinned Petrel,Procellaria aequinoctialis,Procellariiformes,Shearwaters and Petrels
+whcswi,White-collared Swift,Streptoprocne zonaris,Apodiformes,Swifts
+whcspa,White-crowned Sparrow,Zonotrichia leucophrys,Passeriformes,New World Sparrows
+whebul1,White-eared Bulbul,Pycnonotus leucotis,Passeriformes,Bulbuls
+whepar2,White-eyed Parakeet,Psittacara leucophthalmus,Psittaciformes,New World and African Parrots
+whevir,White-eyed Vireo,Vireo griseus,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+whfibi,White-faced Ibis,Plegadis chihi,Pelecaniformes,Ibises and Spoonbills
+wfwduc1,White-faced Whistling-Duck,Dendrocygna viduata,Anseriformes,"Ducks, Geese, and Waterfowl"
+whfpar1,White-fronted Amazon,Amazona albifrons,Psittaciformes,New World and African Parrots
+whhmun1,White-headed Munia,Lonchura maja,Passeriformes,Waxbills and Allies
+whhwoo,White-headed Woodpecker,Leuconotopicus albolarvatus,Piciformes,Woodpeckers
+whltan1,White-lined Tanager,Tachyphonus rufus,Passeriformes,Tanagers and Allies
+whrmun,White-rumped Munia,Lonchura striata,Passeriformes,Waxbills and Allies
+whrsan,White-rumped Sandpiper,Calidris fuscicollis,Charadriiformes,Sandpipers and Allies
+whrsee,White-rumped Seedeater,Crithagra leucopygia,Passeriformes,"Finches, Euphonias, and Allies"
+whteag,White-tailed Eagle,Haliaeetus albicilla,Accipitriformes,"Hawks, Eagles, and Kites"
+whtkit,White-tailed Kite,Elanus leucurus,Accipitriformes,"Hawks, Eagles, and Kites"
+whtpta1,White-tailed Ptarmigan,Lagopus leucura,Galliformes,"Pheasants, Grouse, and Allies"
+whttro,White-tailed Tropicbird,Phaethon lepturus,Phaethontiformes,Tropicbirds
+wtmjay1,White-throated Magpie-Jay,Cyanocorax formosus,Passeriformes,"Crows, Jays, and Magpies"
+whtspa,White-throated Sparrow,Zonotrichia albicollis,Passeriformes,New World Sparrows
+whtswi,White-throated Swift,Aeronautes saxatalis,Apodiformes,Swifts
+whwcro,White-winged Crossbill,Loxia leucoptera,Passeriformes,"Finches, Euphonias, and Allies"
+whwdov,White-winged Dove,Zenaida asiatica,Columbiformes,Pigeons and Doves
+whwpar,White-winged Parakeet,Brotogeris versicolurus,Psittaciformes,New World and African Parrots
+whwsco2,White-winged Scoter,Melanitta deglandi,Anseriformes,"Ducks, Geese, and Waterfowl"
+whwter,White-winged Tern,Chlidonias leucopterus,Charadriiformes,"Gulls, Terns, and Skimmers"
+whwwid1,White-winged Widowbird,Euplectes albonotatus,Passeriformes,Weavers and Allies
+whoswa,Whooper Swan,Cygnus cygnus,Anseriformes,"Ducks, Geese, and Waterfowl"
+wiltur,Wild Turkey,Meleagris gallopavo,Galliformes,"Pheasants, Grouse, and Allies"
+wilsap,Williamson's Sapsucker,Sphyrapicus thyroideus,Piciformes,Woodpeckers
+wilfly,Willow Flycatcher,Empidonax traillii,Passeriformes,Tyrant Flycatchers
+wlwwar,Willow Warbler,Phylloscopus trochilus,Passeriformes,Leaf Warblers
+wilpha,Wilson's Phalarope,Phalaropus tricolor,Charadriiformes,Sandpipers and Allies
+wilplo,Wilson's Plover,Anarhynchus wilsonia,Charadriiformes,Plovers and Lapwings
+wilsni1,Wilson's Snipe,Gallinago delicata,Charadriiformes,Sandpipers and Allies
+wispet,Wilson's Storm-Petrel,Oceanites oceanicus,Procellariiformes,Southern Storm-Petrels
+wlswar,Wilson's Warbler,Cardellina pusilla,Passeriformes,New World Warblers
+winwre3,Winter Wren,Nannus hiemalis,Passeriformes,Wrens
+wooduc,Wood Duck,Aix sponsa,Anseriformes,"Ducks, Geese, and Waterfowl"
+woosan,Wood Sandpiper,Tringa glareola,Charadriiformes,Sandpipers and Allies
+woosto,Wood Stork,Mycteria americana,Ciconiiformes,Storks
+woothr,Wood Thrush,Hylocichla mustelina,Passeriformes,Thrushes and Allies
+woowar,Wood Warbler,Phylloscopus sibilatrix,Passeriformes,Leaf Warblers
+wooscj2,Woodhouse's Scrub-Jay,Aphelocoma woodhouseii,Passeriformes,"Crows, Jays, and Magpies"
+woewar1,Worm-eating Warbler,Helmitheros vermivorum,Passeriformes,New World Warblers
+wrenti,Wrentit,Chamaea fasciata,Passeriformes,Parrotbills
+xanhum,Xantus's Hummingbird,Basilinna xantusii,Apodiformes,Hummingbirds
+yelgro,Yellow Grosbeak,Pheucticus chrysopeplus,Passeriformes,Cardinals and Allies
+yelrai,Yellow Rail,Coturnicops noveboracensis,Gruiformes,"Rails, Gallinules, and Coots"
+yebfly,Yellow-bellied Flycatcher,Empidonax flaviventris,Passeriformes,Tyrant Flycatchers
+yebsap,Yellow-bellied Sapsucker,Sphyrapicus varius,Piciformes,Woodpeckers
+yebcar,Yellow-billed Cardinal,Paroaria capitata,Passeriformes,Tanagers and Allies
+yebcuc,Yellow-billed Cuckoo,Coccyzus americanus,Cuculiformes,Cuckoos
+yebloo,Yellow-billed Loon,Gavia adamsii,Gaviiformes,Loons
+yebmag,Yellow-billed Magpie,Pica nuttalli,Passeriformes,"Crows, Jays, and Magpies"
+yebcha,Yellow-breasted Chat,Icteria virens,Passeriformes,Troupials and Allies
+yebwar3,Yellow-browed Warbler,Phylloscopus inornatus,Passeriformes,Leaf Warblers
+yecpar,Yellow-chevroned Parakeet,Brotogeris chiriri,Psittaciformes,New World and African Parrots
+yeclov,Yellow-collared Lovebird,Agapornis personatus,Psittaciformes,Old World Parrots
+ywcpar,Yellow-crowned Amazon,Amazona ochrocephala,Psittaciformes,New World and African Parrots
+yecbis,Yellow-crowned Bishop,Euplectes afer,Passeriformes,Weavers and Allies
+ycnher,Yellow-crowned Night Heron,Nyctanassa violacea,Pelecaniformes,"Herons, Egrets, and Bitterns"
+yefgra1,Yellow-faced Grassquit,Tiaris olivaceus,Passeriformes,Tanagers and Allies
+yefgul,Yellow-footed Gull,Larus livens,Charadriiformes,"Gulls, Terns, and Skimmers"
+yefcan,Yellow-fronted Canary,Crithagra mozambica,Passeriformes,"Finches, Euphonias, and Allies"
+yegvir,Yellow-green Vireo,Vireo flavoviridis,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+yehpar,Yellow-headed Amazon,Amazona oratrix,Psittaciformes,New World and African Parrots
+yehbla,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,Passeriformes,Troupials and Allies
+yehcar1,Yellow-headed Caracara,Daptrius chimachima,Falconiformes,Falcons and Caracaras
+yerwar,Yellow-rumped Warbler,Setophaga coronata,Passeriformes,New World Warblers
+yetvir,Yellow-throated Vireo,Vireo flavifrons,Passeriformes,"Vireos, Shrike-Babblers, and Erpornis"
+yetwar,Yellow-throated Warbler,Setophaga dominica,Passeriformes,New World Warblers
+zanbis1,Zanzibar Red Bishop,Euplectes nigroventris,Passeriformes,Weavers and Allies
+zebdov,Zebra Dove,Geopelia striata,Columbiformes,Pigeons and Doves
+zebfin2,Zebra Finch,Taeniopygia guttata,Passeriformes,Waxbills and Allies
+zebwax2,Zebra Waxbill,Amandava subflava,Passeriformes,Waxbills and Allies
+zothaw,Zone-tailed Hawk,Buteo albonotatus,Accipitriformes,"Hawks, Eagles, and Kites"
