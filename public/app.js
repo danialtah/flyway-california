@@ -6,7 +6,7 @@
 // The site search opens the home page near a place with ?lat=&lng=&name=
 // (a hotspot) or ?place= (anything else, looked up like a typed place).
 
-import { TOP_SIZES, groupBySpecies, topRarest, offeredSizes, inSeason } from "./feed.js";
+import { TOP_SIZES, groupBySpecies, topRarest, offeredSizes, inSeason, SEASONS } from "./feed.js";
 import {
   $, el, choiceButtons, loadSpecies, showError, RADIUS_MILES, nearArea, inArea, dropdown,
   timeText, dateTimeText,
@@ -17,15 +17,6 @@ import { period, topItem, placesFor, fillList, showHotspots, setUpTiers } from "
 const STATEWIDE = { region: "US-CA", phrase: "in California" };
 const THIS_WEEK = period(7);
 const DEFAULT_MILES = 25;
-
-const SEASONS = [
-  { value: "", text: "All birds" },
-  { value: "year-round", text: "Year-round birds" },
-  { value: "winter visitor", text: "Winter visitors" },
-  { value: "summer visitor", text: "Summer visitors" },
-  { value: "migrant", text: "Migrants" },
-  { value: "vagrant", text: "Rare visitors / vagrants" },
-];
 
 // A typed place -> { name, lat, lng } in California, or null if not found.
 async function lookUpPlace(q) {

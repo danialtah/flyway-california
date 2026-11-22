@@ -12,9 +12,9 @@
 /* Filters: a 72px label, then chips (filter pills with a regular-weight
    label and an optional map-key shape). */
 .filters { display: flex; flex-direction: column; gap: 16px; }
-.filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.filter-label { width: 72px; font: 600 14px/normal var(--font-sans); color: var(--color-secondary); }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-row { display: flex; align-items: flex-start; gap: 8px; }
+.filter-label { flex: none; width: 72px; padding-top: 12px; font: 600 14px/normal var(--font-sans); color: var(--color-secondary); }  /* centered on the first row of chips */
+.chips { display: flex; flex: 1; flex-wrap: wrap; gap: 8px; }
 .filters .chip { padding-inline: 14px; }
 .filters .chip .swatch { margin: 0; width: 12px; height: 12px; }
 .filters .chip .swatch-ring { border-width: 2px; }
@@ -64,3 +64,36 @@
 .species-row .swatch-diamond { width: 9px; height: 9px; margin: 1.5px; border: 0; }
 .species-row .name-wrap { min-width: 0; }
 .species-row .card-name { -webkit-line-clamp: 1; line-clamp: 1; }
+
+/* Figma "Species list · Mobile (390)": a 16px intro; the filter labels sit
+   above their chips, which wrap across the width; the jump bar is 10 letters a
+   row; and the species are two 160px columns, each name up to 2 lines (a
+   1-line name keeps the second line blank so the columns line up). A tap
+   turns a species or letter ocean blue, the way hover does on desktop. */
+@media (max-width: 640px) {
+  .birds-page { gap: 20px; padding-block: 24px 96px; }
+  .birds-heading p { font: 400 16px/normal var(--font-sans); }  /* body-md */
+  .filters { gap: 12px; }
+  .filter-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .filter-label { width: auto; padding-top: 0; }
+  .filter-row .chips { align-self: stretch; }  /* wrap across the full width */
+  .letters {
+    display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); row-gap: 4px;
+    font-size: 17px;
+  }
+  .letters a, .letters span { display: flex; align-items: center; justify-content: center; height: 40px; }
+  .letters a:active { text-decoration: underline; }
+  .bird-list { gap: 28px; }
+  .letter-section h2 { padding-bottom: 6px; }
+  .letter-section ul { grid-template-columns: repeat(2, 174px); justify-content: space-between; margin-top: 6px; }  /* the spare width goes between the columns */
+  .species-row { align-items: flex-start; height: 100%; }
+  .species-row .swatch { margin-top: 5px; }  /* centered on the first line */
+  .species-row .swatch-diamond { margin-top: 6.5px; }
+  .species-row .name-wrap { flex: 1; }
+  .species-row .card-name { -webkit-line-clamp: 2; line-clamp: 2; min-height: 2lh; }
+  .species-row .tooltip { display: none; }  /* the whole name fits in 2 lines; no hover on phones */
+  .species-row:active {
+    color: var(--color-ocean-blue); border-bottom-color: var(--color-ocean-blue);
+    box-shadow: inset 0 -1px 0 var(--color-ocean-blue);
+  }
+}

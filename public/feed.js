@@ -96,6 +96,16 @@ export function isOffList(group) {
   return group.species?.cbrc_list === "none";
 }
 
+// The season filter's options (the home page menu and the A–Z chips).
+export const SEASONS = [
+  { value: "", text: "All birds" },
+  { value: "year-round", text: "Year-round birds" },
+  { value: "winter visitor", text: "Winter visitors" },
+  { value: "summer visitor", text: "Summer visitors" },
+  { value: "migrant", text: "Migrants" },
+  { value: "vagrant", text: "Rare visitors / vagrants" },
+];
+
 // The season filter: a migration type from ca_species_final.csv, or
 // "vagrant" for wild birds too rare in California for Status and Trends to
 // give a season (on the CBRC list, no migration data). Escapees and hybrids

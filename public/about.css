@@ -49,3 +49,21 @@
   background: var(--color-pill); white-space: nowrap;
 }
 .about-content .email a { font-weight: 600; color: var(--color-ocean-blue); }
+
+/* Figma "About · Mobile (390)": no side nav, one column; 20px section
+   headings; each term sits above its description. Sections are 36px apart;
+   in Labels, the heading is 36px above Rarity, and Rarity, the timeline,
+   Migration and CBRC are 44px apart. */
+@media (max-width: 640px) {
+  .about-page { display: block; padding-block: 24px 96px; }
+  .side-nav { display: none; }
+  .about-content { gap: 36px; }
+  .about-content .labels { gap: 44px; }
+  .about-content .labels h2 { margin-bottom: -8px; }  /* 36px to Rarity */
+  .about-content section { scroll-margin-top: calc(72px + 16px); }
+  .about-content .intro { gap: 12px; }
+  .about-content h2 { font-size: 20px; }  /* h5 */
+  .about-content h3 { font-size: 16px; }
+  .terms .term-row { flex-direction: column; gap: 4px; }
+  .terms dt { width: auto; }
+}
