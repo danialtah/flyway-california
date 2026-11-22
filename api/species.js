@@ -10,7 +10,13 @@
 //   make other eBird calls with the key.
 // - Unconfirmed reports are left out, and each place appears once.
 // - Private locations keep no place name or coordinates.
+// - eBird doesn't send the county, so each place gets the county its
+//   coordinates fall in (_county.js). Private places only get one when the
+//   lookup was for a county.
 // - Responses are cached for 15 minutes.
+
+import { countyAt } from "./_county.js";
+import counties from "../public/data/ca_counties.json" with { type: "json" };
 
 const DAYS_BACK = [7, 30];
 const CACHE_SECONDS = 15 * 60;
@@ -63,6 +69,7 @@ export async function GET(request) {
     .filter((o) => o.obsValid && !places.has(o.locId) && places.add(o.locId))
     .map((o) => {
       const isPrivate = Boolean(o.locationPrivate);
+      const county = isPrivate ? regionCounty(where.echo.region) : countyAt(o.lat, o.lng);
       return {
         date: o.obsDt,
         howMany: o.howMany ?? null,
@@ -71,6 +78,7 @@ export async function GET(request) {
         locName: isPrivate ? null : o.locName,
         lat: isPrivate ? null : o.lat,
         lng: isPrivate ? null : o.lng,
+        ...county,
       };
     })
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -79,6 +87,11 @@ export async function GET(request) {
     { fetchedAt: new Date().toISOString(), code, ...where.echo, daysBack: back, sightings },
     { headers: { "Cache-Control": `public, s-maxage=${CACHE_SECONDS}, stale-while-revalidate=60` } },
   );
+}
+
+function regionCounty(region) {
+  const county = counties.find((c) => c.code === region);
+  return county ? { countyCode: county.code, county: county.name } : { countyCode: null, county: null };
 }
 
 function error(status, message) {

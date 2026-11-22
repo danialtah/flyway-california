@@ -1,5 +1,5 @@
 // Counties page: the 58 California counties, each linking to its county page.
-// Typing in the box narrows the list; Enter opens the first county left.
+// Typing in the search narrows the list; Enter opens the first county left.
 
 import { normalize, matchScore } from "./search.js";
 import { $, el, showError } from "./ui.js";
@@ -17,7 +17,7 @@ async function load() {
 
   function render() {
     const shown = matching();
-    $("county-list").replaceChildren(...shown.map((c) => el("li", {}, el("a", { href: countyHref(c) }, `${c.name} County`))));
+    $("county-list").replaceChildren(...shown.map((c) => el("li", {}, el("a", { href: countyHref(c) }, c.name))));
     $("status").textContent = shown.length
       ? (shown.length === counties.length ? `${counties.length} counties` : `${shown.length} of ${counties.length} counties`)
       : `No California county matches "${input.value.trim()}".`;

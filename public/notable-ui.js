@@ -3,14 +3,16 @@
 // notable list (tier tabs and rows that open). Each page loads its own
 // sightings and calls these to draw them.
 //
-// `ctx` is { mapParts, photos, places }: the map, ca_species_photos.json,
-// and placesFor()'s places, so cards can open a place's pin.
+// `ctx` is { mapParts, photos, places, inCounty, emptyText }: the map,
+// ca_species_photos.json, placesFor()'s places, so cards can open a place's
+// pin, whether this is a county page, and what the notable list says when
+// there are no birds ("No notable birds reported in Inyo County this week.").
 
 import { firstSentence, formatDate, placeText } from "./feed.js";
 import {
   $, el, speciesLink, cardName, plural, icon, directionsLink, showOnMapButton, creditParts, photoBox,
 } from "./ui.js";
-import { MARKERS, markerGroup, openPin, groupByPlace, topHotspots } from "./map.js";
+import { MARKERS, markerGroup, openPin, groupByPlace, topHotspots, swatch } from "./map.js";
 
 // How a time window reads in headings ("Rarest Birds in California This
 // Week") and in sentences ("None this week").
@@ -50,7 +52,14 @@ function showPlace(ctx, locId) {
 
 // "Morro Bay--Audubon overlook, San Luis Obispo Co." or
 // "Humboldt Co. (private location)".
-const shortPlace = (s) => (s.private ? `${s.county} Co. (private location)` : `${s.locName}, ${s.county} Co.`);
+// On a county page (ctx.inCounty) every place is in that county, so the
+// county is left off: "Morro Bay--Audubon overlook", "Private location".
+const shortPlace = (s, ctx) => (ctx.inCounty
+  ? (s.private ? "Private location" : s.locName)
+  : (s.private ? `${s.county} Co. (private location)` : `${s.locName}, ${s.county} Co.`));
+const rowPlace = (s, ctx) => (ctx.inCounty
+  ? (s.private ? "Private location (no map pin)" : s.locName)
+  : placeText(s));
 
 // Bird card for the rarest list. Private places have no position, so their
 // cards say so in place of Directions and Show on map.
@@ -64,7 +73,7 @@ export function topItem(group, ctx) {
       el("div", { class: "info" },
         el("span", { class: "badge" }, dot(groupOf(group)), badgeText(group)),
         el("h3", { class: "name" }, cardName(speciesLink(group), group.comName)),
-        el("p", { class: "place" }, cardName(shortPlace(latest), shortPlace(latest))),
+        el("p", { class: "place" }, cardName(shortPlace(latest, ctx), shortPlace(latest, ctx))),
         el("p", { class: "seen" }, `Last seen ${formatDate(latest.date)} · ${plural(group.placeCount, "place")}`)),
       latest.private
         ? el("p", { class: "no-location" }, "There is no currently available public location for this bird.")
@@ -73,18 +82,24 @@ export function topItem(group, ctx) {
           showOnMapButton(() => showPlace(ctx, latest.locId), true)))));
 }
 
-// Map popup for one place: its name and county, then each bird seen there.
-function placePopup(place) {
-  return el("div", {},
-    el("strong", {}, place.locName),
-    el("div", {}, `${place.county} County`),
-    el("ul", {}, ...place.birds.map(({ bird }) =>
-      el("li", {}, dot(groupOf(bird)), " ", speciesLink(bird), ` · ${badgeText(bird)}`))));
+// Map popup for one place, on every map (Figma "Map popup" 274:7352): each
+// bird seen there as a title linked to its species page, with its rarity tag
+// (the map-key shape and the bird card label), then the place as the bullet,
+// with its county and latest date. `birds` are { bird, sighting } pairs;
+// `place` is { locName, county }.
+export function birdsPopup(birds, place) {
+  const latest = birds.map(({ sighting }) => sighting.date).sort().at(-1);
+  return el("div", { class: "pin-popup" },
+    el("div", { class: "pin-birds" }, ...birds.map(({ bird }) => el("div", { class: "pin-bird" },
+      el("strong", { class: "pin-name" }, speciesLink(bird)),
+      el("span", { class: "pin-tag" }, swatch(groupOf(bird)), badgeText(bird))))),
+    el("p", { class: "pin-place" }, el("span", { "aria-hidden": "true" }, "•"),
+      el("span", {}, [place.locName, place.county ? `${place.county} County` : null, formatDate(latest)].filter(Boolean).join(" · "))));
 }
 
 // groupBySpecies groups -> map places, each with its popup.
 export function placesFor(groups) {
-  return groupByPlace(groups).map((place) => ({ ...place, popup: placePopup(place) }));
+  return groupByPlace(groups).map((place) => ({ ...place, popup: birdsPopup(place.birds, place) }));
 }
 
 export function fillList(list, items, emptyText) {
@@ -209,7 +224,7 @@ export function setUpTiers() {
         el("span", { class: "bird" }, dot(groupOf(bird)), el("span", { class: "bird-name" }, bird.comName),
           isReview(bird) ? el("span", { class: "review-tag" }, "CBRC review") : null,
           isHybrid(bird) ? el("span", { class: "review-tag" }, "Hybrid") : null),
-        el("span", { class: "place" }, placeText(bird.latest)),
+        el("span", { class: "place" }, rowPlace(bird.latest, ctx)),
         el("span", { class: "seen" }, `${formatDate(bird.latest.date)} · ${plural(bird.placeCount, "place")}`),
         el("span", { class: "more" }, icon("row-more"), el("span", { class: "visually-hidden" }, isOpen ? "Close" : "More"))));
     head.addEventListener("click", () => {
@@ -288,7 +303,7 @@ export function setUpTiers() {
     $("tier-cards").replaceChildren(...tabs.map(tabButton));
     const list = $("tier-list");
     closeMenu = () => {};
-    if (!tabs.length) return list.replaceChildren(el("p", { class: "empty-note" }, "No notable birds reported here."));
+    if (!tabs.length) return list.replaceChildren(el("p", { class: "empty-note" }, ctx.emptyText));
     const birds = tiers.get(tab);
     const left = birds.length - shown;
     const { noun } = TABS.find((t) => t.group === tab);

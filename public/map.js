@@ -10,6 +10,9 @@ const RADIUS = 7;
 const OUTLINE = "#FFFFFF";
 const METERS_PER_MILE = 1609.344;
 const CIRCLE_COLOR = "#5E574A";  // the map's label color
+// Popups are 280px cards (Figma "Map popup"): 16px padding left, 12px right,
+// so 252px of content. Leaflet adds 1px to the width it's given.
+const POPUP = { minWidth: 251, maxWidth: 251 };
 
 // Marker look for each group, with its label in the map legend. Later
 // entries draw on top, so rarer birds are never hidden under common ones, and
@@ -141,7 +144,7 @@ export function showPins(mapParts, places, area = null) {
     .filter((p) => p.lat != null && p.lng != null)
     .sort((a, b) => DRAW_ORDER.indexOf(a.group) - DRAW_ORDER.indexOf(b.group));
   for (const p of points) {
-    p.marker = marker([p.lat, p.lng], p.group).bindPopup(p.popup).addTo(pins);
+    p.marker = marker([p.lat, p.lng], p.group).bindPopup(p.popup, POPUP).addTo(pins);
   }
   if (area?.point) {
     mapParts.circle = L.circle([area.point.lat, area.point.lng], {

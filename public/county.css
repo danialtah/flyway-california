@@ -1,0 +1,47 @@
+/* County pages, from the Figma frames "Counties · Desktop (1440)" and
+   "County page · San Diego · Desktop (1440)". The county page shares the
+   home page's section layout (home.css); this file adds its hero and the
+   counties list. Components are in site.css. */
+
+/* ---------- County page ---------- */
+
+/* Back link, name and intro; then the days, the status line and the map,
+   20px apart. */
+.county-heading { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.county-heading h1 { margin: 0; font: 600 32px/normal var(--font-sans); }  /* h3 */
+.county-heading p { margin: 0; font: 400 16px/normal var(--font-sans); color: var(--color-secondary); }  /* body-md */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.county-hero .status-line .count { font-weight: 500; }
+.page-status { display: flex; flex-direction: column; align-items: flex-start; gap: 1lh; margin: 0; font: 500 18px/normal var(--font-sans); }  /* body-lg; the link two lines under the message */
+.page-status .back-link { font: inherit; color: var(--color-text-primary); }
+
+/* ---------- Counties list ---------- */
+
+.counties-page { display: flex; flex-direction: column; gap: 32px; padding-block: 56px 96px; }
+.counties-heading { display: flex; flex-direction: column; gap: 8px; }
+.counties-heading h1 { margin: 0; font: 600 32px/normal var(--font-sans); }  /* h3 */
+.counties-heading p { max-width: 760px; margin: 0; font: 500 18px/normal var(--font-sans); color: var(--color-secondary); }  /* body-lg */
+#county-filter { margin: 0; }
+
+.county-list-wrap { display: flex; flex-direction: column; gap: 12px; }
+.county-count { margin: 0; font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }  /* caption */
+.county-count.error { color: var(--color-error-text); }
+
+/* Rows of 5 county links (Figma "County link"): a line under each name;
+   on hover the name and its line turn ocean blue. */
+.county-list {
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 20px;
+  margin: 0; padding: 0; list-style: none;
+}
+@media (max-width: 1100px) { .county-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .county-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.county-list a {
+  box-sizing: border-box; display: flex; align-items: center; width: 200px; max-width: 100%; height: 40px; padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+  font: 500 18px/normal var(--font-sans); color: var(--color-text-primary); text-decoration: none;  /* body-lg */
+  transition: color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+.county-list a:hover {  /* a 2px line: the border plus a 1px inset shadow, so nothing moves */
+  color: var(--color-ocean-blue); border-bottom-color: var(--color-ocean-blue);
+  box-shadow: inset 0 -1px 0 var(--color-ocean-blue);
+}

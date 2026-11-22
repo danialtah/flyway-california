@@ -49,6 +49,12 @@ script builds it.
 each county, from the eBird API, for the county pages. Run it from
 `public/data/` with `EBIRD_API_KEY` set.
 
+`build_county_shapes.py` writes `ca_county_shapes.json`: each county's
+outline, from the US Census Bureau's 2023 cartographic boundary file
+(1:5,000,000, public domain), so `/api/species` can say which county a
+sighting is in. Download `cb_2023_us_county_5m.zip` first (the URL is in the
+script), then run it from `public/data/` with the zip's path.
+
 No script overwrites an existing output file; delete or move the old file
 first.
 

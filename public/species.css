@@ -1,0 +1,74 @@
+/* Species page layout, from the Figma frame "Species Page - WORKING
+   VERSION": the hero (photo and details), the month timeline, and recent
+   sightings. Components are in site.css. */
+
+.species-page { display: flex; flex-direction: column; padding-block: 64px 96px; }
+.species-page article { display: flex; flex-direction: column; gap: 72px; }
+.page-status { margin: 0; font: 500 18px/normal var(--font-sans); }  /* body-lg */
+.page-status .back-link { display: block; width: fit-content; margin-top: 1lh; }  /* two lines under the message */
+
+.section-heading { display: flex; flex-direction: column; gap: 6px; }
+.section-heading h2 { margin: 0; font: 600 32px/normal var(--font-sans); }  /* h3 */
+.section-heading p { margin: 0; font: 400 16px/normal var(--font-sans); color: var(--color-secondary); }  /* body-md */
+
+/* ---------- Hero ---------- */
+
+.species-hero { display: flex; gap: 48px; align-items: flex-start; }
+.hero-photo { flex: 0 1 640px; display: flex; flex-direction: column; gap: 18px; min-width: 0; margin: 0; }
+.hero-photo .photo { aspect-ratio: 640 / 427; border-radius: 12px; }
+.hero-photo .photo-credit { font: 400 12px/normal var(--font-sans); color: var(--color-secondary); }  /* caption-sml */
+.hero-photo .photo-credit a { text-decoration: none; }
+.hero-photo .photo-credit a:first-child { text-decoration: underline; }  /* the photographer */
+.hero-photo .photo-credit a:hover { text-decoration: underline; }
+
+.details { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.names { display: flex; flex-direction: column; gap: 4px; }
+.names h1 { margin: 0; font: 600 32px/normal var(--font-sans); }  /* h3 */
+.names .sci { margin: 0; font: italic 400 18px/normal var(--font-sans); color: var(--color-secondary); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px;
+  background: var(--color-pill); border: 1px solid var(--color-border); border-radius: 12px;
+  font: 400 14px/normal var(--font-sans);  /* caption */
+}
+.details .status-line { margin: 0; font: 500 18px/normal var(--font-sans); }  /* body-lg */
+
+/* Facts: label (168px) and value on one baseline, a line under each, with
+   16px above and below (Figma has 8px gaps + 12px padding, which sat uneven). */
+.facts { display: flex; flex-direction: column; width: 100%; margin: 0; }
+.fact { display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--color-border); }
+.fact dt { flex: none; width: 168px; font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }  /* caption */
+.fact dd { flex: 1; min-width: 0; margin: 0; font: 400 16px/normal var(--font-sans); }  /* body-md */
+
+/* Links that leave FlyWay: the Links color, Regular, underlined. */
+.details .links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; padding-top: 8px; }
+.details .links a { font: 400 16px/normal var(--font-sans); color: var(--color-links); }  /* body-md */
+
+/* ---------- When it's in California ---------- */
+
+.when, .recent { display: flex; flex-direction: column; gap: 20px; }
+
+
+/* ---------- Recent sightings ---------- */
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.controls .divider { width: 1px; height: 28px; background: var(--color-border); }
+.chips { display: flex; gap: 12px; }
+.dropdown { position: relative; }
+.dropdown .menu { left: 0; top: calc(100% + 8px); z-index: 1050; }  /* under the sticky header, over the map */
+#county .menu { max-height: min(400px, 60vh); overflow-y: auto; }  /* 59 choices */
+
+
+.species-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.species-cards .sighting-card { background: var(--color-darker-cream); }
+.species-cards .button-sm, .species-cards .text-button-sm { font-size: 14px; }  /* caption size, as in the home page's open rows */
+@media (max-width: 960px) { .species-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.private-note { margin: 0; font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }
+
+/* "Show all 14 places": an ocean-blue SemiBold link-style button. */
+.all-toggle {
+  align-self: flex-start; padding: 0; border: 0; background: none; cursor: pointer;
+  font: 600 16px/normal var(--font-sans); color: var(--color-ocean-blue); text-decoration: underline;
+}
+
+#sightings-heading { scroll-margin-top: 88px; }  /* clear of the sticky header */

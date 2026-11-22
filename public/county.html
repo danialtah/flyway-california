@@ -11,62 +11,113 @@
           integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous"></script>
   <script type="module" src="county-page.js"></script>
   <link rel="stylesheet" href="map.css">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="county.css">
   <script type="module" src="nav.js"></script>
 </head>
 <body>
-  <header>
-    <a href="./" class="logo"><img src="images/loon.svg" alt="" width="49" height="24"><span>FlyWay California</span></a>
-    <nav aria-label="Main">
+  <header class="site-header">
+   <div class="wrap header-inner">
+    <a href="./" class="logo"><img src="images/ui/logo-header.png" alt="" width="69" height="57"><span>FlyWay California</span></a>
+    <nav class="site-nav" aria-label="Main">
       <a href="counties.html" aria-current="page">Counties</a>
       <a href="birds.html">Species</a>
+      <form id="site-search" class="site-search" role="search" action="./">
+        <label class="field">
+          <span class="icon icon-search"></span>
+          <span class="visually-hidden">Search birds, counties, and places</span>
+          <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
+                 aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
+                 placeholder="Search...">
+        </label>
+        <ul id="site-search-list" class="menu" role="listbox" aria-label="Suggestions" hidden></ul>
+      </form>
     </nav>
-    <form id="site-search" role="search" action="./">
-      <label for="site-search-input">Search birds, counties, and places</label>
-      <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
-             aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
-             placeholder="Search birds, counties, places">
-      <ul id="site-search-list" role="listbox" aria-label="Suggestions" hidden></ul>
-    </form>
+   </div>
   </header>
 
   <main>
-    <p><a href="counties.html">All counties</a></p>
-    <h1 id="county-heading">County, notable sightings</h1>
-    <div id="days" role="group" aria-label="How far back to look"></div>
-    <p id="status" aria-live="polite">Loading sightings…</p>
-
-    <section>
-      <h2 id="map-heading">Notable sightings map</h2>
-      <div id="map" class="map map-large"></div>
+    <section class="hero county-hero wrap">
+      <div class="county-heading">
+        <a class="back-link" href="counties.html"><span class="icon icon-chevron-left"></span><span class="label">All counties</span></a>
+        <h1 id="county-heading">County</h1>
+        <p id="county-intro"></p>
+      </div>
+      <div id="days" class="chips" role="group" aria-label="How far back to look"></div>
+      <p class="status-line" id="status" aria-live="polite">Loading sightings…</p>
+      <div class="map-frame" id="map-frame"><div id="map" class="map"></div></div>
     </section>
 
-    <section>
-      <h2 id="top-heading">Rarest Birds This Week</h2>
-      <ol id="top"></ol>
+    <section class="rarest wrap" id="top-section" aria-labelledby="top-heading">
+      <div class="section-heading">
+        <h2 id="top-heading">Rarest Birds This Week</h2>
+        <p>Birds appear in order of rarity. Photos from iNaturalist.</p>
+      </div>
+      <ol id="top" class="card-grid birds"></ol>
     </section>
 
-    <section id="hotspots-section" hidden>
-      <h2 id="hotspots-heading">Rare Bird Hotspots This Week</h2>
-      <ol id="hotspots"></ol>
+    <section class="hotspots wrap" id="hotspots-section" aria-labelledby="hotspots-heading" hidden>
+      <div class="section-heading">
+        <h2 id="hotspots-heading">Rare Bird Hotspots This Week</h2>
+        <p id="hotspots-intro">eBird hotspots with the most confirmed rare birds in the last 7 days. Ties go to the most notable birds overall.</p>
+      </div>
+      <ol id="hotspots" class="card-grid places"></ol>
     </section>
 
-    <section>
-      <h2 id="tier-heading">Notable sightings, last 7 days</h2>
-      <ul id="tier-cards"></ul>
-      <div id="tier-list" aria-live="polite" hidden></div>
+    <section class="notable" id="notable-section" aria-labelledby="tier-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="tier-heading">Notable Sightings This Week</h2>
+          <p id="tier-summary"></p>
+        </div>
+        <div class="tier-tabs" id="tier-cards" role="group" aria-label="How rare"></div>
+        <div class="notable-list" id="tier-list" aria-live="polite"></div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Data from eBird (Cornell Lab of Ornithology) and eBird Status and Trends.
-      Map data &copy; OpenStreetMap contributors.</p>
-    <p id="review-note">CBRC review species: the California Bird Records Committee
-      reviews sightings of these species.</p>
-    <p>Last updated: <span id="updated">–</span></p>
-    <p>FlyWay California is free, with no ads.
-      <a href="about.html">About and sources</a></p>
-    <!-- TODO: contact link, once there's an address to use. -->
-    <p>Contact: coming soon</p>
+  <footer class="site-footer">
+    <div class="waterline">
+      <img class="loon" src="images/ui/loon-footer.svg" alt="" width="150" height="73">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="surface" d="M0 10C26.6667 6.66667 53.3333 6.66667 80 10C106.667 13.3333 133.333 13.3333 160 10C186.667 6.66667 213.333 6.66667 240 10C266.667 13.3333 293.333 13.3333 320 10C346.667 6.66667 373.333 6.66667 400 10C426.667 13.3333 453.333 13.3333 480 10C506.667 6.66667 533.333 6.66667 560 10C586.667 13.3333 613.333 13.3333 640 10C666.667 6.66667 693.333 6.66667 720 10C746.667 13.3333 773.333 13.3333 800 10C826.667 6.66667 853.333 6.66667 880 10C906.667 13.3333 933.333 13.3333 960 10C986.667 6.66667 1013.33 6.66667 1040 10C1066.67 13.3333 1093.33 13.3333 1120 10C1146.67 6.66667 1173.33 6.66667 1200 10C1226.67 13.3333 1253.33 13.3333 1280 10C1306.67 6.66667 1333.33 6.66667 1360 10C1386.67 13.3333 1413.33 13.3333 1440 10C1466.67 6.66667 1493.33 6.66667 1520 10C1546.67 13.3333 1573.33 13.3333 1600 10V56H0V10Z" fill="#143C72"/>
+        </svg>
+    </div>
+    <div class="footer-content">
+     <div class="wrap footer-inner">
+      <div class="footer-columns">
+        <div class="footer-brand">
+          <p class="name">FlyWay California</p>
+          <p>Find rare and migratory birds across California.</p>
+          <div class="footer-contact">
+            <p class="eyebrow">Spot a mistake?</p>
+            <p>Contact: <a href="mailto:danialtah04@gmail.com">danialtah04@gmail.com</a></p>
+          </div>
+        </div>
+        <nav class="footer-links" aria-labelledby="footer-explore">
+          <p class="eyebrow" id="footer-explore">Explore</p>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="counties.html">Counties</a></li>
+            <li><a href="birds.html">Species A–Z</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-links" aria-labelledby="footer-about">
+          <p class="eyebrow" id="footer-about">About</p>
+          <ul>
+            <li><a href="about.html">About FlyWay</a></li>
+            <li><a href="about.html#error-reporting">Error Reporting</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 Danial Tahir · Free and non-commercial, with no ads ever.</p>
+        <p>Bird data from <a href="https://ebird.org">eBird</a><span id="updated-wrap" hidden> · Last updated <span id="updated"></span></span></p>
+      </div>
+     </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -4,6 +4,10 @@
    own stylesheet (home.css). */
 
 body { margin: 0; }
+/* Short pages keep the footer at the bottom of the screen: the page is a
+   column at least as tall as the screen, and main takes the spare room. */
+body:has(> .site-footer) { display: flex; flex-direction: column; min-height: 100vh; }
+body:has(> .site-footer) > main { flex: 1 0 auto; }
 [hidden] { display: none !important; }
 a { color: inherit; }
 
@@ -22,6 +26,8 @@ a { color: inherit; }
   mask: var(--icon) center / contain no-repeat;
 }
 .icon-search      { --icon: url(images/ui/search.svg);         width: 20px; height: 20px; }
+.icon-search-24   { --icon: url(images/ui/search-24.svg);      width: 24px; height: 24px; }
+.icon-chevron-left { --icon: url(images/ui/chevron-left-16.svg); width: 16px; height: 16px; }
 .icon-location-20 { --icon: url(images/ui/location-on-20.svg); width: 20px; height: 20px; }
 .icon-location-18 { --icon: url(images/ui/location-on-18.svg); width: 18px; height: 18px; }
 .icon-location-14 { --icon: url(images/ui/location-on-14.svg); width: 14px; height: 14px; }
@@ -43,7 +49,7 @@ a { color: inherit; }
   position: sticky; top: 0; z-index: 1100;  /* stays at the top while the page scrolls */
   background: var(--color-background); border-bottom: 1px solid var(--color-border);
 }
-.header-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.header-inner { height: 72px; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .site-header .logo {
   display: flex; align-items: center; gap: 12px; margin-left: -4px;
   font: 600 20px/normal var(--font-sans); color: var(--color-text-primary); text-decoration: none;
@@ -58,21 +64,26 @@ a { color: inherit; }
 }
 .site-nav > a:hover, .site-nav > a[aria-current="page"] { color: var(--color-ocean-blue); }
 
-/* Search fields: a 1px border that turns into a 2px ocean-blue stroke while
-   the field is selected. The second pixel is an inset shadow, so nothing
-   moves. No hover state. */
+/* Search fields, all of them: a 1.5px border that turns into a 2px
+   ocean-blue stroke while the field is selected. The last half pixel is an
+   inset shadow, so nothing moves. No hover state. */
 .field {
   box-sizing: border-box; display: flex; align-items: center; gap: 8px;
-  border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-background);
+  border: 1.5px solid var(--color-border); border-radius: 12px; background: var(--color-background);
   color: var(--color-secondary); cursor: text;
 }
-.field:focus-within { border-color: var(--color-ocean-blue); box-shadow: inset 0 0 0 1px var(--color-ocean-blue); }
+.field:focus-within { border-color: var(--color-ocean-blue); box-shadow: inset 0 0 0 0.5px var(--color-ocean-blue); }
 .field input {
   flex: 1; min-width: 0; border: 0; padding: 0; background: none; outline: none;
   font: 400 16px/normal var(--font-sans); color: var(--color-text-primary);
 }
 .field input::placeholder { color: var(--color-secondary); opacity: 1; }
 .field input::-webkit-search-cancel-button { cursor: pointer; }
+
+/* Large page search (Figma "Search field (large)"): filters a list as you
+   type. Same selected stroke as the other search fields. */
+.field-lg { height: 56px; padding: 16px 20px; gap: 12px; }
+.field-lg input { font: 500 18px/normal var(--font-sans); }  /* body-lg */
 
 .site-search { position: relative; }
 .site-search .field { width: 187px; height: 34px; padding: 6px 8px; }
@@ -105,6 +116,14 @@ a { color: inherit; }
 
 /* ---------- Buttons ---------- */
 
+/* Back link (Figma "Back link" 225:1280): chevron and an underlined
+   ocean-blue label, back to a parent list. */
+.back-link {
+  display: inline-flex; align-items: center; gap: 4px; width: fit-content;
+  font: 600 14px/normal var(--font-sans); color: var(--color-ocean-blue);
+}
+.back-link .label { text-decoration: underline; }
+
 /* Filter pill: cream with a border; sky blue with an ocean-blue border while
    open or picked. */
 .pill {
@@ -122,6 +141,7 @@ a { color: inherit; }
 .pill:disabled { background: var(--color-pill-disabled); color: var(--color-disabled-content); cursor: not-allowed; }
 .pill:disabled > * { opacity: var(--opacity-disabled-content); }
 .pill-sm { padding: 8px 12px; }  /* list-size choices: label only */
+.chip { padding: 10px 16px; font-weight: 400; }  /* Figma "Choice chip": a pill with a regular-weight label */
 
 /* Directions: the one filled button. Medium on hotspot cards, small on
    bird and sighting cards. */
@@ -152,6 +172,10 @@ a { color: inherit; }
 .dot { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--color); }
 
 /* Names cut to 2 lines (cardName in ui.js) keep their tooltip from tokens.css. */
+/* Cards clip what spills out, so a card's tooltip stays as wide as the card:
+   the line's width plus the 12px it reaches past each side. */
+.bird-card .name-wrap, .hotspot-card .name-wrap { display: block; }
+.bird-card .tooltip, .hotspot-card .tooltip { max-width: calc(100% + 24px); }
 .clamp-1 { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
 /* Bird card: photo edge to edge on top, then the badge, name, place and
@@ -268,7 +292,7 @@ a { color: inherit; }
 .sighting-card .meta, .sighting-card .county { font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }
 .sighting-card .spot { font: 400 16px/normal var(--font-sans); }
 .sighting-card .actions { gap: 16px; padding-top: 6px; margin-top: auto; }  /* line up across a row */
-.sighting-card .button-sm, .sighting-card .text-button-sm { font-size: 14px; }  /* caption size in open rows */
+.row-details .sighting-card .button-sm, .row-details .sighting-card .text-button-sm { font-size: 14px; }  /* caption size in open rows */
 
 .list-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 14px 0 24px; }
 .list-footer .count { font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }
@@ -295,10 +319,33 @@ a { color: inherit; }
   .row-head .more .icon, .row, .menu { transition: none; animation: none; }
 }
 
+/* ---------- Year timeline ---------- */
+
+/* Figma "Month segment": species pages and the About page's example. */
+/* 12 months side by side with no gaps, so the filled months read as one
+   bar; the first and last bar ends are rounded. "Now" sits over this
+   month. */
+.timeline { display: flex; margin: 0; padding: 24px 0 0; list-style: none; }
+.month { position: relative; flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.month .bar { width: 100%; height: 16px; background: var(--color-timeline-absent); }
+.month.present .bar { background: var(--color-ocean-blue); }
+.month:first-child .bar { border-radius: 8px 0 0 8px; }
+.month:last-child .bar { border-radius: 0 8px 8px 0; }
+.month .label { font: 400 14px/normal var(--font-sans); color: var(--color-secondary); }  /* caption */
+.month.present .label { color: var(--color-text-primary); }
+.month.now .label { font-weight: 600; color: var(--color-text-primary); }
+.now-marker {
+  position: absolute; left: 50%; top: -28px; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font: 600 12px/normal var(--font-sans);
+}
+.now-marker::after { content: ""; width: 2px; height: 6px; background: var(--color-text-primary); }
+
 /* ---------- Map ---------- */
 
 /* Map key and zoom buttons, restyled from Leaflet's. */
-.map-frame { border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
+.map-frame { border: 1.5px solid var(--color-border); border-radius: 12px; overflow: hidden; }
+.map-frame .map { height: 475px; }  /* every map on the site */
 .map-frame .leaflet-container { font-family: var(--font-sans); background: var(--color-pill); }
 .map-frame .leaflet-top.leaflet-left { margin: 15px 0 0 19px; }
 .map-frame .leaflet-top .leaflet-control { margin: 0; }
@@ -320,8 +367,6 @@ a { color: inherit; }
 .map-frame .map-legend .swatch { margin: 0; width: 12px; height: 12px; }
 .map-frame .map-legend .swatch-ring { border-width: 2px; }
 .map-frame .map-legend .swatch-diamond { width: 10px; height: 10px; margin: 2px 3px 2px 2px; border: 0; }
-.map-frame .leaflet-popup-content { font: 400 14px/normal var(--font-sans); }
-
 /* ---------- Footer ---------- */
 
 /* The loon floats on water that slides left forever: the surface moves by

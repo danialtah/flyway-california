@@ -5,138 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="tokens.css">
   <title>About · FlyWay California</title>
+  <script type="module" src="about-page.js"></script>
+  <link rel="stylesheet" href="map.css">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="about.css">
   <script type="module" src="nav.js"></script>
 </head>
 <body>
-  <header>
-    <a href="./" class="logo"><img src="images/loon.svg" alt="" width="49" height="24"><span>FlyWay California</span></a>
-    <nav aria-label="Main">
+  <header class="site-header">
+   <div class="wrap header-inner">
+    <a href="./" class="logo"><img src="images/ui/logo-header.png" alt="" width="69" height="57"><span>FlyWay California</span></a>
+    <nav class="site-nav" aria-label="Main">
       <a href="counties.html">Counties</a>
       <a href="birds.html">Species</a>
+      <form id="site-search" class="site-search" role="search" action="./">
+        <label class="field">
+          <span class="icon icon-search"></span>
+          <span class="visually-hidden">Search birds, counties, and places</span>
+          <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
+                 aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
+                 placeholder="Search...">
+        </label>
+        <ul id="site-search-list" class="menu" role="listbox" aria-label="Suggestions" hidden></ul>
+      </form>
     </nav>
-    <form id="site-search" role="search" action="./">
-      <label for="site-search-input">Search birds, counties, and places</label>
-      <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
-             aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
-             placeholder="Search birds, counties, places">
-      <ul id="site-search-list" role="listbox" aria-label="Suggestions" hidden></ul>
-    </form>
+   </div>
   </header>
 
-  <main>
-    <h1>About FlyWay California</h1>
-    <p>FlyWay California helps you find rare and migratory birds in California.
-      It shows this week's notable sightings on a list and a map, lets you look
-      near you, has a page for every county, and has a page for every bird on
-      the state list. It's a free, non-commercial project.</p>
+  <main class="about-page wrap">
+    <nav class="side-nav" aria-label="On this page">
+      <a href="#about">About</a>
+      <a href="#what-you-can-find">What You Can Find</a>
+      <a href="#labels">Labels</a>
+      <a href="#photos">Photos</a>
+      <a href="#sources">Sources and Credits</a>
+      <a href="#error-reporting">Error Reporting</a>
+    </nav>
 
-    <section>
-      <h2>What you'll find</h2>
-      <ul>
-        <li><strong>Notable sightings</strong>: birds that eBird flags as unusual
-          for the place or the time of year, reported in the last 7 days. Only
-          confirmed reports are shown. The list updates every 15 minutes.</li>
-        <li><strong>Rarest birds</strong>: this week's notable birds ranked from
-          rarest to least rare, for all of California, one county, or near you.</li>
-        <li><strong>Rare bird hotspots</strong>: the eBird hotspots with the most
-          rare birds reported recently.</li>
-        <li><strong>Notable sightings by rarity</strong>: every notable bird,
-          grouped as Rare (no seasonal data), Rare, Uncommon, Common, and
-          Escapee or non-native. Hybrids are grouped with Common. Escapees and
-          non-native birds are birds that aren't on the official California
-          list, like escaped pets.</li>
-        <li><strong>County pages</strong>: one county's notable sightings from the
-          last 7 or 30 days, with its rarest birds and hotspots.</li>
-        <li><strong>California Bird Species</strong>: every bird recorded in
-          California, A to Z, with filters for rarity, season, and CBRC review
-          species.</li>
-        <li><strong>Species pages</strong>: each bird's status, when it's in
-          California, and its recent sightings on a map.</li>
-        <li><strong>Search</strong>: find a bird, county, or place from the top of
-          any page.</li>
-      </ul>
-    </section>
+    <div class="about-content">
+      <section id="about" class="intro">
+        <h1>About FlyWay California</h1>
+        <p>FlyWay California helps you find primarily rare and migratory birds in California, built for birders chasing lifers and anyone with an affinity for hard-to-find birds. This project was inspired by shiny hunting in Pokémon, the thrill of finding that 1/8,192 Pokémon with a different color to all the rest is the same feeling I got when I first got into birding and found a Common Loon, my first ever rare-marked bird on eBird.</p>
+      </section>
 
-    <section>
-      <h2>What the labels mean</h2>
-      <h3>Rarity</h3>
-      <p>Rarity comes from eBird Status and Trends: how likely birders are to find
-        the species in its best month, averaged across California.</p>
-      <ul>
-        <li><strong>Common</strong>: found on 5% or more of checklists.</li>
-        <li><strong>Uncommon</strong>: found on 0.1% to 5% of checklists.</li>
-        <li><strong>Rare</strong>: found on fewer than 0.1% of checklists. A few
-          species were adjusted to match eBird's own labels.</li>
-        <li><strong>Rare (no seasonal data)</strong>: Status and Trends has no
-          California data for the species, usually because it's a vagrant that
-          rarely reaches the state. These are often the rarest birds of all.</li>
-      </ul>
+      <section id="what-you-can-find" aria-labelledby="what-you-can-find-heading">
+        <h2 id="what-you-can-find-heading">What You Can Find</h2>
+        <dl class="terms">
+          <div class="term-row"><dt>Rarest birds</dt><dd>This week's notable birds, ranked from rarest to least rare, for all of California, one county, or near you.</dd></div>
+          <div class="term-row"><dt>Rare bird hotspots</dt><dd>The eBird hotspots with the most rare birds reported recently.</dd></div>
+          <div class="term-row"><dt>Notable sightings</dt><dd>Birds eBird flags as unusual for the place or time of year, reported in the last 7 days and grouped by rarity. Only confirmed reports are shown, and the list updates every 15 minutes.</dd></div>
+          <div class="term-row"><dt>County pages</dt><dd>One county's notable sightings from the last 7 or 30 days, with its rarest birds and hotspots.</dd></div>
+          <div class="term-row"><dt>California bird species</dt><dd>Every bird recorded in California, A to Z, with filters for rarity and season.</dd></div>
+          <div class="term-row"><dt>Species pages</dt><dd>Each bird's status, the months it's in California, and its recent sightings on a map.</dd></div>
+          <div class="term-row"><dt>Search</dt><dd>Find a bird, county, or place from the top of any page.</dd></div>
+        </dl>
+      </section>
 
-      <h3>Migration</h3>
-      <ul>
-        <li><strong>Year-round</strong>: in California in every season.</li>
-        <li><strong>Winter visitor</strong>: mostly here in the colder months.</li>
-        <li><strong>Summer visitor</strong>: mostly here in the warmer months, often
-          to breed.</li>
-        <li><strong>Migrant</strong>: passes through in spring or fall.</li>
-        <li><strong>Rare visitor / vagrant</strong>: a wild bird that rarely reaches
-          California, too rare for eBird Status and Trends to show a season.</li>
-      </ul>
+      <section id="labels" class="labels" aria-labelledby="labels-heading">
+        <h2 id="labels-heading">Labels</h2>
+        <div class="label-group">
+          <h3>Rarity</h3>
+          <p>Rarity comes from eBird Status and Trends: how likely birders are to find the species in its best month, averaged across California. The colored dot next to a bird always shows its rarity.</p>
+          <dl class="terms">
+            <div class="term-row"><dt><span class="swatch-slot" data-group="noTier"></span>Rare (no seasonal data)</dt><dd>Status and Trends has no California data for the species, usually because it's a vagrant that rarely reaches the state. Often the rarest birds of all.</dd></div>
+            <div class="term-row"><dt><span class="swatch-slot" data-group="Rare"></span>Rare</dt><dd>Found on fewer than 0.1% of checklists. A few species were adjusted to match eBird's own labels.</dd></div>
+            <div class="term-row"><dt><span class="swatch-slot" data-group="Uncommon"></span>Uncommon</dt><dd>Found on 0.1% to 5% of checklists.</dd></div>
+            <div class="term-row"><dt><span class="swatch-slot" data-group="Common"></span>Common</dt><dd>Found on 5% or more of checklists.</dd></div>
+            <div class="term-row"><dt><span class="swatch-slot" data-group="escapee"></span>Escapee or non-native</dt><dd>Not on the official California list, like escaped pets and released birds.</dd></div>
+          </dl>
+        </div>
+        <div class="label-group">
+          <h3>California Residency Timeline</h3>
+          <p>Dark blue months are when the bird is usually in California; gray months are when it usually isn't. "Now" marks today's date, wherever you are. This timeline shows a migrant bird that visits California every season except summer.</p>
+          <ol id="example-timeline" class="timeline" aria-label="Example: months a bird is usually in California"></ol>
+        </div>
+        <div class="label-group">
+          <h3>Migration</h3>
+          <dl class="terms">
+            <div class="term-row"><dt>Year-round</dt><dd>In California in every season.</dd></div>
+            <div class="term-row"><dt>Winter visitor</dt><dd>Mostly here in the colder months.</dd></div>
+            <div class="term-row"><dt>Summer visitor</dt><dd>Mostly here in the warmer months, often to breed.</dd></div>
+            <div class="term-row"><dt>Migrant</dt><dd>Passes through in spring or fall.</dd></div>
+            <div class="term-row"><dt>Rare visitor / vagrant</dt><dd>A wild bird that rarely reaches California, too rare for Status and Trends to show a season.</dd></div>
+          </dl>
+        </div>
+        <div class="label-group" id="review-note">
+          <h3>CBRC review species</h3>
+          <p>The California Bird Records Committee (CBRC) reviews every sighting of these species to confirm it. Certain foreign birds that appeared in the data needed a manual review to confirm their existence, designated by a CBRC review tag.</p>
+        </div>
+      </section>
 
-      <h3 id="review-note">CBRC review species</h3>
-      <p>The California Bird Records Committee reviews sightings of these species.
-        If you see one, submit photos or notes.</p>
-    </section>
+      <section id="photos" aria-labelledby="photos-heading">
+        <h2 id="photos-heading">Photos</h2>
+        <p class="body">Bird photos come primarily from <a href="https://www.inaturalist.org/" target="_blank" rel="noopener">iNaturalist</a> and the <a href="https://www.macaulaylibrary.org/" target="_blank" rel="noopener">Macaulay Library</a>. Photographers share them under Creative Commons licenses, and each photo shows its photographer and license where it appears.</p>
+      </section>
 
-    <section>
-      <h2>Privacy</h2>
-      <ul>
-        <li>Sightings at private locations, like someone's home, show only the
-          county. They never get a place name or a map pin.</li>
-        <li>"Use my location" stays in your browser for the map and lists. When you
-          search for a bird near you, your location, rounded to about 1 km, is
-          sent to eBird to find nearby sightings.</li>
-        <li>What you type in the search at the top of the page is sent to FlyWay
-          California's server to suggest matching eBird hotspots.</li>
-        <li>A place you type is sent to OpenStreetMap's place search to find it on
-          the map.</li>
-        <li>The site has no accounts, ads, or tracking.</li>
-      </ul>
-    </section>
+      <section id="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources and Credits</h2>
+        <dl class="terms">
+          <div class="term-row"><dt>eBird</dt><dd>Recent and notable sightings, through the eBird API. Cornell Lab of Ornithology.</dd></div>
+          <div class="term-row"><dt>eBird Status and Trends</dt><dd>Rarity, migration type, and months present for each species. Data Version: 2023; Released: 2025. Cornell Lab of Ornithology, Ithaca, New York.</dd></div>
+          <div class="term-row"><dt>California Bird Records Committee (CBRC)</dt><dd>The official California checklist and the list of review species.</dd></div>
+          <div class="term-row"><dt>iNaturalist</dt><dd>Bird photos, shared under Creative Commons licenses.</dd></div>
+          <div class="term-row"><dt>Macaulay Library</dt><dd>Bird photos, Cornell Lab of Ornithology.</dd></div>
+          <div class="term-row"><dt>OpenStreetMap</dt><dd>Map data © OpenStreetMap contributors, and place search through Nominatim.</dd></div>
+          <div class="term-row"><dt>Leaflet</dt><dd>The map viewer.</dd></div>
+          <div class="term-row"><dt>Noto Sans</dt><dd>The typeface, by the Noto Project Authors, under the SIL Open Font License.</dd></div>
+        </dl>
+      </section>
 
-    <section>
-      <h2>Photos</h2>
-      <p>FlyWay California doesn't host bird photos. Each species page links to
-        eBird, where you can see licensed photos from the Macaulay Library.</p>
-    </section>
-
-    <section>
-      <h2>Sources and credits</h2>
-      <ul>
-        <li><strong>eBird</strong> (Cornell Lab of Ornithology): recent and notable
-          sightings, through the eBird API.</li>
-        <li><strong>eBird Status and Trends</strong>: rarity, migration type, and
-          months present for each species.
-          <!-- TODO: add the authors and DOI to this citation (see README). -->
-          <br>eBird Status and Trends, Data Version: 2023; Released: 2025. Cornell
-          Lab of Ornithology, Ithaca, New York.</li>
-        <li><strong>California Bird Records Committee</strong>: the official
-          California checklist and the list of review species.</li>
-        <li><strong>OpenStreetMap</strong>: map data &copy; OpenStreetMap
-          contributors, and place search through Nominatim.</li>
-        <li><strong>Leaflet</strong>: the map viewer.</li>
-        <li><strong>Noto Sans</strong>: the typeface, by the Noto Project
-          Authors, under the SIL Open Font License.</li>
-      </ul>
-    </section>
+      <section id="error-reporting" aria-labelledby="error-reporting-heading">
+        <h2 id="error-reporting-heading">Error Reporting</h2>
+        <p class="body">If you notice the wrong bird in a photo, a credit that needs fixing, or a mistake in the data, please contact the address below with the bird's name and what's wrong and I’ll fix it!</p>
+        <p class="email"><span>Email</span><a href="mailto:danialtah04@gmail.com">danialtah04@gmail.com</a></p>
+        <p class="note">FlyWay California is a free, non-commercial project by Danial Tahir.</p>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p>Data from eBird (Cornell Lab of Ornithology) and eBird Status and Trends.
-      Map data &copy; OpenStreetMap contributors.</p>
-    <p>FlyWay California is free, with no ads.</p>
-    <!-- TODO: contact link, once there's an address to use. -->
-    <p>Contact: coming soon</p>
+  <footer class="site-footer">
+    <div class="waterline">
+      <img class="loon" src="images/ui/loon-footer.svg" alt="" width="150" height="73">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="surface" d="M0 10C26.6667 6.66667 53.3333 6.66667 80 10C106.667 13.3333 133.333 13.3333 160 10C186.667 6.66667 213.333 6.66667 240 10C266.667 13.3333 293.333 13.3333 320 10C346.667 6.66667 373.333 6.66667 400 10C426.667 13.3333 453.333 13.3333 480 10C506.667 6.66667 533.333 6.66667 560 10C586.667 13.3333 613.333 13.3333 640 10C666.667 6.66667 693.333 6.66667 720 10C746.667 13.3333 773.333 13.3333 800 10C826.667 6.66667 853.333 6.66667 880 10C906.667 13.3333 933.333 13.3333 960 10C986.667 6.66667 1013.33 6.66667 1040 10C1066.67 13.3333 1093.33 13.3333 1120 10C1146.67 6.66667 1173.33 6.66667 1200 10C1226.67 13.3333 1253.33 13.3333 1280 10C1306.67 6.66667 1333.33 6.66667 1360 10C1386.67 13.3333 1413.33 13.3333 1440 10C1466.67 6.66667 1493.33 6.66667 1520 10C1546.67 13.3333 1573.33 13.3333 1600 10V56H0V10Z" fill="#143C72"/>
+        </svg>
+    </div>
+    <div class="footer-content">
+     <div class="wrap footer-inner">
+      <div class="footer-columns">
+        <div class="footer-brand">
+          <p class="name">FlyWay California</p>
+          <p>Find rare and migratory birds across California.</p>
+          <div class="footer-contact">
+            <p class="eyebrow">Spot a mistake?</p>
+            <p>Contact: <a href="mailto:danialtah04@gmail.com">danialtah04@gmail.com</a></p>
+          </div>
+        </div>
+        <nav class="footer-links" aria-labelledby="footer-explore">
+          <p class="eyebrow" id="footer-explore">Explore</p>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="counties.html">Counties</a></li>
+            <li><a href="birds.html">Species A–Z</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-links" aria-labelledby="footer-about">
+          <p class="eyebrow" id="footer-about">About</p>
+          <ul>
+            <li><a href="about.html">About FlyWay</a></li>
+            <li><a href="about.html#error-reporting">Error Reporting</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 Danial Tahir · Free and non-commercial, with no ads ever.</p>
+        <p>Bird data from <a href="https://ebird.org">eBird</a><span id="updated-wrap" hidden> · Last updated <span id="updated"></span></span></p>
+      </div>
+     </div>
+    </div>
   </footer>
 </body>
 </html>

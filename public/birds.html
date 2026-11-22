@@ -6,75 +6,100 @@
   <link rel="stylesheet" href="tokens.css">
   <title>California Bird Species · FlyWay California</title>
   <script type="module" src="birds-page.js"></script>
+  <link rel="stylesheet" href="map.css">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="birds.css">
   <script type="module" src="nav.js"></script>
 </head>
 <body>
-  <header>
-    <a href="./" class="logo"><img src="images/loon.svg" alt="" width="49" height="24"><span>FlyWay California</span></a>
-    <nav aria-label="Main">
+  <header class="site-header">
+   <div class="wrap header-inner">
+    <a href="./" class="logo"><img src="images/ui/logo-header.png" alt="" width="69" height="57"><span>FlyWay California</span></a>
+    <nav class="site-nav" aria-label="Main">
       <a href="counties.html">Counties</a>
       <a href="birds.html" aria-current="page">Species</a>
+      <form id="site-search" class="site-search" role="search" action="./">
+        <label class="field">
+          <span class="icon icon-search"></span>
+          <span class="visually-hidden">Search birds, counties, and places</span>
+          <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
+                 aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
+                 placeholder="Search...">
+        </label>
+        <ul id="site-search-list" class="menu" role="listbox" aria-label="Suggestions" hidden></ul>
+      </form>
     </nav>
-    <form id="site-search" role="search" action="./">
-      <label for="site-search-input">Search birds, counties, and places</label>
-      <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
-             aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
-             placeholder="Search birds, counties, places">
-      <ul id="site-search-list" role="listbox" aria-label="Suggestions" hidden></ul>
-    </form>
+   </div>
   </header>
 
-  <main>
-    <h1>California Bird Species</h1>
-    <p>Every bird recorded in California. Pick one to see when it's here and
-      where it's been seen recently.</p>
-    <form id="bird-filter">
-      <p>
-        <label for="bird-name">Name</label>
-        <input id="bird-name" type="search" autocomplete="off" placeholder="Common or scientific name">
-      </p>
-      <p>
-        <label for="bird-rarity">Rarity</label>
-        <select id="bird-rarity">
-          <option value="">All rarities</option>
-          <option value="noTier">Rare (no seasonal data)</option>
-          <option value="Rare">Rare</option>
-          <option value="Uncommon">Uncommon</option>
-          <option value="Common">Common</option>
-          <option value="escapee">Escapee or non-native</option>
-        </select>
-      </p>
-      <p>
-        <label for="bird-season">Season</label>
-        <select id="bird-season">
-          <option value="">All birds</option>
-          <option value="year-round">Year-round birds</option>
-          <option value="winter visitor">Winter visitors</option>
-          <option value="summer visitor">Summer visitors</option>
-          <option value="migrant">Migrants</option>
-          <option value="vagrant">Rare visitors / vagrants</option>
-        </select>
-      </p>
-      <p>
-        <input id="bird-review" type="checkbox">
-        <label for="bird-review">CBRC review species only</label>
-      </p>
+  <main class="birds-page wrap">
+    <div class="birds-heading">
+      <h1>California Bird Species</h1>
+      <p id="birds-intro">Every species recorded in California from eBird up to today, from backyard regulars to once-in-a-lifetime visitors. Pick one to see when it's here and where it's been seen lately.</p>
+    </div>
+    <form id="bird-filter" role="search">
+      <label class="field field-lg">
+        <span class="icon icon-search-24"></span>
+        <span class="visually-hidden">Search for a bird by common or scientific name</span>
+        <input id="bird-name" type="search" autocomplete="off" placeholder="Search for a bird">
+      </label>
     </form>
-    <p id="status" aria-live="polite">Loading birds…</p>
-    <nav id="letters" aria-label="Jump to a letter"></nav>
-    <div id="bird-list"></div>
+    <div class="filters">
+      <div class="filter-row">
+        <span class="filter-label" id="rarity-label">Rarity</span>
+        <div id="rarity" class="chips" role="group" aria-labelledby="rarity-label"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label" id="season-label">Season</span>
+        <div id="season" class="chips" role="group" aria-labelledby="season-label"></div>
+      </div>
+    </div>
+    <nav id="letters" class="letters" aria-label="Jump to a letter"></nav>
+    <p id="status" class="birds-status" aria-live="polite">Loading birds…</p>
+    <div id="bird-list" class="bird-list"></div>
   </main>
 
-  <footer>
-    <p>Data from eBird (Cornell Lab of Ornithology) and eBird Status and Trends.
-      Map data &copy; OpenStreetMap contributors.</p>
-    <p id="review-note">CBRC review species: the California Bird Records Committee
-      reviews sightings of these species.</p>
-    <p>Last updated: <span id="updated">–</span></p>
-    <p>FlyWay California is free, with no ads.
-      <a href="about.html">About and sources</a></p>
-    <!-- TODO: contact link, once there's an address to use. -->
-    <p>Contact: coming soon</p>
+  <footer class="site-footer">
+    <div class="waterline">
+      <img class="loon" src="images/ui/loon-footer.svg" alt="" width="150" height="73">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="surface" d="M0 10C26.6667 6.66667 53.3333 6.66667 80 10C106.667 13.3333 133.333 13.3333 160 10C186.667 6.66667 213.333 6.66667 240 10C266.667 13.3333 293.333 13.3333 320 10C346.667 6.66667 373.333 6.66667 400 10C426.667 13.3333 453.333 13.3333 480 10C506.667 6.66667 533.333 6.66667 560 10C586.667 13.3333 613.333 13.3333 640 10C666.667 6.66667 693.333 6.66667 720 10C746.667 13.3333 773.333 13.3333 800 10C826.667 6.66667 853.333 6.66667 880 10C906.667 13.3333 933.333 13.3333 960 10C986.667 6.66667 1013.33 6.66667 1040 10C1066.67 13.3333 1093.33 13.3333 1120 10C1146.67 6.66667 1173.33 6.66667 1200 10C1226.67 13.3333 1253.33 13.3333 1280 10C1306.67 6.66667 1333.33 6.66667 1360 10C1386.67 13.3333 1413.33 13.3333 1440 10C1466.67 6.66667 1493.33 6.66667 1520 10C1546.67 13.3333 1573.33 13.3333 1600 10V56H0V10Z" fill="#143C72"/>
+        </svg>
+    </div>
+    <div class="footer-content">
+     <div class="wrap footer-inner">
+      <div class="footer-columns">
+        <div class="footer-brand">
+          <p class="name">FlyWay California</p>
+          <p>Find rare and migratory birds across California.</p>
+          <div class="footer-contact">
+            <p class="eyebrow">Spot a mistake?</p>
+            <p>Contact: <a href="mailto:danialtah04@gmail.com">danialtah04@gmail.com</a></p>
+          </div>
+        </div>
+        <nav class="footer-links" aria-labelledby="footer-explore">
+          <p class="eyebrow" id="footer-explore">Explore</p>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="counties.html">Counties</a></li>
+            <li><a href="birds.html">Species A–Z</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-links" aria-labelledby="footer-about">
+          <p class="eyebrow" id="footer-about">About</p>
+          <ul>
+            <li><a href="about.html">About FlyWay</a></li>
+            <li><a href="about.html#error-reporting">Error Reporting</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 Danial Tahir · Free and non-commercial, with no ads ever.</p>
+        <p>Bird data from <a href="https://ebird.org">eBird</a><span id="updated-wrap" hidden> · Last updated <span id="updated"></span></span></p>
+      </div>
+     </div>
+    </div>
   </footer>
 </body>
 </html>

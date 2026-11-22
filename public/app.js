@@ -191,7 +191,7 @@ async function load() {
     const sightings = notable.sightings.filter((s) => inArea(s, where));
     const groups = groupBySpecies(sightings, species, forms).filter((g) => inSeason(g, season));
     const places = placesFor(groups);
-    const ctx = { mapParts, photos, places };
+    const ctx = { mapParts, photos, places, emptyText: `No notable birds reported ${where.phrase} ${THIS_WEEK.span}.` };
     showPins(mapParts, places, where);
     showHotspots(ctx, where, THIS_WEEK);
     $("top-heading").textContent = `Rarest Birds ${where.phrase} ${THIS_WEEK.heading}`;
@@ -202,6 +202,7 @@ async function load() {
     const count = groups.reduce((n, g) => n + g.sightings.length, 0);
     $("tier-summary").textContent = `${count.toLocaleString("en-US")} sightings of ${groups.length.toLocaleString("en-US")} species, `
       + "grouped by how rare they are in California.";
+    $("tier-summary").hidden = !count;  // the list's note says there are none
     showTiers(groups, ctx);
   }
 

@@ -1,6 +1,6 @@
 // Page code shared by the home page and the species page.
 
-import { parseCsv, speciesByCode, formatDate, milesBetween } from "./feed.js";
+import { parseCsv, speciesByCode, formatDate, milesBetween, MONTHS } from "./feed.js";
 import { SEARCH_DAYS, sightingText, privateText } from "./search.js";
 
 export const $ = (id) => document.getElementById(id);
@@ -243,6 +243,7 @@ export function dropdown(container, { options, value, label, onPick }) {
     }));
     if (active >= 0) menu.setAttribute("aria-activedescendant", `${id}-${active}`);
     else menu.removeAttribute("aria-activedescendant");
+    menu.children[active]?.scrollIntoView({ block: "nearest" });  // long menus scroll
   }
 
   function open() {
@@ -299,4 +300,21 @@ export function dropdown(container, { options, value, label, onPick }) {
       button.disabled = on;
     },
   };
+}
+
+// The 12-month timeline (Figma "Month segment"), as list items for an
+// <ol class="timeline">: `present` is 12 true/false values, Jan first. The
+// current month gets the "Now" marker.
+export const FULL_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
+  "September", "October", "November", "December"];
+
+export function monthItems(present) {
+  const now = new Date().getMonth();
+  return present.map((on, i) => el("li",
+    { class: `month${on ? " present" : ""}${i === now ? " now" : ""}` },
+    i === now ? el("span", { class: "now-marker", "aria-hidden": "true" }, "Now") : null,
+    el("span", { class: "bar", "aria-hidden": "true" }),
+    el("span", { class: "label", "aria-hidden": "true" }, MONTHS[i]),
+    el("span", { class: "visually-hidden" },
+      `${FULL_MONTHS[i]}: ${on ? "usually here" : "usually not here"}${i === now ? " (this month)" : ""}`)));
 }

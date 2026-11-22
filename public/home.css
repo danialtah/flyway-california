@@ -1,6 +1,7 @@
 /* Home page layout, from the Figma frame "v7 - WORKING VERSION": the hero
    (heading, place controls, status line, map), the rarest birds, the rare
-   bird hotspots, and the notable sightings list. Components are in site.css. */
+   bird hotspots, and the notable sightings list. County pages use it too,
+   for the same sections. Components are in site.css. */
 
 .section-heading { display: flex; flex-direction: column; gap: 6px; }
 .section-heading h1, .section-heading h2 { margin: 0; font: 600 32px/normal var(--font-sans); }
@@ -37,13 +38,12 @@
 .status-line .hint { color: var(--color-secondary); }
 .status-line .text-button { height: auto; font: 500 16px/normal var(--font-sans); }
 
-.map-frame .map-large { height: 473px; }
 
 /* ---------- Rarest birds ---------- */
 
 .rarest, .hotspots, .notable { padding-top: 64px; }
 .heading-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
-.list-size { display: flex; align-items: center; gap: 20px; }
+.list-size { display: flex; align-items: center; gap: 12px; }
 .list-size .label { font: 400 16px/normal var(--font-sans); color: var(--color-secondary); }
 
 /* Rows of 5 cards, 232px wide at full size, all the same height. */
@@ -63,8 +63,12 @@
 /* The list reaches 24px past the page margins so open rows can frame their
    text; its heading and tabs come back in by 24px. */
 .notable .wrap { padding-inline: clamp(0px, calc(6.95vw - 24px), 76px); }
-.notable .section-heading, .notable .tier-tabs { padding-inline: 24px; }
+.notable .section-heading, .notable .tier-tabs, .notable .empty-note { padding-inline: 24px; }
 .notable .tier-tabs { margin-top: 32px; }
 .notable .notable-list { margin-top: 32px; }
+/* No birds: no tabs, and the note sits 20px under the heading, like the
+   other sections' notes. */
+.notable .tier-tabs:empty { display: none; }
+.notable .notable-list:has(> .empty-note) { margin-top: 0; padding-bottom: 40px; }  /* about the list footer's room, before the loon */
 
 .site-footer { margin-top: 0; }

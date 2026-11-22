@@ -1,0 +1,51 @@
+/* About page, from the Figma frame "About · Desktop (1440)": a sticky side
+   nav (Figma "Side nav item") and the content column: intro, what you can
+   find, labels, photos, sources and credits, and error reporting.
+   Components are in site.css. */
+
+.about-page { display: flex; align-items: flex-start; gap: 48px; padding-block: 56px 96px; }
+
+/* Side nav: gray links that turn ocean blue on hover; the section in view is
+   ocean blue SemiBold. Stays in view under the sticky header. */
+.side-nav {
+  position: sticky; top: calc(72px + 24px); flex: none; width: 240px;
+  display: flex; flex-direction: column; gap: 4px; padding-top: 8px;
+}
+.side-nav a {
+  padding: 8px 12px; border-radius: 8px;
+  font: 400 16px/normal var(--font-sans); color: var(--color-secondary); text-decoration: none;  /* body-md */
+  transition: color 150ms ease;
+}
+.side-nav a:hover { color: var(--color-ocean-blue); }
+.side-nav a[aria-current="true"] { color: var(--color-ocean-blue); font-weight: 600; }
+
+.about-content { flex: 1 1 0; min-width: 0; max-width: 952px; display: flex; flex-direction: column; gap: 72px; }  /* like the species page's sections */
+.about-content section { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: calc(72px + 24px); }
+.about-content h1 { margin: 0; font: 600 32px/normal var(--font-sans); }  /* h3 */
+.about-content h2 { margin: 0; font: 600 24px/normal var(--font-sans); }  /* h4 */
+.about-content h3 { margin: 0; font: 600 18px/normal var(--font-sans); }
+.about-content p { margin: 0; font: 400 16px/normal var(--font-sans); color: var(--color-secondary); }  /* body-md */
+.about-content .intro { gap: 24px; }
+.about-content .intro p { line-height: 1.5; }  /* Figma's 110% of Noto Sans' normal spacing (1.362): 24px lines, intro only */
+.about-content .intro p, .about-content p.body { color: var(--color-text-primary); }
+.about-content p.body a { color: var(--color-links); }  /* links that leave FlyWay */
+
+/* Term lists: a 220px SemiBold term, then the description, a line above
+   each row. Plain text: no hover, square. */
+.terms { display: flex; flex-direction: column; margin: 0; }
+.terms .term-row { display: flex; align-items: flex-start; gap: 24px; padding: 14px 0; border-top: 1px solid var(--color-border); }
+.terms dt { flex: none; width: 220px; display: flex; align-items: center; gap: 8px; font: 600 16px/normal var(--font-sans); }
+.terms dd { flex: 1; min-width: 0; margin: 0; font: 400 16px/normal var(--font-sans); color: var(--color-secondary); }
+.terms .swatch { flex: none; margin: 0; width: 12px; height: 12px; }
+.terms .swatch-ring { border-width: 2px; }
+.terms .swatch-diamond { width: 9px; height: 9px; margin: 1.5px; border: 0; }
+
+.about-content .labels { gap: 60px; }  /* room between Rarity, the timeline, Migration and CBRC */
+.label-group { display: flex; flex-direction: column; gap: 12px; }
+
+/* Error reporting: the address in a cream box. */
+.about-content .email {
+  display: flex; gap: 8px; padding: 14px 16px; border: 1px solid var(--color-border); border-radius: 12px;
+  background: var(--color-pill); white-space: nowrap;
+}
+.about-content .email a { font-weight: 600; color: var(--color-ocean-blue); }
