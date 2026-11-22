@@ -219,15 +219,23 @@ export function setUpTiers() {
   function row(bird) {
     const id = `row-${bird.speciesCode}`;
     const isOpen = open.has(bird.speciesCode);
-    const head = el("button", { type: "button", class: "row-head", "aria-expanded": String(isOpen), "aria-controls": id },
+    // The row opens and closes through the chevron button, whose tap area
+    // covers the whole row. Once open, the bird's name links to its species
+    // page (closed, a tap on the name just opens the row).
+    const name = bird.species && isOpen
+      ? el("a", { class: "bird-name", href: `species.html?code=${encodeURIComponent(bird.species.ebird_code)}` }, bird.comName)
+      : el("span", { class: "bird-name" }, bird.comName);
+    const toggle = el("button", { type: "button", class: "more", "aria-expanded": String(isOpen), "aria-controls": id },
+      icon("row-more"), el("span", { class: "visually-hidden" }, `${isOpen ? "Close" : "Open"} ${bird.comName}`));
+    const head = el("div", { class: "row-head" },
       el("span", { class: "cols" },
-        el("span", { class: "bird" }, dot(groupOf(bird)), el("span", { class: "bird-name" }, bird.comName),
+        el("span", { class: "bird" }, dot(groupOf(bird)), name,
           isReview(bird) ? el("span", { class: "review-tag" }, "CBRC review") : null,
           isHybrid(bird) ? el("span", { class: "review-tag" }, "Hybrid") : null),
         el("span", { class: "place" }, rowPlace(bird.latest, ctx)),
         el("span", { class: "seen" }, `${formatDate(bird.latest.date)} · ${plural(bird.placeCount, "place")}`),
-        el("span", { class: "more" }, icon("row-more"), el("span", { class: "visually-hidden" }, isOpen ? "Close" : "More"))));
-    head.addEventListener("click", () => {
+        toggle));
+    toggle.addEventListener("click", () => {
       if (isOpen) open.delete(bird.speciesCode);
       else open.add(bird.speciesCode);
       render();

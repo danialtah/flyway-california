@@ -166,5 +166,7 @@ button, input, select, .leaflet-container { font-family: var(--font-sans); }
   white-space: normal; pointer-events: none;
   visibility: hidden; opacity: 0; transition: opacity 150ms ease, visibility 150ms;
 }
-.name-wrap.cut:hover .tooltip, .name-wrap.cut:focus-within .tooltip { visibility: visible; opacity: 1; }
+/* Mouse and keyboard only: on a phone, a tap that reveals something counts as
+   a hover, so the name's link would need a second tap. */
+@media (hover: hover) { .name-wrap.cut:hover .tooltip, .name-wrap.cut:focus-within .tooltip { visibility: visible; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .tooltip { transition: none; } }

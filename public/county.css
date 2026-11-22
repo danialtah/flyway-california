@@ -50,11 +50,21 @@
 
 /* ---------- Mobile (390) ---------- */
 
+/* Figma "County page · San Diego · Mobile (390)": the home page's mobile
+   sections (home.css); here the hero: 6px heading gaps, the day buttons
+   sharing the width, and the counts on their own line. */
+@media (max-width: 640px) {
+  .county-heading { gap: 6px; }
+  .county-hero .chips { flex-wrap: nowrap; }
+  .county-hero .chips .chip { flex: 1 1 0; }
+  .county-hero .status-line .count { flex-basis: 100%; }
+}
+
 /* Figma "Counties · Mobile (390)": a 16px intro, the search, then the
    counties in two columns, 4px apart down and 12px across. */
 @media (max-width: 640px) {
   .counties-page { padding-block: 24px 96px; }
   .counties-heading p { font: 400 16px/normal var(--font-sans); }  /* body-md */
   .county-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
-  .county-list a { width: auto; }
+  .county-list a { width: 160px; max-width: 100%; height: auto; padding: 12px 0; font: 400 16px/normal var(--font-sans); }  /* body-md */
 }
