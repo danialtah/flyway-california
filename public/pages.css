@@ -1,7 +1,0 @@
-/* Layout the design pass will restyle; only what a page needs to work as
-   planned. */
-
-/* Counties page: the 58 counties in 5 columns, fewer on narrow screens. */
-.county-list { columns: 5; list-style: none; padding: 0; }
-@media (max-width: 900px) { .county-list { columns: 3; } }
-@media (max-width: 500px) { .county-list { columns: 2; } }
