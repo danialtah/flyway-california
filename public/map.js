@@ -173,11 +173,14 @@ export function swatch(group) {
 // The map key, in the map's bottom-left corner: rarest first, escapees last.
 const LEGEND_ORDER = ["noTier", "Rare", "Uncommon", "Common", "escapee"];
 export function addLegend(map) {
+  const items = () => LEGEND_ORDER.map((group) => el("div", {}, swatch(group), MARKERS[group].label));
   const legend = L.control({ position: "bottomleft" });
-  legend.onAdd = () => el("div", { class: "map-legend" },
-    el("span", { class: "title" }, "Map key"),
-    ...LEGEND_ORDER.map((group) => el("div", {}, swatch(group), MARKERS[group].label)));
+  legend.onAdd = () => el("div", { class: "map-legend" }, el("span", { class: "title" }, "Map key"), ...items());
   legend.addTo(map);
+  // On phones the key is a panel along the bottom of the map's frame instead
+  // (site.css shows one or the other).
+  map.getContainer().closest(".map-frame")?.append(el("div", { class: "map-key-mobile", "aria-hidden": "true" },
+    el("span", { class: "title" }, "Legend"), el("div", { class: "items" }, ...items())));
 }
 
 // Named places from groupBySpecies groups: each place lists the birds seen

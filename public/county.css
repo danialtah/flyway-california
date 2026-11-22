@@ -41,7 +41,20 @@
   font: 500 18px/normal var(--font-sans); color: var(--color-text-primary); text-decoration: none;  /* body-lg */
   transition: color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
 }
+@media (hover: hover) {
 .county-list a:hover {  /* a 2px line: the border plus a 1px inset shadow, so nothing moves */
   color: var(--color-ocean-blue); border-bottom-color: var(--color-ocean-blue);
   box-shadow: inset 0 -1px 0 var(--color-ocean-blue);
+}
+}
+
+/* ---------- Mobile (390) ---------- */
+
+/* Figma "Counties · Mobile (390)": a 16px intro, the search, then the
+   counties in two columns, 4px apart down and 12px across. */
+@media (max-width: 640px) {
+  .counties-page { padding-block: 24px 96px; }
+  .counties-heading p { font: 400 16px/normal var(--font-sans); }  /* body-md */
+  .county-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
+  .county-list a { width: auto; }
 }

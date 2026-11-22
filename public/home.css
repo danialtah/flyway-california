@@ -22,7 +22,7 @@
   border: 1px solid var(--color-border); border-radius: 12px; background: none; cursor: pointer;
   font: 400 16px/normal var(--font-sans); color: var(--color-text-primary); white-space: nowrap;
 }
-.locate:hover { background: var(--color-surface); }
+@media (hover: hover) { .locate:hover { background: var(--color-surface); } }
 .locate[aria-pressed="true"] {  /* Figma "Use my location (primary)" 118:2113, with the same pin icon */
   background: var(--color-sky-blue); border-color: var(--color-ocean-blue); color: var(--color-ocean-blue); font-weight: 500;
 }
@@ -72,3 +72,33 @@
 .notable .notable-list:has(> .empty-note) { margin-top: 0; padding-bottom: 40px; }  /* about the list footer's room, before the loon */
 
 .site-footer { margin-top: 0; }
+
+/* ---------- Mobile (390) ---------- */
+
+/* Figma "v7 - Mobile (390)": one column, 16px margins, 24px section
+   headings, the place controls stacked full width, the map key under the
+   map, and the card rows as swipeable carousels. */
+@media (max-width: 640px) {
+  .section-heading h2 { font-size: 24px; }  /* h4 */
+  .hero { gap: 16px; padding-top: 24px; }
+  .where { flex-direction: column; align-items: stretch; }
+  .locate { justify-content: center; }
+  .where .or { align-self: center; }
+  .where .place-form { flex: none; width: 100%; }
+  .where .filters { flex-direction: column; gap: 8px; }
+  .where .dropdown .pill { width: 100%; justify-content: space-between; }
+  .where .dropdown .menu { left: 0; right: 0; width: auto; min-width: 0; }  /* as wide as the pill above it */
+  .status-line { gap: 2px 8px; }
+  .status-line .where-now { flex-basis: 100%; }
+
+  .rarest, .hotspots, .notable { padding-top: 48px; }
+  .heading-row { flex-direction: column; align-items: stretch; gap: 12px; }
+  .list-size { justify-content: center; }
+  .card-grid { margin-top: 16px; }
+  .card-grid.birds > li { width: 232px; }
+  .card-grid.places > li { width: 300px; }
+
+  .notable .wrap { padding-inline: 16px; }
+  .notable .section-heading, .notable .tier-tabs, .notable .empty-note { padding-inline: 0; }
+  .notable .tier-tabs, .notable .notable-list { margin-top: 16px; }
+}

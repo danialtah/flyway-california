@@ -31,7 +31,7 @@
   top: 14.75px; right: 12px; width: 20px; height: 20px;  /* the ×'s top lines up with the top of the bird name's letters */
   font: 400 20px/20px var(--font-sans); color: var(--color-secondary);
 }
-.leaflet-container a.leaflet-popup-close-button:hover { color: var(--color-text-primary); }
+@media (hover: hover) { .leaflet-container a.leaflet-popup-close-button:hover { color: var(--color-text-primary); } }
 
 .pin-popup { display: flex; flex-direction: column; gap: 16px; }
 /* Birds stay clear of the ×; a busy place's birds scroll, so the place
@@ -40,7 +40,7 @@
 .pin-bird { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
 .pin-name { font: 600 14px/normal var(--font-sans); }
 .leaflet-container .pin-name a { color: var(--color-ocean-blue); text-decoration: none; }  /* inside FlyWay: ocean blue */
-.leaflet-container .pin-name a:hover { text-decoration: underline; }
+@media (hover: hover) { .leaflet-container .pin-name a:hover { text-decoration: underline; } }
 .pin-tag { display: flex; align-items: center; gap: 6px; font: 500 12px/normal var(--font-sans); }
 .pin-tag .swatch { margin: 0; width: 12px; height: 12px; }
 .pin-tag .swatch-ring { border-width: 2px; }

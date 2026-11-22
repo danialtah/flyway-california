@@ -85,6 +85,12 @@
   --color-surface: #F8F4EA;       /* cards, hovered list rows */
   --color-pill: #F3EEE2;          /* filter pills, open list rows, picked menu option */
   --color-pill-hover: #E9E2D2;    /* any cream pill on hover: one step darker than --color-pill */
+  /* Pressed (touch screens, which have no hover): one step darker than the
+     hover colors, under a ripple that spreads from the finger and fades. */
+  --color-pill-pressed: #DDD4C0;  /* cream pills, rows and menu items */
+  --color-sky-pressed: #6A8FB1;   /* sky-blue buttons: one step darker than Sky-Hover */
+  --color-ripple: rgba(20, 60, 114, 0.18);  /* Ocean Blue at 18% */
+  --color-scroll-thumb: rgba(94, 106, 112, 0.5);  /* Secondary Text at 50%: menu scroll indicator on phones */
   --color-photo-empty: #E9E2D2;   /* photo box before the photo loads */
   --color-map-border: #D9D9D9;    /* map key and zoom buttons */
   --color-timeline-absent: #AFB7C2;  /* species timeline: months the bird isn't here (raw hex in Figma, not a variable) */

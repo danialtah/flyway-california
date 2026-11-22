@@ -16,7 +16,7 @@
   font: 400 16px/normal var(--font-sans); color: var(--color-secondary); text-decoration: none;  /* body-md */
   transition: color 150ms ease;
 }
-.side-nav a:hover { color: var(--color-ocean-blue); }
+@media (hover: hover) { .side-nav a:hover { color: var(--color-ocean-blue); } }
 .side-nav a[aria-current="true"] { color: var(--color-ocean-blue); font-weight: 600; }
 
 .about-content { flex: 1 1 0; min-width: 0; max-width: 952px; display: flex; flex-direction: column; gap: 72px; }  /* like the species page's sections */

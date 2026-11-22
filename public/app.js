@@ -151,6 +151,12 @@ function startPlace(near) {
   }
 }
 
+// Phones get a shorter placeholder that fits the narrow field.
+const narrow = matchMedia("(max-width: 640px)");
+const placeholder = () => { $("near-place").placeholder = narrow.matches ? "City, park, or hotspot" : "Type a city, park, or hotspot in California"; };
+narrow.addEventListener("change", placeholder);
+placeholder();
+
 async function load() {
   const [notable, species, forms, photos] = await Promise.all([
     fetch("/api/notable").then((r) => r.json()),

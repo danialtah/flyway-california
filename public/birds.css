@@ -24,7 +24,7 @@
    birds (under the current filters) is gray and not a link. */
 .letters { display: flex; justify-content: space-between; font: 600 18px/normal var(--font-sans); }
 .letters a { color: var(--color-ocean-blue); text-decoration: none; }
-.letters a:hover { text-decoration: underline; }
+@media (hover: hover) { .letters a:hover { text-decoration: underline; } }
 .letters .none { color: var(--color-timeline-absent); }
 
 .birds-status { margin: 0; color: var(--color-secondary); }
@@ -53,9 +53,11 @@
   font: 400 16px/normal var(--font-sans); color: var(--color-text-primary); text-decoration: none;  /* body-md */
   transition: color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
 }
+@media (hover: hover) {
 .species-row:hover {
   color: var(--color-ocean-blue); border-bottom-color: var(--color-ocean-blue);
   box-shadow: inset 0 -1px 0 var(--color-ocean-blue);
+}
 }
 .species-row .swatch { flex: none; margin: 0; width: 12px; height: 12px; }
 .species-row .swatch-ring { border-width: 2px; }

@@ -14,7 +14,9 @@ import {
   creditParts, photoBox, timeText, dateTimeText, monthItems, FULL_MONTHS,
 } from "./ui.js";
 
-const CARDS_SHOWN = 6;  // place cards before "Show all N places"
+// Place cards before "Show all N places": 6 on desktop, 3 on phones.
+const narrow = matchMedia("(max-width: 640px)");
+const cardsShown = () => (narrow.matches ? 3 : 6);
 const STATEWIDE = { region: "US-CA", phrase: "in California" };
 
 // "Apr-May, Sep-Feb" -> "April–May and September–February".
@@ -162,13 +164,14 @@ async function load() {
   });
 
   function drawCards() {
-    const shown = showAll ? places : places.slice(0, CARDS_SHOWN);
+    const shown = showAll ? places : places.slice(0, cardsShown());
     $("sightings").replaceChildren(...shown.map((p) =>
       placeCard(p, () => { openPin(mapParts, p); $("map").scrollIntoView({ behavior: "smooth", block: "center" }); })));
-    $("show-all").hidden = places.length <= CARDS_SHOWN;
+    $("show-all").hidden = places.length <= cardsShown();
     $("show-all").textContent = showAll ? "Show fewer places" : `Show all ${places.length} places`;
   }
 
+  narrow.addEventListener("change", () => drawCards());
   $("show-all").addEventListener("click", () => {
     showAll = !showAll;
     drawCards();

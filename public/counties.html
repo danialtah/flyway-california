@@ -24,10 +24,24 @@
           <input id="site-search-input" name="place" type="search" role="combobox" autocomplete="off"
                  aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"
                  placeholder="Search...">
+          <button type="button" class="search-close" aria-label="Close search"><span class="icon icon-close"></span></button>
         </label>
         <ul id="site-search-list" class="menu" role="listbox" aria-label="Suggestions" hidden></ul>
       </form>
     </nav>
+    <div class="mobile-actions">
+      <button type="button" class="icon-button search-toggle" aria-label="Search" aria-expanded="false" aria-controls="site-search"><span class="icon icon-search-24"></span></button>
+      <div class="mobile-menu">
+        <button type="button" class="icon-button menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span class="icon icon-menu"></span></button>
+        <ul id="site-menu" class="menu" hidden>
+          <li><a href="counties.html">Counties</a></li>
+          <li><a href="birds.html">Species</a></li>
+          <li class="divider" role="separator"></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="mailto:danialtah04@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
    </div>
   </header>
 

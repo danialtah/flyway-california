@@ -217,6 +217,34 @@ export function photoBox(photo, alt, extra = null) {
   return el("div", { class: "photo" }, img, extra);
 }
 
+// Scroll indicator for a long menu on phones, where scrollbars stay hidden
+// until you scroll: a thin bar on the menu's right edge, sized to how much of
+// the list shows. Like the phone's own, it shows when the menu opens and
+// while scrolling, then fades out a second later. Menus that fit get none.
+function scrollThumb(menu) {
+  const node = el("span", { class: "scroll-thumb", "aria-hidden": "true" });
+  let timer = null;
+  function place() {
+    const room = menu.clientHeight - 16;  // inside the menu's 8px padding
+    const scrollable = menu.scrollHeight > menu.clientHeight + 1;
+    node.hidden = menu.hidden || !scrollable;
+    if (node.hidden) return;
+    const size = Math.max(32, room * (menu.clientHeight / menu.scrollHeight));
+    const travel = room - size;
+    const at = menu.scrollTop / (menu.scrollHeight - menu.clientHeight);
+    node.style.height = `${size}px`;
+    node.style.top = `${menu.offsetTop + 8 + travel * at}px`;
+  }
+  function flash() {
+    place();
+    node.classList.add("show");
+    clearTimeout(timer);
+    timer = setTimeout(() => node.classList.remove("show"), 1000);
+  }
+  menu.addEventListener("scroll", flash, { passive: true });
+  return { node, flash };
+}
+
 // Filter pill with a menu under it (the Figma "Filter pill" and its
 // dropdown). `options` are { value, text }; the pill reads label(option).
 // Keyboard: arrows move through the options, Enter or Space picks, Escape
@@ -252,6 +280,7 @@ export function dropdown(container, { options, value, label, onPick }) {
     button.setAttribute("aria-expanded", "true");
     draw();
     menu.focus();
+    thumb.flash();
   }
 
   function close(focusButton = true) {
@@ -291,7 +320,8 @@ export function dropdown(container, { options, value, label, onPick }) {
     if (!menu.hidden && !event.composedPath().includes(container)) close(false);
   });
 
-  container.replaceChildren(button, menu);
+  const thumb = scrollThumb(menu);
+  container.replaceChildren(button, menu, thumb.node);
   draw();
   return {
     set(newValue) { value = newValue; draw(); },
@@ -314,7 +344,7 @@ export function monthItems(present) {
     { class: `month${on ? " present" : ""}${i === now ? " now" : ""}` },
     i === now ? el("span", { class: "now-marker", "aria-hidden": "true" }, "Now") : null,
     el("span", { class: "bar", "aria-hidden": "true" }),
-    el("span", { class: "label", "aria-hidden": "true" }, MONTHS[i]),
+    el("span", { class: "label", "data-short": MONTHS[i][0], "aria-hidden": "true" }, MONTHS[i]),  // "J" on phones
     el("span", { class: "visually-hidden" },
       `${FULL_MONTHS[i]}: ${on ? "usually here" : "usually not here"}${i === now ? " (this month)" : ""}`)));
 }

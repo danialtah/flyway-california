@@ -19,7 +19,7 @@
 .hero-photo .photo-credit { font: 400 12px/normal var(--font-sans); color: var(--color-secondary); }  /* caption-sml */
 .hero-photo .photo-credit a { text-decoration: none; }
 .hero-photo .photo-credit a:first-child { text-decoration: underline; }  /* the photographer */
-.hero-photo .photo-credit a:hover { text-decoration: underline; }
+@media (hover: hover) { .hero-photo .photo-credit a:hover { text-decoration: underline; } }
 
 .details { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .names { display: flex; flex-direction: column; gap: 4px; }
@@ -72,3 +72,35 @@
 }
 
 #sightings-heading { scroll-margin-top: 88px; }  /* clear of the sticky header */
+
+/* ---------- Mobile (390) ---------- */
+
+/* Figma "Species page · Mobile": one column, sections 48px apart; the photo
+   on top; fact rows with the label above the value; full-width county menu
+   and day buttons; place cards in one column. */
+@media (max-width: 640px) {
+  .species-page { padding-block: 16px 56px; }
+  .species-page article { gap: 48px; }
+  .species-hero { flex-direction: column; gap: 16px; }
+  .hero-photo { flex: none; width: 100%; gap: 6px; }
+  .hero-photo .photo { aspect-ratio: auto; height: 239px; }
+  .details { gap: 16px; }
+  .details .status-line { font: 400 16px/normal var(--font-sans); }  /* body-md */
+  .facts { gap: 0; }
+  .fact { flex-direction: column; align-items: stretch; gap: 2px; padding: 12px 0; border-bottom: 0; border-top: 1px solid var(--color-border); }
+  .fact dt { width: auto; }
+  .fact:last-child { border-bottom: 1px solid var(--color-border); }  /* closes the list */
+  .details .links { flex-direction: column; gap: 12px; padding-top: 4px; }
+
+  .when, .recent { gap: 16px; }
+  .section-heading { gap: 4px; }
+  .section-heading h2 { font-size: 24px; }  /* h4 */
+
+  .controls { flex-direction: column; align-items: stretch; gap: 16px; }
+  .controls .divider { display: none; }
+  #county .pill { width: 100%; justify-content: space-between; }
+  #county .menu { left: 0; right: 0; width: auto; min-width: 0; }  /* as wide as the pill */
+  .chips { flex-wrap: nowrap; gap: 24px; }
+  .chips .chip { flex: 1 1 0; }
+  .species-cards { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+}
