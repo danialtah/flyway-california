@@ -4,7 +4,10 @@
 import { el } from "./ui.js";
 import { isOffList } from "./feed.js";
 
-const CALIFORNIA = { center: [37.2, -119.5], zoom: 5 };
+// California's corners. Statewide maps fit these in quarter zoom steps, so the
+// state fills the map instead of rounding out to the whole western US.
+const CALIFORNIA = [[32.5, -124.4], [42.0, -114.1]];
+const STATE_SNAP = 0.25;
 const PIN_ZOOM = 10;  // zoom for a single pin
 const RADIUS = 7;
 const OUTLINE = "#FFFFFF";
@@ -121,7 +124,8 @@ function recoloredTiles(options) {
 
 // The credit shows in the map corner.
 export function makeMap(id) {
-  const map = L.map(id).setView(CALIFORNIA.center, CALIFORNIA.zoom);
+  const map = L.map(id, { zoomSnap: STATE_SNAP });
+  fitState(map, CALIFORNIA);
   recoloredTiles({
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -151,11 +155,21 @@ export function showPins(mapParts, places, area = null) {
       radius: area.miles * METERS_PER_MILE, color: CIRCLE_COLOR, weight: 2, dashArray: "6 4",
       fillOpacity: 0.05, interactive: false,
     }).addTo(map);
-    map.fitBounds(mapParts.circle.getBounds());
-  } else if (area?.bounds) map.fitBounds(area.bounds);
+    fitWhole(map, mapParts.circle.getBounds());
+  } else if (area?.bounds) fitWhole(map, area.bounds);
   else if (points.length === 1) map.setView([points[0].lat, points[0].lng], PIN_ZOOM);
-  else if (points.length) map.fitBounds(points.map((p) => [p.lat, p.lng]), { padding: [20, 20] });
-  else map.setView(CALIFORNIA.center, CALIFORNIA.zoom);
+  else if (points.length) fitState(map, points.map((p) => [p.lat, p.lng]));
+  else fitState(map, CALIFORNIA);
+}
+
+// Statewide views (and the pins in them) zoom in quarter steps.
+function fitState(map, bounds) {
+  map.fitBounds(bounds, { padding: [20, 20] });
+}
+
+// Near-me circles and counties keep whole zoom steps, as before.
+function fitWhole(map, bounds) {
+  map.setView(L.latLngBounds(bounds).getCenter(), Math.floor(map.getBoundsZoom(bounds)));
 }
 
 // Zoom to a place drawn by showPins and open its popup.
