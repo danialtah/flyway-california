@@ -1,0 +1,7 @@
+# Never upload secrets or the offline data scripts.
+.env
+.env.*
+*.key
+pipeline/
+node_modules/
+.DS_Store

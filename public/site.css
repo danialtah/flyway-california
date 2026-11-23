@@ -297,6 +297,11 @@ a { color: inherit; }
 .row.open .row-head .place { visibility: hidden; }
 .row.open .cols { align-items: start; padding-bottom: 0; }
 .row.open .more { margin-bottom: -18px; }  /* the chevron sits on the name's line, as in Figma */
+/* Each row tucks 2px up over the one above, so a hovered or open row's
+   top edge sits right on the divider line above it, with no gap. The extra
+   2px of padding keeps the text where it was. */
+.row + .row { margin-top: -2px; }
+.row + .row .row-head .cols { padding-top: 22px; }
 
 /* Open row: photo and credit under the name; on the right the status line,
    the species page link, and a card for each place it was reported. */
@@ -563,13 +568,16 @@ a { color: inherit; }
 
   /* Notable list (Figma "Notable list row mobile"): no column header; each
      row stacks the bird, the place and when, with the chevron at the top
-     right. Rows sit 4px apart with a line under each; an open row is a cream
-     card with the details under it in one column. */
+     right. Each row has a line under it; the next row's top edge sits on
+     that line (no gap), so a pressed or open row is flush with it. An open
+     row is a cream card with the details under it in one column. */
   .list-header { display: none; }
-  .notable-list > ol { display: flex; flex-direction: column; gap: 4px; }
+  .notable-list > ol { display: flex; flex-direction: column; gap: 0; }
+  .row + .row { margin-top: -1px; }
+  .row + .row .row-head .cols { padding-top: 0; }
   .row { border-radius: 12px; }
   .row:not(.open) { border-radius: 0; border-bottom-color: var(--color-border); }
-  .row-head { padding: 14px 4px 14px 12px; }
+  .row-head { padding: 19px 4px 14px 12px; }  /* 19px: the text stays where the old 4px gap put it */
   .row-head .cols {
     grid-template-columns: minmax(0, 1fr) 40px; grid-template-areas: "bird more" "place more" "seen more";
     gap: 4px 8px; align-items: start; padding: 0; border-bottom: 0;
