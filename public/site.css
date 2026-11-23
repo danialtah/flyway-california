@@ -401,21 +401,39 @@ a { color: inherit; }
 /* ---------- Footer ---------- */
 
 /* The loon floats on water that slides left forever: the surface moves by
-   one wavelength every 8 s, so each loop ends where it began. (The two
-   sky-blue ripple lines are out until there's a better water reference.)
-   The loon bobs a pixel or two. Everything holds still with reduced motion. */
-.site-footer { margin-top: 0; }
+   one wavelength every 8 s, so each loop ends where it began. The loon bobs
+   a pixel or two. Everything holds still with reduced motion.
+   Along the top of the water, footer-water.js runs the Paper Water shader
+   (caustic light) in .water-shader: cut to the same wave, sliding with it,
+   and fading out about 70px down, above the text. Once it runs, the SVG wave
+   is hidden; without WebGL the SVG wave and plain ocean stay. */
+.site-footer { position: relative; margin-top: 0; background: linear-gradient(to bottom, transparent 88px, var(--color-ocean-blue) 88px); }
 .waterline { position: relative; height: 128px; overflow: hidden; }
-.waterline .loon { position: absolute; left: calc(max(0px, (100% - 1440px) / 2) + clamp(12px, 6.67vw, 96px)); top: 22.83px; width: 150px; height: 73.17px; animation: bob 4s ease-in-out infinite; }
+.waterline .loon { position: absolute; z-index: 3; left: calc(max(0px, (100% - 1440px) / 2) + clamp(12px, 6.67vw, 96px)); top: 22.83px; width: 150px; height: 73.17px; animation: bob 4s ease-in-out infinite; }
 .waterline svg { position: absolute; left: 0; top: 74px; width: 100%; height: 56px; }
 .waterline .surface { animation: wave-160 8s linear infinite; }
+.water-on .waterline svg { visibility: hidden; }
 @keyframes wave-160 { to { transform: translateX(-160px); } }
 @keyframes bob { 50% { transform: translateY(1.5px); } }
+
+/* The wave as a mask: 160px long and 56px tall, repeated and sliding left,
+   solid below it, then faded (the fade is intersected with the rest). */
+.water-shader {
+  position: absolute; z-index: 1; left: 0; right: 0; top: 74px; height: 80px; pointer-events: none;
+  --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='56'%3E%3Cpath d='M0 10C26.67 6.67 53.33 6.67 80 10C106.67 13.33 133.33 13.33 160 10V56H0Z'/%3E%3C/svg%3E");
+  --fade: linear-gradient(#000 0 16px, transparent 72px);
+  -webkit-mask: var(--fade) 0 0 / 100% 100% no-repeat, var(--wave) 0 0 / 160px 56px repeat-x, linear-gradient(#000 0 0) 0 55px / 100% 100% no-repeat;
+  -webkit-mask-composite: source-in, source-over;
+          mask: var(--fade) 0 0 / 100% 100% no-repeat, var(--wave) 0 0 / 160px 56px repeat-x, linear-gradient(#000 0 0) 0 55px / 100% 100% no-repeat;
+          mask-composite: intersect, add;
+  animation: water-wave 8s linear infinite;
+}
+@keyframes water-wave { to { -webkit-mask-position: 0 0, -160px 0, 0 55px; mask-position: 0 0, -160px 0, 0 55px; } }
 @media (prefers-reduced-motion: reduce) {
-  .waterline .loon, .waterline path { animation: none; }
+  .waterline .loon, .waterline path, .water-shader { animation: none; }
 }
 
-.footer-content { margin-top: -2px; background: var(--color-ocean-blue); color: var(--color-background); }
+.footer-content { position: relative; z-index: 2; margin-top: -2px; color: var(--color-background); }
 .footer-inner { display: flex; flex-direction: column; gap: 32px; padding-block: 24px 32px; }
 .footer-columns { display: flex; flex-wrap: wrap; gap: 64px; padding: 16px 0 8px; }
 .footer-brand { display: flex; flex-direction: column; gap: 16px; width: 420px; max-width: 100%; margin-right: auto; }

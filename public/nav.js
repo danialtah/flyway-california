@@ -7,6 +7,7 @@
 import { normalize, suggestions } from "./search.js";
 import { $, el, loadSpecies } from "./ui.js";
 import "./mobile.js";  // the phone header, press ripple and card dots, on every page
+import "./footer-water.js";  // the footer water shader, on every page
 
 const DELAY_MS = 150;     // wait for a pause in typing
 const PLACE_MIN = 3;      // characters typed before asking the server for places
