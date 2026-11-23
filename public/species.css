@@ -47,6 +47,12 @@
 /* ---------- When it's in California ---------- */
 
 .when, .recent { display: flex; flex-direction: column; gap: 20px; }
+/* Out-of-season note under the timeline: the About page's email box look. */
+.season-note {
+  margin: 0; padding: 14px 16px; border: 1px solid var(--color-border); border-radius: 12px;
+  background: var(--color-pill); font: 400 16px/normal var(--font-sans);  /* body-md */
+}
+.season-note strong { font-weight: 600; }
 
 
 /* ---------- Recent sightings ---------- */

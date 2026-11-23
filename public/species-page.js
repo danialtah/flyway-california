@@ -11,7 +11,7 @@ import { birdsPopup } from "./notable-ui.js";
 import { MARKERS, makeMap, showPins, markerGroup, openPin } from "./map.js";
 import {
   $, el, showError, choiceButtons, loadSpecies, dropdown, plural, directionsLink, showOnMapButton,
-  creditParts, photoBox, timeText, dateTimeText, monthItems, FULL_MONTHS,
+  creditParts, photoBox, cardName, timeText, dateTimeText, monthItems, FULL_MONTHS,
 } from "./ui.js";
 
 // Place cards before "Show all N places": 6 on desktop, 3 on phones.
@@ -70,8 +70,22 @@ function fillFacts(s, recent) {
     const thisWeek = recent.sightings.filter((x) => new Date(x.date.replace(" ", "T")) >= weekAgo).length;
     rows.push(fact("This week", thisWeek ? `Reported at ${plural(thisWeek, "place")} in California`
       : "Not reported in California this week"));
+    fillSeasonNote(s, thisWeek);
   }
   $("facts").replaceChildren(...rows);
+}
+
+// Under the timeline: a bird reported this week in a month it usually isn't
+// here (a summer visitor in November) gets a note, so the sighting reads as
+// unusual rather than as a mistake in the timeline.
+function fillSeasonNote(s, thisWeek) {
+  const month = new Date().getMonth();
+  const outOfSeason = s.occupied_months && !monthsIn(s.occupied_months)[month];
+  $("season-note").hidden = !(outOfSeason && thisWeek);
+  if (!$("season-note").hidden) {
+    $("season-note").replaceChildren(el("strong", {}, "Out of season. "),
+      `Usually not in California in ${FULL_MONTHS[month]}, but reported at ${plural(thisWeek, "place")} in the last ${SEARCH_DAYS[0]} days.`);
+  }
 }
 
 // The 12 months as one bar: filled where the bird is usually here, with a
@@ -88,13 +102,13 @@ function fillMonths(s) {
   $("months").replaceChildren(...monthItems(monthsIn(s.occupied_months)));
 }
 
-// One card per named place: when, how many birds, the place and county,
-// Directions and Show on map.
+// One card per named place: when, how many birds, the place (up to 2 lines,
+// then … with the full name in a tooltip) and county, Directions and Show on map.
 function placeCard(place, onShow) {
   const meta = [formatDate(place.date), place.howMany ? plural(place.howMany, "bird") : null];
   return el("li", { class: "sighting-card" },
     el("span", { class: "meta" }, meta.filter(Boolean).join(" · ")),
-    el("span", { class: "spot" }, place.locName),
+    el("span", { class: "spot" }, cardName(place.locName, place.locName)),
     countyText(place) ? el("span", { class: "county" }, countyText(place)) : null,
     el("div", { class: "actions" }, directionsLink(place, true), showOnMapButton(onShow, true)));
 }
