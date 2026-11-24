@@ -85,7 +85,7 @@
   .letters a:active { text-decoration: underline; }
   .bird-list { gap: 28px; }
   .letter-section h2 { padding-bottom: 6px; }
-  .letter-section ul { grid-template-columns: repeat(2, 174px); justify-content: space-between; margin-top: 6px; }  /* the spare width goes between the columns */
+  .letter-section ul { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; margin-top: 6px; }  /* 173px columns on a 390px phone */
   .species-row { align-items: flex-start; height: 100%; }
   .species-row .swatch { margin-top: 5px; }  /* centered on the first line */
   .species-row .swatch-diamond { margin-top: 6.5px; }
