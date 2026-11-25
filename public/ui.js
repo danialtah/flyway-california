@@ -142,6 +142,13 @@ export const icon = (name) => el("span", { class: `icon icon-${name}`, "aria-hid
 
 export const plural = (n, one, many = `${one}s`) => `${n.toLocaleString("en-US")} ${n === 1 ? one : many}`;
 
+// Headings are in title case: "within 50 miles of your location" ->
+// "Within 50 Miles of Your Location". Short words stay lowercase, as in
+// "Rarest Birds in California This Week".
+const SMALL_WORDS = new Set(["a", "an", "and", "at", "by", "for", "in", "of", "on", "or", "the", "to"]);
+export const titleCase = (text) => text.replace(/\S+/g, (word) =>
+  (SMALL_WORDS.has(word) ? word : word[0].toUpperCase() + word.slice(1)));
+
 // "10:24 PM" and "Nov 18, 10:24 PM" in the visitor's time zone.
 export const timeText = (isoTime) =>
   new Date(isoTime).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });

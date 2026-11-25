@@ -9,7 +9,7 @@
 import { TOP_SIZES, groupBySpecies, topRarest, offeredSizes, inSeason, SEASONS } from "./feed.js";
 import {
   $, el, choiceButtons, loadSpecies, showError, RADIUS_MILES, nearArea, inArea, dropdown,
-  timeText, dateTimeText,
+  timeText, dateTimeText, titleCase,
 } from "./ui.js";
 import { makeMap, showPins, addLegend } from "./map.js";
 import { period, topItem, placesFor, fillList, showHotspots, setUpTiers } from "./notable-ui.js";
@@ -191,7 +191,7 @@ async function load() {
     const ctx = { mapParts, photos, places, emptyText: `No notable birds reported ${where.phrase} ${THIS_WEEK.span}.` };
     showPins(mapParts, places, where);
     showHotspots(ctx, where, THIS_WEEK);
-    $("top-heading").textContent = `Rarest Birds ${where.phrase} ${THIS_WEEK.heading}`;
+    $("top-heading").textContent = `Rarest Birds ${titleCase(where.phrase)} ${THIS_WEEK.heading}`;
     const ranked = topRarest(groups, Infinity);  // leaves out escapees and hybrids
     $("top-sizes").replaceChildren(...sizeButtons(ranked.length));
     fillList($("top"), ranked.slice(0, topSize).map((g) => topItem(g, ctx)), `No rare birds reported ${where.phrase} ${THIS_WEEK.span}.`);

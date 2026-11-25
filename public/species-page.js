@@ -11,7 +11,7 @@ import { birdsPopup } from "./notable-ui.js";
 import { MARKERS, makeMap, showPins, markerGroup, openPin } from "./map.js";
 import {
   $, el, showError, choiceButtons, loadSpecies, dropdown, plural, directionsLink, showOnMapButton,
-  creditParts, photoBox, cardName, timeText, dateTimeText, monthItems, FULL_MONTHS,
+  creditParts, photoBox, cardName, timeText, dateTimeText, monthItems, FULL_MONTHS, titleCase,
 } from "./ui.js";
 
 // Place cards before "Show all N places": 6 on desktop, 3 on phones.
@@ -198,7 +198,7 @@ async function load() {
 
   async function showRecent() {
     const mine = ++request;  // a late answer to an earlier pick is ignored
-    $("sightings-heading").textContent = `Recent Sightings ${area.phrase}`;
+    $("sightings-heading").textContent = `Recent Sightings ${titleCase(area.phrase)}`;
     $("days").replaceChildren(...choiceButtons(SEARCH_DAYS, days, (d) => `Last ${d} days`,
       (d) => { days = d; showRecent(); }, "pill chip"));
     $("sightings-summary").classList.remove("error");

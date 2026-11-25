@@ -10,7 +10,7 @@
 
 import { firstSentence, formatDate, placeText } from "./feed.js";
 import {
-  $, el, speciesLink, cardName, plural, icon, directionsLink, showOnMapButton, creditParts, photoBox,
+  $, el, speciesLink, cardName, plural, icon, directionsLink, showOnMapButton, creditParts, photoBox, titleCase,
 } from "./ui.js";
 import { MARKERS, markerGroup, openPin, groupByPlace, topHotspots, swatch } from "./map.js";
 
@@ -135,7 +135,7 @@ function hotspotItem(ctx, { place, rare }) {
 export function showHotspots(ctx, where, when, count) {
   const hotspots = topHotspots(ctx.places, count);
   $("hotspots-section").hidden = hotspots.length < 2;
-  $("hotspots-heading").textContent = `Rare Bird Hotspots ${where.phrase} ${when.heading}`;
+  $("hotspots-heading").textContent = `Rare Bird Hotspots ${titleCase(where.phrase)} ${when.heading}`;
   $("hotspots").replaceChildren(...hotspots.map((h) => hotspotItem(ctx, h)));
 }
 

@@ -6,7 +6,7 @@
 
 import { groupBySpecies, topRarest } from "./feed.js";
 import { SEARCH_DAYS } from "./search.js";
-import { $, el, choiceButtons, loadSpecies, showError, plural, timeText, dateTimeText } from "./ui.js";
+import { $, el, choiceButtons, loadSpecies, showError, plural, timeText, dateTimeText, titleCase } from "./ui.js";
 import { makeMap, showPins, addLegend } from "./map.js";
 import { period, topItem, placesFor, fillList, showHotspots, setUpTiers } from "./notable-ui.js";
 
@@ -74,7 +74,7 @@ async function load() {
       el("span", { class: "hint" }, `Map shows ${name}. · Updated ${timeText(notable.fetchedAt)}`));
     showPins(mapParts, places, area);
     showHotspots(ctx, area, when, HOTSPOT_COUNT);
-    $("top-heading").textContent = `Rarest Birds ${area.phrase} ${when.heading}`;
+    $("top-heading").textContent = `Rarest Birds ${titleCase(area.phrase)} ${when.heading}`;
     fillList($("top"), topRarest(groups, TOP_COUNT).map((g) => topItem(g, ctx)), `No rare birds reported ${area.phrase} ${when.span}.`);
     $("tier-heading").textContent = `Notable Sightings ${when.heading}`;
     $("tier-summary").textContent = `${plural(count, "sighting")} of ${plural(groups.length, "species", "species")} ${area.phrase}, `
